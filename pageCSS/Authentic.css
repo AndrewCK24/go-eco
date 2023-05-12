@@ -1,4 +1,4 @@
-.authentication-sign-in-a-container {
+.container {
     width: 100%;
     display: flex;
     overflow: auto;
@@ -69,63 +69,7 @@
     border-radius: 8px;
     background-color: var(--dl-color-white-100);
   }
-  .authentication-sign-in-a-google {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .authentication-sign-in-a-google1 {
-    top: 0px;
-    left: 0px;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .authentication-sign-in-a-superg {
-    top: 8px;
-    left: 8px;
-    width: 16.00000762939453px;
-    height: 16.00000762939453px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .authentication-sign-in-a-shape {
-    top: 0px;
-    left: 0.8533420562744141px;
-    width: 12px;
-    height: 6px;
-    position: absolute;
-  }
-  .authentication-sign-in-a-shape1 {
-    top: 6.5422210693359375px;
-    left: 7.999999046325684px;
-    width: 8px;
-    height: 8px;
-    position: absolute;
-  }
-  .authentication-sign-in-a-shape2 {
-    top: 4.408900260925293px;
-    left: 0px;
-    width: 3px;
-    height: 7px;
-    position: absolute;
-  }
-  .authentication-sign-in-a-shape3 {
-    top: 9.582220077514648px;
-    left: 0.8622159957885742px;
-    width: 12px;
-    height: 6px;
-    position: absolute;
-  }
+  
   .authentication-sign-in-a-autoaddedframe {
     width: 134px;
     display: flex;
@@ -350,3 +294,63 @@
     position: absolute;
   }
   
+
+
+
+  /* .authentication-sign-in-a-google {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .authentication-sign-in-a-google1 {
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .authentication-sign-in-a-superg {
+    top: 8px;
+    left: 8px;
+    width: 16.00000762939453px;
+    height: 16.00000762939453px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .authentication-sign-in-a-shape {
+    top: 0px;
+    left: 0.8533420562744141px;
+    width: 12px;
+    height: 6px;
+    position: absolute;
+  }
+  .authentication-sign-in-a-shape1 {
+    top: 6.5422210693359375px;
+    left: 7.999999046325684px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+  }
+  .authentication-sign-in-a-shape2 {
+    top: 4.408900260925293px;
+    left: 0px;
+    width: 3px;
+    height: 7px;
+    position: absolute;
+  }
+  .authentication-sign-in-a-shape3 {
+    top: 9.582220077514648px;
+    left: 0.8622159957885742px;
+    width: 12px;
+    height: 6px;
+    position: absolute;
+  } */

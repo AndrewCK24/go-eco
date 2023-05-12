@@ -1,6 +1,7 @@
+import SignInButton from "../components/SignInButton";
 function AuthenticationPage(){
     return(<div>
-        <div className="authentication-sign-in-a-container">
+        <div className="container">
         <div className="authentication-sign-in-a-authentication-sign-in-a">
           <div className="authentication-sign-in-a-block">
             <div className="authentication-sign-in-a-frame427319044">
@@ -13,58 +14,27 @@ function AuthenticationPage(){
             </div>
             <div className="authentication-sign-in-a-frame427318925">
               <div className="authentication-sign-in-a-form">
-                <div className="authentication-sign-in-a-google">
-                  <div className="authentication-sign-in-a-google1">
-                    <div className="authentication-sign-in-a-superg">
-                      <img
-                        src="public/playground_assets/shapei339-7e79.svg"
-                        alt="ShapeI339"
-                        className="authentication-sign-in-a-shape"
-                      />
-                      <img
-                        src="public/playground_assets/shapei339-jfp7.svg"
-                        alt="ShapeI339"
-                        className="authentication-sign-in-a-shape1"
-                      />
-                      <img
-                        src="public/playground_assets/shapei339-xmvb.svg"
-                        alt="ShapeI339"
-                        className="authentication-sign-in-a-shape2"
-                      />
-                      <img
-                        src="public/playground_assets/shapei339-igx.svg"
-                        alt="ShapeI339"
-                        className="authentication-sign-in-a-shape3"
-                      />
-                    </div>
-                  </div>
-                </div>
                 <div className="authentication-sign-in-a-autoaddedframe">
                   <span className="authentication-sign-in-a-text04 14Regular">
-                    <span>Sign in with Google</span>
+                    <SignInButton name="Sign in with Google"></SignInButton>
                   </span>
                 </div>
               </div>
               <div className="authentication-sign-in-a-form1">
                 <div className="authentication-sign-in-a-apple">
                   <div className="authentication-sign-in-a-apple1">
-                    <img
-                      src="public/playground_assets/shapei339-0aop.svg"
-                      alt="ShapeI339"
-                      className="authentication-sign-in-a-shape4"
-                    />
                   </div>
                 </div>
                 <div className="authentication-sign-in-a-autoaddedframe1">
                   <span className="authentication-sign-in-a-text06 14Regular">
-                    <span>Sign in with Apple</span>
+                    <SignInButton src="public/assets/shapei339-0aop.svg" name="Sign in with Apple"></SignInButton>
                   </span>
                 </div>
               </div>
             </div>
             <div className="authentication-sign-in-a-frame427318927">
               <img
-                src="public/playground_assets/line236i339-e9r8.svg"
+                src="public/assets/line236i339-e9r8.svg"
                 alt="Line236I339"
                 className="authentication-sign-in-a-line236"
               />
@@ -72,7 +42,7 @@ function AuthenticationPage(){
                 <span>Or with Email</span>
               </span>
               <img
-                src="public/playground_assets/line237i339-z6b.svg"
+                src="public/assets/line237i339-z6b.svg"
                 alt="Line237I339"
                 className="authentication-sign-in-a-line237"
               />
@@ -90,7 +60,7 @@ function AuthenticationPage(){
                   </span>
                 </div>
                 <span className="authentication-sign-in-a-text14 14Regular1">
-                  <span>Forgot Password?</span>
+                  <a>Forgot Password?</a>
                 </span>
               </div>
             </div>
@@ -101,9 +71,9 @@ function AuthenticationPage(){
                 </span>
               </button>
               <span className="authentication-sign-in-a-text18 14Regular1">
-                <span className="authentication-sign-in-a-text19">
+                <a className="authentication-sign-in-a-text19">
                   Not a Member yet?
-                </span>
+                </a>
                 <span className="authentication-sign-in-a-text20"></span>
                 <span>Sign Up</span>
               </span>
@@ -116,12 +86,12 @@ function AuthenticationPage(){
             </span>
           </div>
           <img
-            src="public/playground_assets/screenshot20230411at15262i339-cdje-200h.png"
+            src="public/assets/screenshot20230411at15262i339-cdje-200h.png"
             alt="Screenshot20230411at15262I339"
             className="authentication-sign-in-a-screenshot20230411at15262"
           />
           <img
-            src="public/playground_assets/screenshot20230412at03102i339-tjgg-200h.png"
+            src="public/assets/screenshot20230412at03102i339-tjgg-200h.png"
             alt="Screenshot20230412at03102I339"
             className="authentication-sign-in-a-screenshot20230412at03102"
           />
@@ -132,3 +102,31 @@ function AuthenticationPage(){
     )
 }
 export default AuthenticationPage;
+
+
+{/* <div className="authentication-sign-in-a-google">
+                  <div className="authentication-sign-in-a-google1">
+                    <div className="authentication-sign-in-a-superg">
+                      <img
+                        src="public/assets/shapei339-7e79.svg"
+                        alt="ShapeI339"
+                        className="authentication-sign-in-a-shape"
+                      />
+                      <img
+                        src="public/assets/shapei339-jfp7.svg"
+                        alt="ShapeI339"
+                        className="authentication-sign-in-a-shape1"
+                      />
+                      <img
+                        src="public/assets/shapei339-xmvb.svg"
+                        alt="ShapeI339"
+                        className="authentication-sign-in-a-shape2"
+                      />
+                      <img
+                        src="public/assets/shapei339-igx.svg"
+                        alt="ShapeI339"
+                        className="authentication-sign-in-a-shape3"
+                      />
+                    </div>
+                  </div>
+                </div> */}
