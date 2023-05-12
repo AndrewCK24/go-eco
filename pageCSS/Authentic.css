@@ -1,0 +1,352 @@
+.authentication-sign-in-a-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .authentication-sign-in-a-authentication-sign-in-a {
+    width: 100%;
+    height: 1006px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .authentication-sign-in-a-block {
+    gap: 28px;
+    top: 186px;
+    left: 418px;
+    width: 680px;
+    height: 652px;
+    display: flex;
+    padding: 107px 145px;
+    position: absolute;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    flex-direction: column;
+    background-color: var(--dl-color-white-100);
+  }
+  .authentication-sign-in-a-frame427319044 {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .authentication-sign-in-a-text {
+    color: var(--dl-color-black-100);
+    height: auto;
+    text-align: center;
+    line-height: 36px;
+  }
+  .authentication-sign-in-a-text02 {
+    color: var(--dl-color-black-40);
+    height: auto;
+    text-align: center;
+    line-height: 20px;
+  }
+  .authentication-sign-in-a-frame427318925 {
+    gap: 16px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .authentication-sign-in-a-form {
+    gap: 4px;
+    width: 186px;
+    height: 40px;
+    display: flex;
+    padding: 4px 8px;
+    align-items: center;
+    flex-shrink: 0;
+    border-color: rgba(0, 0, 0, 0.10000000149011612);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    background-color: var(--dl-color-white-100);
+  }
+  .authentication-sign-in-a-google {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .authentication-sign-in-a-google1 {
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .authentication-sign-in-a-superg {
+    top: 8px;
+    left: 8px;
+    width: 16.00000762939453px;
+    height: 16.00000762939453px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .authentication-sign-in-a-shape {
+    top: 0px;
+    left: 0.8533420562744141px;
+    width: 12px;
+    height: 6px;
+    position: absolute;
+  }
+  .authentication-sign-in-a-shape1 {
+    top: 6.5422210693359375px;
+    left: 7.999999046325684px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+  }
+  .authentication-sign-in-a-shape2 {
+    top: 4.408900260925293px;
+    left: 0px;
+    width: 3px;
+    height: 7px;
+    position: absolute;
+  }
+  .authentication-sign-in-a-shape3 {
+    top: 9.582220077514648px;
+    left: 0.8622159957885742px;
+    width: 12px;
+    height: 6px;
+    position: absolute;
+  }
+  .authentication-sign-in-a-autoaddedframe {
+    width: 134px;
+    display: flex;
+    overflow: hidden;
+    flex-grow: 1;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .authentication-sign-in-a-text04 {
+    color: var(--dl-color-black-100);
+    height: auto;
+    text-align: left;
+    line-height: 20px;
+  }
+  .authentication-sign-in-a-form1 {
+    gap: 4px;
+    width: 186px;
+    height: 40px;
+    display: flex;
+    padding: 4px 8px;
+    align-items: center;
+    flex-shrink: 0;
+    border-color: rgba(0, 0, 0, 0.10000000149011612);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    background-color: var(--dl-color-white-100);
+  }
+  .authentication-sign-in-a-apple {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: flex-start;
+    flex-shrink: 0;
+  }
+  .authentication-sign-in-a-apple1 {
+    top: 0px;
+    left: 0px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .authentication-sign-in-a-shape4 {
+    top: 6.400000095367432px;
+    left: 8px;
+    width: 16px;
+    height: 19px;
+    position: absolute;
+  }
+  .authentication-sign-in-a-autoaddedframe1 {
+    width: 134px;
+    display: flex;
+    overflow: hidden;
+    flex-grow: 1;
+    align-items: flex-start;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+  .authentication-sign-in-a-text06 {
+    color: var(--dl-color-black-100);
+    height: auto;
+    text-align: left;
+    line-height: 20px;
+  }
+  .authentication-sign-in-a-frame427318927 {
+    gap: 21px;
+    display: flex;
+    align-items: center;
+  }
+  .authentication-sign-in-a-line236 {
+    width: 136px;
+    height: 1px;
+  }
+  .authentication-sign-in-a-text08 {
+    color: var(--dl-color-black-40);
+    height: auto;
+    text-align: left;
+    line-height: 18px;
+  }
+  .authentication-sign-in-a-line237 {
+    width: 136px;
+    height: 1px;
+  }
+  .authentication-sign-in-a-frame427319054 {
+    gap: 16px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .authentication-sign-in-a-form2 {
+    width: 388px;
+    height: 40px;
+    display: flex;
+    padding: 8px 16px;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: rgba(0, 0, 0, 0.10000000149011612);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--dl-color-white-100);
+  }
+  .authentication-sign-in-a-text10 {
+    color: var(--dl-color-black-20);
+    height: auto;
+    text-align: left;
+    line-height: 20px;
+  }
+  .authentication-sign-in-a-frame427319041 {
+    gap: 8px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .authentication-sign-in-a-form3 {
+    width: 388px;
+    height: 40px;
+    display: flex;
+    padding: 8px 16px;
+    align-items: flex-start;
+    flex-shrink: 0;
+    border-color: rgba(0, 0, 0, 0.10000000149011612);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--dl-color-white-100);
+  }
+  .authentication-sign-in-a-text12 {
+    color: var(--dl-color-black-20);
+    height: auto;
+    text-align: left;
+    line-height: 20px;
+  }
+  .authentication-sign-in-a-text14 {
+    color: var(--dl-color-secondary-purplea);
+    height: auto;
+    text-align: left;
+    line-height: 20px;
+  }
+  .authentication-sign-in-a-frame427319042 {
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .authentication-sign-in-a-button {
+    width: 388px;
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    justify-content: center;
+    background-color: var(--dl-color-primary-brand);
+  }
+  .authentication-sign-in-a-text16 {
+    color: var(--dl-color-white-100);
+    height: auto;
+    text-align: center;
+    line-height: 28px;
+  }
+  .authentication-sign-in-a-text18 {
+    color: rgba(0, 0, 0, 0.4000000059604645);
+    height: auto;
+    text-align: center;
+    line-height: 20px;
+  }
+  .authentication-sign-in-a-text19 {
+    color: var(--dl-color-black-40);
+  }
+  .authentication-sign-in-a-text20 {
+    color: var(--dl-color-black-100);
+  }
+  .authentication-sign-in-a-header-b {
+    top: 0px;
+    left: 0px;
+    width: 1514px;
+    height: 103px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .authentication-sign-in-a-copyright {
+    top: 940px;
+    left: 710.5px;
+    width: 94px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+  }
+  .authentication-sign-in-a-text22 {
+    color: var(--dl-color-black-40);
+    height: auto;
+    text-align: center;
+    line-height: 18px;
+  }
+  .authentication-sign-in-a-screenshot20230411at15262 {
+    top: 45px;
+    left: 20px;
+    width: 193px;
+    height: 50px;
+    position: absolute;
+  }
+  .authentication-sign-in-a-screenshot20230412at03102 {
+    top: 0px;
+    left: 0px;
+    width: 1516px;
+    height: 35px;
+    position: absolute;
+  }
+  
