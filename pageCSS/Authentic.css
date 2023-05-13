@@ -8,262 +8,108 @@
   }
   .container {
     gap: 28px;
-    top: 186px;
-    left: 418px;
-    width: 680px;
-    height: 652px;
+    top: 10%;
     display: flex;
-    padding: 107px 145px;
+    padding: 100px;
     position: absolute;
     align-items: center;
-    flex-shrink: 0;
     border-radius: 16px;
+    border-style: solid;
+    border-color: green;
     flex-direction: column;
-    background-color: var(--dl-color-white-100);
+    background-color: white;
   }
-  .authentication-sign-in-a-frame427319044 {
+  .textSet {
     gap: 8px;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .authentication-sign-in-a-text02 {
-    color: var(--dl-color-black-40);
-    height: auto;
-    text-align: center;
-    line-height: 20px;
+  .text {
+    font-size: xx-large;
   }
-  .authentication-sign-in-a-frame427318925 {
-    gap: 16px;
-    display: flex;
-    align-items: flex-start;
-  }
-  .authentication-sign-in-a-form {
-    gap: 4px;
-    width: 186px;
-    height: 40px;
-    display: flex;
-    padding: 4px 8px;
-    align-items: center;
-    flex-shrink: 0;
-    border-color: rgba(0, 0, 0, 0.10000000149011612);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 8px;
-    background-color: var(--dl-color-white-100);
-  }
-  
-  .authentication-sign-in-a-autoaddedframe {
-    width: 134px;
-    display: flex;
-    overflow: hidden;
-    flex-grow: 1;
-    align-items: flex-start;
-    flex-shrink: 0;
-    flex-direction: column;
-  }
-  .authentication-sign-in-a-text04 {
-    color: var(--dl-color-black-100);
-    height: auto;
-    text-align: left;
-    line-height: 20px;
-  }
-  .authentication-sign-in-a-form1 {
-    gap: 4px;
-    width: 186px;
-    height: 40px;
-    display: flex;
-    padding: 4px 8px;
-    align-items: center;
-    flex-shrink: 0;
-    border-color: rgba(0, 0, 0, 0.10000000149011612);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 8px;
-    background-color: var(--dl-color-white-100);
-  }
-  .authentication-sign-in-a-apple {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    align-items: flex-start;
-    flex-shrink: 0;
-  }
-  .authentication-sign-in-a-apple1 {
-    top: 0px;
-    left: 0px;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 1;
-  }
-  .authentication-sign-in-a-shape4 {
-    top: 6.400000095367432px;
-    left: 8px;
-    width: 16px;
-    height: 19px;
-    position: absolute;
-  }
-  .authentication-sign-in-a-autoaddedframe1 {
-    width: 134px;
-    display: flex;
-    overflow: hidden;
-    flex-grow: 1;
-    align-items: flex-start;
-    flex-shrink: 0;
-    flex-direction: column;
-  }
-  .authentication-sign-in-a-text06 {
-    color: var(--dl-color-black-100);
-    height: auto;
-    text-align: left;
-    line-height: 20px;
-  }
-  .authentication-sign-in-a-frame427318927 {
-    gap: 21px;
-    display: flex;
-    align-items: center;
-  }
-  .authentication-sign-in-a-line236 {
-    width: 136px;
-    height: 1px;
-  }
-  .authentication-sign-in-a-text08 {
-    color: var(--dl-color-black-40);
-    height: auto;
-    text-align: left;
-    line-height: 18px;
-  }
-  .authentication-sign-in-a-line237 {
-    width: 136px;
-    height: 1px;
-  }
-  .authentication-sign-in-a-frame427319054 {
-    gap: 16px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .authentication-sign-in-a-form2 {
-    width: 388px;
-    height: 40px;
-    display: flex;
-    padding: 8px 16px;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-color: rgba(0, 0, 0, 0.10000000149011612);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 8px;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--dl-color-white-100);
-  }
-  .authentication-sign-in-a-text10 {
-    color: var(--dl-color-black-20);
-    height: auto;
-    text-align: left;
-    line-height: 20px;
-  }
-  .authentication-sign-in-a-frame427319041 {
-    gap: 8px;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-  }
-  .authentication-sign-in-a-form3 {
-    width: 388px;
-    height: 40px;
-    display: flex;
-    padding: 8px 16px;
-    align-items: flex-start;
-    flex-shrink: 0;
-    border-color: rgba(0, 0, 0, 0.10000000149011612);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 8px;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--dl-color-white-100);
-  }
-  .authentication-sign-in-a-text12 {
-    color: var(--dl-color-black-20);
-    height: auto;
-    text-align: left;
-    line-height: 20px;
-  }
-  .authentication-sign-in-a-text14 {
-    color: var(--dl-color-secondary-purplea);
-    height: auto;
-    text-align: left;
-    line-height: 20px;
-  }
-  .authentication-sign-in-a-frame427319042 {
-    gap: 16px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .authentication-sign-in-a-button {
-    width: 388px;
-    display: flex;
-    padding: 8px 16px;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 8px;
-    justify-content: center;
-    background-color: var(--dl-color-primary-brand);
-  }
-  .authentication-sign-in-a-text16 {
-    color: var(--dl-color-white-100);
-    height: auto;
-    text-align: center;
-    line-height: 28px;
-  }
-  .authentication-sign-in-a-text18 {
+  .text1 {
     color: rgba(0, 0, 0, 0.4000000059604645);
     height: auto;
     text-align: center;
     line-height: 20px;
   }
-  .authentication-sign-in-a-text19 {
-    color: var(--dl-color-black-40);
-  }
-  .authentication-sign-in-a-text20 {
-    color: var(--dl-color-black-100);
-  }
-  .authentication-sign-in-a-header-b {
-    top: 0px;
-    left: 0px;
-    width: 1514px;
-    height: 103px;
+  .buttonSet {
+    gap: 16px;
     display: flex;
-    overflow: hidden;
-    position: absolute;
-    align-items: flex-start;
-    flex-shrink: 0;
-    background-color: rgba(255, 255, 255, 1);
-  }
-  .authentication-sign-in-a-copyright {
-    top: 940px;
-    left: 710.5px;
-    width: 94px;
-    display: flex;
-    position: absolute;
     align-items: flex-start;
   }
-  .authentication-sign-in-a-text22 {
-    color: var(--dl-color-black-40);
-    height: auto;
+  .buttonStyle {
+    font-size: larger;
+    width: 186px;
+    height: 40px;
+    display: flex;
+    padding: 8px 8px;
     text-align: center;
+    align-items: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  .buttonStyle :hover{
+    background-color: grey;
+  }
+
+  .text2 {
+    color: rgba(0, 0, 0, 0.4000000059604645);
+    height: auto;
+    text-align: left;
     line-height: 18px;
   }
+  .inputSet {
+    gap: 16px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .inputStyle {
+    width: 388px;
+    height: 40px;
+    display: flex;
+    padding: 8px 16px;
+    align-items: left;
+    font-size: large;
+    color: rgba(0, 0, 0, 0.4000000059604645);
+    background-color: var(--dl-color-white-100);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: black;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text3 {
+    gap: 8px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .buttonSet2 {
+    margin-top: 5%;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .buttonStyle2 {
+    font-size: large;
+    width: 388px;
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: center;
+    color: white;
+    background-color: black;
+  }
   .LOGO {
-    top: 45px;
     left: 20px;
     width: 193px;
     height: 50px;

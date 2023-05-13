@@ -1,9 +1,10 @@
-function handleClick(){return;}
+function handleClick(){Window.alert("click");}
 function SignInButton(prop){
-    return(<div>
-        <img src={prop.src}></img>
-        <button name={prop} onClick={handleClick}>{prop.name}</button>
-    </div>
+    return(
+        <button name={prop} onClick={handleClick} className="buttonStyle">
+            <img src={prop.src}></img>
+            {prop.name}
+        </button>
     )
 }
 export default SignInButton;
