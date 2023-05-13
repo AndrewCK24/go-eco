@@ -1,5 +1,5 @@
 import SignInButton from "../components/SignInButton";
-import LogInForm from "../components/LogInForm";
+import SignInTable from "../components/SignInTable";
 function AuthenticationPage(){
     return(<div>
         <div className="page">
@@ -20,7 +20,7 @@ function AuthenticationPage(){
               Or with Email
             </div>
 
-            <LogInForm default1="Email" default2="Password"></LogInForm>
+            <SignInTable default1="Email" default2="Password"></SignInTable>
 
             <div>© 2023 GO ECO</div>
           </div>
