@@ -20,11 +20,7 @@ function AuthenticationPage(){
             <SignInTable default1="Email" default2="Password"></SignInTable>
             <div>© 2023 GO ECO</div>
           </div>
-          <img
-            src="public/assets/LOGO_GOECO.png"
-            alt="LOGO"
-            className="LOGO"
-          />
+          <img src="public/assets/LOGO_GOECO.png" className="LOGO" />
         </div>
     </div>
     )
