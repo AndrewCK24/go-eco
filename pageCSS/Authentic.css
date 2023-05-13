@@ -1,0 +1,118 @@
+.page {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container {
+    gap: 28px;
+    top: 10%;
+    display: flex;
+    padding: 100px;
+    position: absolute;
+    align-items: center;
+    border-radius: 16px;
+    border-style: solid;
+    border-color: green;
+    flex-direction: column;
+    background-color: white;
+  }
+  .textSet {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .text {
+    font-size: xx-large;
+  }
+  .text1 {
+    color: rgba(0, 0, 0, 0.4000000059604645);
+    height: auto;
+    text-align: center;
+    line-height: 20px;
+  }
+  .buttonSet {
+    gap: 16px;
+    display: flex;
+    align-items: flex-start;
+  }
+  .buttonStyle {
+    font-size: large;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    padding: 10px 10px;
+    text-align: center;
+    align-items: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    background-color: white;
+  }
+  .text2 {
+    color: rgba(0, 0, 0, 0.4000000059604645);
+    height: auto;
+    text-align: left;
+    line-height: 18px;
+  }
+  .inputSet {
+    gap: 16px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .inputStyle {
+    width: 388px;
+    height: 40px;
+    display: flex;
+    padding: 8px 16px;
+    align-items: left;
+    font-size: large;
+    color: rgba(0, 0, 0, 0.4000000059604645);
+    background-color: var(--dl-color-white-100);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: black;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text3 {
+    gap: 8px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  .buttonSet2 {
+    margin-top: 5%;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .buttonStyle2 {
+    font-size: large;
+    width: 388px;
+    display: flex;
+    padding: 8px 16px;
+    align-items: center;
+    border-radius: 8px;
+    justify-content: center;
+    color: white;
+    background-color: black;
+  }
+  .LOGO {
+    left: 20px;
+    width: 193px;
+    height: 50px;
+    position: absolute;
+  }
+  
+
+
+
+  
