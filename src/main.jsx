@@ -5,6 +5,6 @@ import '/pageCSS/Authentic.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthenticationPage />
+    <AuthenticationPage></AuthenticationPage>
   </React.StrictMode>,
 )

@@ -1,5 +1,5 @@
 import SignInButton from "../components/SignInButton";
-import SignInTable from "../components/SignInTable";
+import LogInForm from "../components/LogInForm";
 function AuthenticationPage(){
     return(<div>
         <div className="page">
@@ -10,17 +10,25 @@ function AuthenticationPage(){
                 <div>Your Social Campaigns</div>
               </div>
             </div>
+
             <div className="buttonSet">
             <SignInButton src="" name="Sign in with Google"></SignInButton>
             <SignInButton src="/assets/appleIcon.svg" name="Sign in with Apple"></SignInButton>
             </div>
+
             <div className="text2">
               Or with Email
             </div>
-            <SignInTable default1="Email" default2="Password"></SignInTable>
+
+            <LogInForm default1="Email" default2="Password"></LogInForm>
+
             <div>© 2023 GO ECO</div>
           </div>
-          <img src="public/assets/LOGO_GOECO.png" className="LOGO" />
+          <img
+            src="public/assets/LOGO_GOECO.png"
+            alt="LOGO"
+            className="LOGO"
+          />
         </div>
     </div>
     )
