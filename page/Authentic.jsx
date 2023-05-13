@@ -96,37 +96,10 @@ function AuthenticationPage(){
             className="authentication-sign-in-a-screenshot20230412at03102"
           />
         </div>
-      </div>
-
+        </div>
     </div>
     )
 }
 export default AuthenticationPage;
 
 
-{/* <div className="authentication-sign-in-a-google">
-                  <div className="authentication-sign-in-a-google1">
-                    <div className="authentication-sign-in-a-superg">
-                      <img
-                        src="public/assets/shapei339-7e79.svg"
-                        alt="ShapeI339"
-                        className="authentication-sign-in-a-shape"
-                      />
-                      <img
-                        src="public/assets/shapei339-jfp7.svg"
-                        alt="ShapeI339"
-                        className="authentication-sign-in-a-shape1"
-                      />
-                      <img
-                        src="public/assets/shapei339-xmvb.svg"
-                        alt="ShapeI339"
-                        className="authentication-sign-in-a-shape2"
-                      />
-                      <img
-                        src="public/assets/shapei339-igx.svg"
-                        alt="ShapeI339"
-                        className="authentication-sign-in-a-shape3"
-                      />
-                    </div>
-                  </div>
-                </div> */}
