@@ -1,5 +1,5 @@
 import SignInInput from "./SignInInput";
-function LogInForm(prop){
+function SignInTable(prop){
     return(<div>
         <div className="inputSet">
             <SignInInput default={prop.default1}></SignInInput>
@@ -20,4 +20,4 @@ function LogInForm(prop){
     </div>
     )
 }
-export default LogInForm;
+export default SignInTable;
