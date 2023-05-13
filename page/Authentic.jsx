@@ -13,7 +13,7 @@ function AuthenticationPage(){
 
             <div className="buttonSet">
             <SignInButton src="" name="Sign in with Google"></SignInButton>
-            <SignInButton src="" name="Sign in with Apple"></SignInButton>
+            <SignInButton src="/assets/appleIcon.svg" name="Sign in with Apple"></SignInButton>
             </div>
 
             <div className="text2">
