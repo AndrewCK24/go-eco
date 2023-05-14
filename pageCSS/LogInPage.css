@@ -1,14 +1,13 @@
-.page {
+.LogInPage {
     width: 100%;
     display: flex;
     overflow: auto;
-    min-height: 100vh;
     align-items: center;
     flex-direction: column;
   }
-  .container {
+  .LogInContainer {
     gap: 28px;
-    top: 10%;
+    top: 15%;
     display: flex;
     padding: 100px;
     position: absolute;
@@ -19,27 +18,27 @@
     flex-direction: column;
     background-color: white;
   }
-  .textSet {
+  .LogInTextSet {
     gap: 8px;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .text {
+  .LogInText {
     font-size: xx-large;
   }
-  .text1 {
+  .LogInText1 {
     color: rgba(0, 0, 0, 0.4000000059604645);
     height: auto;
     text-align: center;
     line-height: 20px;
   }
-  .buttonSet {
+  .LogInButtonSet {
     gap: 16px;
     display: flex;
     align-items: flex-start;
   }
-  .buttonStyle {
+  .LogInButtonStyle {
     font-size: larger;
     width: 200px;
     height: 50px;
@@ -53,23 +52,19 @@
     border-radius: 8px;
     background-color: white;
   }
-  .buttonStyle :hover{
-    background-color: grey;
-  }
-
-  .text2 {
+  .LogInText2 {
     color: rgba(0, 0, 0, 0.4000000059604645);
     height: auto;
     text-align: left;
     line-height: 18px;
   }
-  .inputSet {
+  .LogInInputSet {
     gap: 16px;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
   }
-  .inputStyle {
+  .LogInInputStyle {
     width: 388px;
     height: 40px;
     display: flex;
@@ -85,20 +80,20 @@
     flex-direction: column;
     justify-content: center;
   }
-  .text3 {
+  .LogInText3 {
     gap: 8px;
     display: flex;
     align-items: flex-end;
     flex-direction: column;
   }
-  .buttonSet2 {
+  .LogInButtonSet2 {
     margin-top: 5%;
     gap: 16px;
     display: flex;
     align-items: center;
     flex-direction: column;
   }
-  .buttonStyle2 {
+  .LogInButtonStyle2 {
     font-size: large;
     width: 388px;
     display: flex;
@@ -108,12 +103,6 @@
     justify-content: center;
     color: white;
     background-color: black;
-  }
-  .LOGO {
-    left: 20px;
-    width: 193px;
-    height: 50px;
-    position: absolute;
   }
   
 

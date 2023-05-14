@@ -1,0 +1,29 @@
+.Nav {
+    gap: 40px;
+    top: 2.5%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+  }
+  .text {
+    color: var(0, 0, 0, 0.4000000059604645);
+    font-size: xx-large;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .LogIn{
+    display: flex;
+    width: 5%;
+    height: auto;
+    right: 0%;
+    position: absolute;
+  }
+  .LOGO {
+    left: 20px;
+    width: 193px;
+    height: 50px;
+    position: absolute;
+  }

@@ -1,22 +1,23 @@
 import LogInButton from "./components/LogInButton";
 import LogInTable from "./components/LogInTable";
+import '../pageCSS/LogInPage.css'
 function LogInPage(){
     return(<div>
-        <div className="page">
-          <div className="container">
-            <div className="textSet">
-              <div className="text">Sign In</div>
-              <div className="text1">
+        <div className="LogInPage">
+          <div className="LogInContainer">
+            <div className="LogInTextSet">
+              <div className="LogInText">Sign In</div>
+              <div className="LogInText1">
                 <div>Your Social Campaigns</div>
               </div>
             </div>
 
-            <div className="buttonSet">
+            <div className="LogInButtonSet">
             <LogInButton src="" name="Sign in with Google"></LogInButton>
             <LogInButton src="/assets/appleIcon.svg" name="Sign in with Apple"></LogInButton>
             </div>
 
-            <div className="text2">
+            <div className="LogInText2">
               Or with Email
             </div>
 
@@ -24,11 +25,6 @@ function LogInPage(){
 
             <div>© 2023 GO ECO</div>
           </div>
-          <img
-            src="/assets/LOGO_GOECO.png"
-            alt="LOGO"
-            className="LOGO"
-          />
         </div>
     </div>
     )
