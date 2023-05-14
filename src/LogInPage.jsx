@@ -1,5 +1,5 @@
-import LogInButton from "../components/LogInButton";
-import LogInTable from "../components/LogInTable";
+import LogInButton from "./components/LogInButton";
+import LogInTable from "./components/LogInTable";
 function LogInPage(){
     return(<div>
         <div className="page">
@@ -25,7 +25,7 @@ function LogInPage(){
             <div>© 2023 GO ECO</div>
           </div>
           <img
-            src="public/assets/LOGO_GOECO.png"
+            src="/assets/LOGO_GOECO.png"
             alt="LOGO"
             className="LOGO"
           />
