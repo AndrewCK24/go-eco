@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import AuthenticationPage from '../page/Authentic'
-import '/pageCSS/Authentic.css'
+import LogInPage from '../page/LogInPage'
+import '/pageCSS/LogInPage.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthenticationPage></AuthenticationPage>
+    <LogInPage></LogInPage>
   </React.StrictMode>,
 )

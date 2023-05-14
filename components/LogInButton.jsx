@@ -1,5 +1,5 @@
 function handleClick(){alert("click");}
-function SignInButton(prop){
+function LogInButton(prop){
     return(
         <button name={prop} onClick={handleClick} className="buttonStyle">
             <img src={prop.src}></img>
@@ -7,4 +7,4 @@ function SignInButton(prop){
         </button>
     )
 }
-export default SignInButton;
+export default LogInButton;

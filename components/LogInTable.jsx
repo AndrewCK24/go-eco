@@ -1,10 +1,10 @@
-import SignInInput from "./SignInInput";
-function SignInTable(prop){
+import LogInInput from "./LogInInput";
+function LogInTable(prop){
     return(<div>
         <div className="inputSet">
-            <SignInInput default={prop.default1}></SignInInput>
+            <LogInInput default={prop.default1}></LogInInput>
             <div className="text3">
-                <SignInInput default={prop.default2}></SignInInput>
+                <LogInInput default={prop.default2}></LogInInput>
                 <a href="#page">Forgot Password?</a>
             </div>
         </div>
@@ -20,4 +20,4 @@ function SignInTable(prop){
     </div>
     )
 }
-export default SignInTable;
+export default LogInTable;

@@ -1,6 +1,6 @@
-import SignInButton from "../components/SignInButton";
-import SignInTable from "../components/SignInTable";
-function AuthenticationPage(){
+import LogInButton from "../components/LogInButton";
+import LogInTable from "../components/LogInTable";
+function LogInPage(){
     return(<div>
         <div className="page">
           <div className="container">
@@ -12,15 +12,15 @@ function AuthenticationPage(){
             </div>
 
             <div className="buttonSet">
-            <SignInButton src="" name="Sign in with Google"></SignInButton>
-            <SignInButton src="/assets/appleIcon.svg" name="Sign in with Apple"></SignInButton>
+            <LogInButton src="" name="Sign in with Google"></LogInButton>
+            <LogInButton src="/assets/appleIcon.svg" name="Sign in with Apple"></LogInButton>
             </div>
 
             <div className="text2">
               Or with Email
             </div>
 
-            <SignInTable default1="Email" default2="Password"></SignInTable>
+            <LogInTable default1="Email" default2="Password"></LogInTable>
 
             <div>© 2023 GO ECO</div>
           </div>
@@ -33,6 +33,6 @@ function AuthenticationPage(){
     </div>
     )
 }
-export default AuthenticationPage;
+export default LogInPage;
 
 
