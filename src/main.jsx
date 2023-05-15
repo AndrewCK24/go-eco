@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import NavBar from './components/NAvBar'
+import BottomNav from './components/BottomNav'
 import HomePage from './HomePage'
 import LogInPage from './LogInPage'
 import { HashRouter, Route, Routes } from 'react-router-dom'
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/LogInPage" element={<LogInPage />} />
         <Route path="/EventCreatePage" element={<EventCreatePage />} />
       </Routes>
+    <BottomNav />
     </HashRouter>
   </React.StrictMode>,
 )
