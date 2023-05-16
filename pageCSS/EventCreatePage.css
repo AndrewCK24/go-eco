@@ -15,18 +15,16 @@
   .ECP_Text1 {
     color: rgba(0, 0, 0, 1);
     width: 100%;
-    text-align: center;
     height: auto;
-    position: absolute;
     font-size: 32px;
     font-weight: 700;
+    text-align: center;
     display: flex;
-    background-color: black;
+    flex-direction: column;
   }
   .ECP_YellowBlock {
     height: 258px;
     width: 100%;
-    position: absolute;
     align-items: flex-start;
     border-radius: 24px;
     background-color: rgba(213, 217, 8, 0.17000000178813934);
@@ -41,18 +39,15 @@
     top: 56px;
     left: 5%;
     display: flex;
-    position: absolute;
+    position: relative;
     align-items: flex-start;
     flex-direction: column;
-    background-color: black;
   }
   .ECP_YBRightText {
-    top: 92px;
-    left: 607px;
     width: 100%;
     height: 75px;
     display: grid;
-    position: absolute;
+    position: relative;
     align-items: center;
     grid-column:1fr 1fr 1fr
   } 
@@ -86,39 +81,34 @@
     height: 231.52268981933594px;
     display: flex;
     overflow: hidden;
-    position: absolute;
     align-items: flex-start;
     border-radius: 15px;
     background-color: rgba(179, 230, 193, 0.5);
   }
   .ECP_GBText1 {
     top: 55.308197021484375px;
-    left: 196px;
     color: rgba(0, 0, 0, 1);
-    width: 241px;
     height: auto;
-    position: absolute;
+    position: relative;
     font-size: 32px;
     font-weight: 700;
+    background-color: black;  
   }
   .ECP_GBText2 {
     top: 123.47876739501953px;
-    left: 213px;
     color: rgba(0, 0, 0, 1);
-    width: 206px;
     height: auto;
-    position: absolute;
+    position: relative;
     font-size: 24px;
     font-weight: 400;
+    background-color: black; 
   }
   .ECP_BlueBlock {
-    right: 0%;
+    margin-right: 0%;
     width: 45%;
     height: 231.52268981933594px;
     display: flex;
-    position: absolute;
     align-items: flex-start;
-    flex-shrink: 0;
     border-radius: 15px;
     background-color: rgba(180, 221, 231, 0.5);
   }
@@ -128,7 +118,7 @@
     color: rgba(0, 0, 0, 1);
     width: 290px;
     height: auto;
-    position: absolute;
+    position: relative;
     font-size: 32px;
     font-weight: 700;
   }
@@ -138,31 +128,28 @@
     color: rgba(0, 0, 0, 1);
     width: 182px;
     height: auto;
-    position: absolute;
+    position: relative;
     font-size: 24px;
     font-weight: 400;
   }
   .ECP_Text2 {
-    top: 835px;
     color: rgba(0, 0, 0, 1);
     width: 100%;
-    text-align: center;
     height: auto;
-    position: absolute;
     font-size: 32px;
     font-weight: 700;
+    text-align: center;
     display: flex;
+    flex-direction: column;
   }
   .ECP_Text3 {
-    top: 835px;
     color: rgba(0, 0, 0, 1);
     width: 100%;
     height: auto;
-    position: relative;
     font-size: 32px;
     font-weight: 700;
     display: flex;
-    background-color: black;
+    flex-direction: column;
   }
   
   
