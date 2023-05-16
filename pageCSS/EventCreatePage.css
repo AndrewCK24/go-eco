@@ -9,13 +9,14 @@
     top: 15%;
     display: flex;
     position: absolute;
-    align-items: center;
     flex-direction: column;
   }
   .ECP_Text1 {
     color: rgba(0, 0, 0, 1);
     width: 100%;
     height: auto;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
     font-size: 32px;
     font-weight: 700;
     text-align: center;
@@ -34,6 +35,7 @@
   }
   .ECP_YBLeftText {
     width: 100%;
+    height: auto;
     font-weight: 700;
     font-size: xx-large;
     top: 56px;
@@ -45,97 +47,80 @@
   }
   .ECP_YBRightText {
     width: 100%;
-    height: 75px;
+    height: auto;
     display: grid;
     position: relative;
     align-items: center;
-    grid-column:1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr;
   } 
   .ECP_YBRightTextCol {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    align-items: center;
   }
   .ECP_YBRightTextRow1 {
     color: var(--dl-color-default-color2);
     height: auto;
     font-size: 32px;
-    text-align: left;
     font-weight: 500;
+    align-items: center;
   }
   .ECP_YBRightTextRow2 {
     color: var(--dl-color-default-color2);
     height: auto;
     font-size: 18px;
-    text-align: left;
     font-weight: 500;
+    align-items: center;
   }
   .ECP_Proposals{
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     overflow: hidden;
   }
   .ECP_GreenBlock {
-    left: 0%;
-    width: 45%;
+    width: 90%;
     height: 231.52268981933594px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     overflow: hidden;
-    align-items: flex-start;
     border-radius: 15px;
     background-color: rgba(179, 230, 193, 0.5);
+    text-decoration: none;
   }
-  .ECP_GBText1 {
-    top: 55.308197021484375px;
+  .ECP_BText1 {
+    top: 30%;
     color: rgba(0, 0, 0, 1);
-    height: auto;
     position: relative;
     font-size: 32px;
     font-weight: 700;
-    background-color: black;  
   }
-  .ECP_GBText2 {
-    top: 123.47876739501953px;
+  .ECP_BText2 {
+    top: 35%;
     color: rgba(0, 0, 0, 1);
-    height: auto;
     position: relative;
     font-size: 24px;
     font-weight: 400;
-    background-color: black; 
   }
   .ECP_BlueBlock {
-    margin-right: 0%;
-    width: 45%;
+    width: 90%;
     height: 231.52268981933594px;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     border-radius: 15px;
     background-color: rgba(180, 221, 231, 0.5);
-  }
-  .ECP_BBText1 {
-    top: 25%;
-    left: 171px;
-    color: rgba(0, 0, 0, 1);
-    width: 290px;
-    height: auto;
-    position: relative;
-    font-size: 32px;
-    font-weight: 700;
-  }
-  .ECP_BBText2 {
-    top: 50%;
-    left: 225px;
-    color: rgba(0, 0, 0, 1);
-    width: 182px;
-    height: auto;
-    position: relative;
-    font-size: 24px;
-    font-weight: 400;
+    text-decoration: none;
+    background-color: black;
   }
   .ECP_Text2 {
     color: rgba(0, 0, 0, 1);
     width: 100%;
     height: auto;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
     font-size: 32px;
     font-weight: 700;
     text-align: center;
