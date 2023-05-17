@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import svgr from 'vite-plugin-svgr'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import svgr from "vite-plugin-svgr";
 // FIXME: Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite-plugin-svgr' imported from D:\GitHub\goeco\vite.config.js.timestamp-1684334456360-52640d2e4a6ad.mjs
 //     at new NodeError (node:internal/errors:399:5)
 //     at packageResolve (node:internal/modules/esm/resolve:889:9)
@@ -15,4 +15,4 @@ import svgr from 'vite-plugin-svgr'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), svgr()],
-})
+});

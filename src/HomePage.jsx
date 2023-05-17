@@ -1,7 +1,7 @@
-function HomePage(){
-    return(<div>
-        
-    </div>
-    )
-}
+import styled from "@emotion/styled";
+
+const HomePage = () => {
+  return <div></div>;
+};
+
 export default HomePage;
