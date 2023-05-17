@@ -1,4 +1,3 @@
-import React from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import styled from "@emotion/styled";
 import NavBar from "./components/Nav/NavBar";

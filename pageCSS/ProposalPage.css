@@ -6,132 +6,132 @@
     flex-direction: column;
  } 
  .ProposalContainer {
-    gap: 28px;
+    gap: 28rem;
     top: 15%;
     display: flex;
-    padding: 100px;
+    padding: 100rem;
     position: absolute;
     align-items: center;
-    border-radius: 16px;
+    border-radius: 16rem;
     border-style: solid;
     border-color: green;
     flex-direction: column;
     background-color: white;
   }
   .frame82-text006 {
-    top: 157px;
-    left: 561px;
+    top: 157rem;
+    left: 561rem;
     color: rgba(0, 0, 0, 1);
     height: auto;
     position: absolute;
-    font-size: 36px;
+    font-size: 36rem;
     text-align: left;
     font-weight: 700;
   }
   .frame82-text008 {
-    top: 289px;
-    left: 128px;
+    top: 289rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 182px;
+    width: 182rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-weight: 500;
   }
   .frame82-text010 {
-    top: 437px;
-    left: 128px;
+    top: 437rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 182px;
+    width: 182rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-weight: 500;
   }
   .frame82-text015 {
-    top: 554px;
-    left: 128px;
+    top: 554rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 182px;
+    width: 182rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-weight: 500;
   }
   .frame82-text020 {
-    top: 648px;
-    left: 128px;
+    top: 648rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 182px;
+    width: 182rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-weight: 500;
   }
   .frame82-text025 {
-    top: 742px;
-    left: 128px;
+    top: 742rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 182px;
+    width: 182rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-weight: 500;
   }
   .frame82-text030 {
-    top: 830px;
-    left: 128px;
+    top: 830rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 182px;
+    width: 182rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-weight: 500;
   }
   .frame82-text032 {
-    top: 916px;
-    left: 128px;
+    top: 916rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 213px;
+    width: 213rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-weight: 500;
   }
   .frame82-text034 {
-    top: 1042px;
-    left: 128px;
+    top: 1042rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 213px;
+    width: 213rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-weight: 500;
   }
   .frame82-text036 {
-    top: 1159px;
-    left: 128px;
+    top: 1159rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 291px;
+    width: 291rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -141,25 +141,25 @@
     text-decoration: none;
   }
   .frame82-text038 {
-    top: 1694px;
-    left: 128px;
+    top: 1694rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 291px;
+    width: 291rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-weight: 500;
   }
   .frame82-text043 {
-    top: 1828px;
-    left: 128px;
+    top: 1828rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 291px;
+    width: 291rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -169,13 +169,13 @@
     text-decoration: none;
   }
   .frame82-text048 {
-    top: 1958px;
-    left: 128px;
+    top: 1958rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 291px;
+    width: 291rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -185,13 +185,13 @@
     text-decoration: none;
   }
   .frame82-text050 {
-    top: 2035px;
-    left: 128px;
+    top: 2035rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 291px;
+    width: 291rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -201,13 +201,13 @@
     text-decoration: none;
   }
   .frame82-text052 {
-    top: 2136px;
-    left: 128px;
+    top: 2136rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 291px;
+    width: 291rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -217,13 +217,13 @@
     text-decoration: none;
   }
   .frame82-text054 {
-    top: 2274px;
-    left: 128px;
+    top: 2274rem;
+    left: 128rem;
     color: rgba(0, 0, 0, 1);
-    width: 291px;
+    width: 291rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -233,13 +233,13 @@
     text-decoration: none;
   }
   .frame82-text059 {
-    top: 2481px;
-    left: 711px;
+    top: 2481rem;
+    left: 711rem;
     color: rgba(89, 151, 106, 1);
-    width: 124px;
+    width: 124rem;
     height: auto;
     position: absolute;
-    font-size: 26px;
+    font-size: 26rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -249,13 +249,13 @@
     text-decoration: none;
   }
   .frame82-text064 {
-    top: 2283px;
-    left: 480px;
+    top: 2283rem;
+    left: 480rem;
     color: rgba(0, 0, 0, 0.6499999761581421);
-    width: 406px;
+    width: 406rem;
     height: auto;
     position: absolute;
-    font-size: 16px;
+    font-size: 16rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -265,13 +265,13 @@
     text-decoration: none;
   }
   .frame82-text069 {
-    top: 2328px;
-    left: 480px;
+    top: 2328rem;
+    left: 480rem;
     color: rgba(0, 0, 0, 0.6499999761581421);
-    width: 917px;
+    width: 917rem;
     height: auto;
     position: absolute;
-    font-size: 16px;
+    font-size: 16rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -281,178 +281,178 @@
     text-decoration: none;
   }
   .frame82-rectangle34624081 {
-    top: 289px;
-    left: 408px;
-    width: 1000px;
-    height: 41px;
+    top: 289rem;
+    left: 408rem;
+    width: 1000rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624082 {
-    top: 437px;
-    left: 408px;
-    width: 1000px;
-    height: 41px;
+    top: 437rem;
+    left: 408rem;
+    width: 1000rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624083 {
-    top: 554px;
-    left: 407px;
-    width: 349px;
-    height: 41px;
+    top: 554rem;
+    left: 407rem;
+    width: 349rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624084 {
-    top: 648px;
-    left: 407px;
-    width: 349px;
-    height: 41px;
+    top: 648rem;
+    left: 407rem;
+    width: 349rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624085 {
-    top: 1694px;
-    left: 407px;
-    width: 349px;
-    height: 41px;
+    top: 1694rem;
+    left: 407rem;
+    width: 349rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624090 {
-    top: 1828px;
-    left: 407px;
-    width: 349px;
-    height: 41px;
+    top: 1828rem;
+    left: 407rem;
+    width: 349rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624095 {
-    top: 1960px;
-    left: 410px;
-    width: 997px;
-    height: 41px;
+    top: 1960rem;
+    left: 410rem;
+    width: 997rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624096 {
-    top: 2040px;
-    left: 410px;
-    width: 997px;
-    height: 41px;
+    top: 2040rem;
+    left: 410rem;
+    width: 997rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624092 {
-    top: 2285px;
-    left: 449px;
-    width: 18px;
-    height: 18px;
+    top: 2285rem;
+    left: 449rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 4px;
+    border-width: 1rem;
+    border-radius: 4rem;
   }
   .frame82-rectangle34624093 {
-    top: 2332px;
-    left: 449px;
-    width: 18px;
-    height: 18px;
+    top: 2332rem;
+    left: 449rem;
+    width: 18rem;
+    height: 18rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 4px;
+    border-width: 1rem;
+    border-radius: 4rem;
   }
   .frame82-rectangle34624091 {
-    top: 2136px;
-    left: 410px;
-    width: 1003px;
-    height: 41px;
+    top: 2136rem;
+    left: 410rem;
+    width: 1003rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624088 {
-    top: 1042px;
-    left: 408px;
-    width: 1000px;
-    height: 41px;
+    top: 1042rem;
+    left: 408rem;
+    width: 1000rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624086 {
-    top: 830px;
-    left: 407px;
-    width: 1001px;
-    height: 41px;
+    top: 830rem;
+    left: 407rem;
+    width: 1001rem;
+    height: 41rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624087 {
-    top: 916px;
-    left: 407px;
-    width: 1001px;
-    height: 85px;
+    top: 916rem;
+    left: 407rem;
+    width: 1001rem;
+    height: 85rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-rectangle34624089 {
-    top: 1159px;
-    left: 407px;
-    width: 1001px;
-    height: 432px;
+    top: 1159rem;
+    left: 407rem;
+    width: 1001rem;
+    height: 432rem;
     position: absolute;
     border-color: rgba(0, 0, 0, 0.30000001192092896);
     border-style: solid;
-    border-width: 1px;
-    border-radius: 10px;
+    border-width: 1rem;
+    border-radius: 10rem;
   }
   .frame82-text071 {
-    top: 343px;
-    left: 408px;
+    top: 343rem;
+    left: 408rem;
     color: rgba(0, 0, 0, 0.5);
-    width: 1000px;
+    width: 1000rem;
     height: auto;
     position: absolute;
-    font-size: 12px;
+    font-size: 12rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -468,13 +468,13 @@
     text-decoration: UNDERLINE;
   }
   .frame82-text075 {
-    top: 486px;
-    left: 408px;
+    top: 486rem;
+    left: 408rem;
     color: rgba(0, 0, 0, 0.5);
-    width: 1000px;
+    width: 1000rem;
     height: auto;
     position: absolute;
-    font-size: 12px;
+    font-size: 12rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -490,13 +490,13 @@
     text-decoration: UNDERLINE;
   }
   .frame82-text079 {
-    top: 1091px;
-    left: 410px;
+    top: 1091rem;
+    left: 410rem;
     color: rgba(0, 0, 0, 0.5);
-    width: 1000px;
+    width: 1000rem;
     height: auto;
     position: absolute;
-    font-size: 12px;
+    font-size: 12rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -506,13 +506,13 @@
     text-decoration: none;
   }
   .frame82-text081 {
-    top: 1599px;
-    left: 410px;
+    top: 1599rem;
+    left: 410rem;
     color: rgba(0, 0, 0, 0.5);
-    width: 1000px;
+    width: 1000rem;
     height: auto;
     position: absolute;
-    font-size: 12px;
+    font-size: 12rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -522,13 +522,13 @@
     text-decoration: none;
   }
   .frame82-text083 {
-    top: 2185px;
-    left: 412px;
+    top: 2185rem;
+    left: 412rem;
     color: rgba(0, 0, 0, 0.5);
-    width: 1000px;
+    width: 1000rem;
     height: auto;
     position: absolute;
-    font-size: 12px;
+    font-size: 12rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -538,13 +538,13 @@
     text-decoration: none;
   }
   .frame82-text085 {
-    top: 2382px;
-    left: 480px;
+    top: 2382rem;
+    left: 480rem;
     color: rgba(0, 0, 0, 0.5);
-    width: 927px;
+    width: 927rem;
     height: auto;
     position: absolute;
-    font-size: 12px;
+    font-size: 12rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -560,64 +560,64 @@
     text-decoration: UNDERLINE;
   }
   .frame82-rectangle34624094 {
-    top: 2469px;
-    left: 683px;
-    width: 185px;
-    height: 59px;
+    top: 2469rem;
+    left: 683rem;
+    width: 185rem;
+    height: 59rem;
     position: absolute;
     border-color: rgba(89, 151, 106, 1);
     border-style: solid;
-    border-width: 3px;
-    border-radius: 6px;
+    border-width: 3rem;
+    border-radius: 6rem;
   }
   .frame82-line238 {
-    top: 211px;
-    left: 559px;
-    width: 394px;
-    height: 1px;
+    top: 211rem;
+    left: 559rem;
+    width: 394rem;
+    height: 1rem;
     position: absolute;
   }
   .frame82-avatar {
-    gap: 10px;
-    top: 55px;
-    left: 1221px;
-    width: 171px;
-    height: 59px;
+    gap: 10rem;
+    top: 55rem;
+    left: 1221rem;
+    width: 171rem;
+    height: 59rem;
     display: flex;
-    padding: 8px 7px;
+    padding: 8rem 7rem;
     position: absolute;
     align-items: flex-start;
     flex-shrink: 0;
     flex-direction: column;
   }
   .frame82-frame21 {
-    gap: 118px;
+    gap: 118rem;
     display: flex;
-    padding: 8px;
+    padding: 8rem;
     align-items: center;
   }
   .frame82-group28 {
-    width: 128px;
-    height: 28px;
+    width: 128rem;
+    height: 28rem;
     display: flex;
     position: relative;
     align-items: flex-start;
     flex-shrink: 1;
   }
   .frame82-ellipse1 {
-    top: 0px;
-    left: 0px;
-    width: 28px;
-    height: 28px;
+    top: 0rem;
+    left: 0rem;
+    width: 28rem;
+    height: 28rem;
     position: absolute;
   }
   .frame82-text089 {
-    top: 2px;
-    left: 36px;
+    top: 2rem;
+    left: 36rem;
     color: var(--dl-color-default-text);
     height: auto;
     position: absolute;
-    font-size: 16px;
+    font-size: 16rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -627,10 +627,10 @@
     text-decoration: none;
   }
   .frame82-footer {
-    top: 2577px;
-    left: -1px;
-    width: 1514px;
-    height: 400px;
+    top: 2577rem;
+    left: -1rem;
+    width: 1514rem;
+    height: 400rem;
     display: flex;
     overflow: hidden;
     position: absolute;
@@ -639,11 +639,11 @@
     background-color: var(--dl-color-default-color2);
   }
   .frame82-frame52 {
-    gap: 24px;
-    top: 109px;
-    left: 97px;
-    width: 189px;
-    height: 65px;
+    gap: 24rem;
+    top: 109rem;
+    left: 97rem;
+    width: 189rem;
+    height: 65rem;
     display: flex;
     position: absolute;
     align-items: center;
@@ -651,82 +651,82 @@
     flex-direction: column;
   }
   .frame82-frame50 {
-    gap: 24px;
-    width: 156px;
-    height: 59px;
+    gap: 24rem;
+    width: 156rem;
+    height: 59rem;
     display: flex;
-    padding: 0 0 0 1px;
+    padding: 0 0 0 1rem;
     align-items: flex-start;
     flex-shrink: 0;
     flex-direction: column;
   }
   .frame82-vector {
-    top: 180px;
-    left: 258px;
-    width: 23px;
-    height: 19px;
+    top: 180rem;
+    left: 258rem;
+    width: 23rem;
+    height: 19rem;
     position: absolute;
   }
   .frame82-group12 {
-    top: 174px;
-    left: 175px;
-    width: 48px;
-    height: 48px;
+    top: 174rem;
+    left: 175rem;
+    width: 48rem;
+    height: 48rem;
     display: flex;
     position: absolute;
     align-items: flex-start;
     flex-shrink: 1;
   }
   .frame82-ellipse3 {
-    top: 0px;
-    left: 0px;
-    width: 48px;
-    height: 48px;
+    top: 0rem;
+    left: 0rem;
+    width: 48rem;
+    height: 48rem;
     position: absolute;
     border-color: rgba(30, 30, 30, 0.5);
     border-style: solid;
-    border-width: 1px;
+    border-width: 1rem;
   }
   .frame82-riinstagramfill {
-    top: 3px;
-    left: 11px;
-    width: 26px;
-    height: 25px;
+    top: 3rem;
+    left: 11rem;
+    width: 26rem;
+    height: 25rem;
     position: absolute;
   }
   .frame82-group11 {
-    top: 174px;
-    left: 110px;
-    width: 236.5px;
-    height: 55px;
+    top: 174rem;
+    left: 110rem;
+    width: 236.5rem;
+    height: 55rem;
     display: flex;
     position: absolute;
     align-items: flex-start;
     flex-shrink: 1;
   }
   .frame82-ggfacebook {
-    top: 3px;
-    left: 0px;
-    width: 30px;
-    height: 25px;
+    top: 3rem;
+    left: 0rem;
+    width: 30rem;
+    height: 25rem;
     position: absolute;
   }
   .frame82-ellipse2 {
-    top: 0px;
-    left: 181px;
-    width: 55px;
-    height: 55px;
+    top: 0rem;
+    left: 181rem;
+    width: 55rem;
+    height: 55rem;
     position: absolute;
     border-color: rgba(30, 30, 30, 0.75);
     border-style: solid;
-    border-width: 1px;
+    border-width: 1rem;
   }
   .frame82-frame56 {
-    gap: 40px;
-    top: 45px;
-    left: 980px;
-    width: 439px;
-    height: 180px;
+    gap: 40rem;
+    top: 45rem;
+    left: 980rem;
+    width: 439rem;
+    height: 180rem;
     display: flex;
     position: absolute;
     align-items: flex-start;
@@ -734,7 +734,7 @@
     background-color: rgba(30, 30, 30, 1);
   }
   .frame82-frame53 {
-    gap: 24px;
+    gap: 24rem;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -743,7 +743,7 @@
   .frame82-text091 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Bold;
     text-align: left;
     font-family: Poppins;
@@ -755,7 +755,7 @@
   .frame82-text093 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Regular;
     text-align: left;
     font-family: Poppins;
@@ -767,7 +767,7 @@
   .frame82-text095 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Regular;
     text-align: left;
     font-family: Poppins;
@@ -779,7 +779,7 @@
   .frame82-text097 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Regular;
     text-align: left;
     font-family: Poppins;
@@ -789,7 +789,7 @@
     text-decoration: none;
   }
   .frame82-frame54 {
-    gap: 24px;
+    gap: 24rem;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -798,7 +798,7 @@
   .frame82-text099 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Bold;
     text-align: left;
     font-family: Poppins;
@@ -810,7 +810,7 @@
   .frame82-text101 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Regular;
     text-align: left;
     font-family: Poppins;
@@ -822,7 +822,7 @@
   .frame82-text103 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Regular;
     text-align: left;
     font-family: Poppins;
@@ -834,7 +834,7 @@
   .frame82-text105 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Regular;
     text-align: left;
     font-family: Poppins;
@@ -844,7 +844,7 @@
     text-decoration: none;
   }
   .frame82-frame55 {
-    gap: 24px;
+    gap: 24rem;
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -853,7 +853,7 @@
   .frame82-text107 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Bold;
     text-align: left;
     font-family: Poppins;
@@ -865,7 +865,7 @@
   .frame82-text109 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Regular;
     text-align: left;
     font-family: Poppins;
@@ -877,7 +877,7 @@
   .frame82-text111 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Regular;
     text-align: left;
     font-family: Poppins;
@@ -889,7 +889,7 @@
   .frame82-text113 {
     color: rgba(217, 217, 217, 1);
     height: auto;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Regular;
     text-align: left;
     font-family: Poppins;
@@ -899,12 +899,12 @@
     text-decoration: none;
   }
   .frame82-text115 {
-    top: 325px;
-    left: 97px;
+    top: 325rem;
+    left: 97rem;
     color: rgba(217, 217, 217, 1);
     height: auto;
     position: absolute;
-    font-size: 18px;
+    font-size: 18rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;
@@ -914,20 +914,20 @@
     text-decoration: none;
   }
   .frame82-screenshot20230411at15262 {
-    top: 45px;
-    left: 103px;
-    width: 193px;
-    height: 50px;
+    top: 45rem;
+    left: 103rem;
+    width: 193rem;
+    height: 50rem;
     position: absolute;
   }
   .frame82-text117 {
-    top: 109px;
-    left: 103px;
+    top: 109rem;
+    left: 103rem;
     color: rgba(255, 255, 255, 1);
-    width: 253px;
+    width: 253rem;
     height: auto;
     position: absolute;
-    font-size: 16px;
+    font-size: 16rem;
     font-style: Medium;
     text-align: left;
     font-family: Poppins;

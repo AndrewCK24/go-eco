@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 function Single(){
     const style={
         width: '100%',
-        height: '231.52268981933594px',
+        height: '231.52268981933594rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         overflow: 'hidden',
-        borderRadius: '15px',
+        borderRadius: '15rem',
         backgroundColor: ' rgba(179, 230, 193, 0.5)',
         textDecoration: 'none'
     };
@@ -16,7 +16,7 @@ function Single(){
         color: 'rgba(0, 0, 0, 1)',
         position: 'relative',
         display: 'flex',
-        fontSize: '32px',
+        fontSize: '32rem',
         fontWeight: '700'
     };
     const text2={
@@ -24,7 +24,7 @@ function Single(){
         color: 'rgba(0, 0, 0, 1)',
         position: 'relative',
         display: 'flex',
-        fontSize: '24px',
+        fontSize: '24rem',
         fontWeight: '400'
     };
     return(<Link to="/EventCreatePage/ProposalPage" style={style}>

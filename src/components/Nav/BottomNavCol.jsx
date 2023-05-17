@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 function BottomNavCol(prop){
     const col={
-        gap: '24px',
+        gap: '24rem',
         display: 'flex',
         alignItems: 'flex-start',
         flexDirection: 'column',
@@ -9,7 +9,7 @@ function BottomNavCol(prop){
     };
     const row={
         color: 'rgba(217, 217, 217, 1)',
-        fontSize: '18px',
+        fontSize: '18rem',
         fontWeight: '700',
         textDecoration: 'none'
     };

@@ -3,11 +3,11 @@ function Longterm(){
     const style={
         width: '100%',
         display: 'flex',
-        height: '231.52268981933594px',
+        height: '231.52268981933594rem',
         flexDirection: 'column',
         alignItems: 'center',
         overflow: 'hidden',
-        borderRadius: '15px',
+        borderRadius: '15rem',
         backgroundColor: 'rgba(180, 221, 231, 0.5)',
         textDecoration: 'none'
     };
@@ -16,7 +16,7 @@ function Longterm(){
         color: 'rgba(0, 0, 0, 1)',
         position: 'relative',
         display: 'flex',
-        fontSize: '32px',
+        fontSize: '32rem',
         fontWeight: '700'
     };
     const text2={
@@ -24,7 +24,7 @@ function Longterm(){
         color: 'rgba(0, 0, 0, 1)',
         position: 'relative',
         display: 'flex',
-        fontSize: '24px',
+        fontSize: '24rem',
         fontWeight: '400'
     };
     return(<Link to="/EventCreatePage/ProposalPage" style={style}>  
