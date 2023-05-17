@@ -16,7 +16,7 @@ const Container = styled.div`
   padding: 0;
   display: flex;
   font-size: 16px;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const App = () => {
