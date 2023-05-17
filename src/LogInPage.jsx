@@ -1,5 +1,5 @@
-import LogInButton from "./components/LogInButton";
-import LogInTable from "./components/LogInTable";
+import LogInButton from "./components/LogInPage/LogInButton";
+import LogInTable from "./components/LogInPage/LogInTable";
 import '../pageCSS/LogInPage.css'
 function LogInPage(){
     return(<div>

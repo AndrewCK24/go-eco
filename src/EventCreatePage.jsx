@@ -1,6 +1,6 @@
 import "../pageCSS/EventCreatePage.css"
-import Single from "./components/Single";
-import Longterm from "./components/Longterm";
+import Single from "./components/EventCreatePage/Single";
+import Longterm from "./components/EventCreatePage/Longterm";
 function EventCreatePage(){
   return(<div className="EventCreatePage">
     <div className="ECP_Container">

@@ -1,4 +1,4 @@
-import "../../pageCSS/BottomNav.css"
+import "../../../pageCSS/BottomNav.css"
 import BottomNavCol from "./BottomNavCol";
 function BottomNav(){
     return(<div className="Footer">
