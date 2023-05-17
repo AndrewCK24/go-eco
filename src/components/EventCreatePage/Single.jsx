@@ -27,7 +27,7 @@ function Single(){
         fontSize: '24px',
         fontWeight: '400'
     };
-    return(<Link path="/" style={style}>
+    return(<Link to="/EventCreatePage/ProposalPage" style={style}>
         <div style={text1}>Single activity</div>
         <div style={text2}>For only one time</div> 
     </Link>

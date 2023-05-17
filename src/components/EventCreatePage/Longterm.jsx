@@ -27,7 +27,7 @@ function Longterm(){
         fontSize: '24px',
         fontWeight: '400'
     };
-    return(<Link path="/" style={style}>  
+    return(<Link to="/EventCreatePage/ProposalPage" style={style}>  
         <div style={text1}>Longterm project</div>
         <div style={text2}>For continuous</div>
     </Link>

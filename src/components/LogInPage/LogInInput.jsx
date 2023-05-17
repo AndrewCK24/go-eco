@@ -1,6 +1,6 @@
 function LogInInput(prop){
     return(<div>
-        <input defaultValue={prop.default} className="LogInInputStyle">{prop.name}</input>
+        <input defaultValue={prop.default} className="LogInInputStyle" />
     </div>
     )
 }
