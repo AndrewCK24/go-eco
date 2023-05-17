@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 // import "../../../pageCSS/BottomNav.css";
 import BottomNavCol from "./BottomNavCol";
+import { ReactComponent as Logo } from "../../../public/favicon.svg";
 
 const Footer = styled.div`
   margin-top: 100%;
@@ -21,6 +22,16 @@ const LeftFooterText = styled.div`
   position: absolute;
   font-size: larger;
   font-weight: 700;
+`;
+
+const IconContainer = styled.div`
+  svg {
+    top: 45px;
+    left: 103px;
+    width: 193px;
+    height: 50px;
+    position: absolute;
+  }
 `;
 
 const RightFooter = styled.div`
@@ -54,7 +65,9 @@ const BottomNav = () => {
   return (
     <Footer>
       <LeftFooter>
-        <img src="/assets/LOGO_GOECO.png" className="F_Picture" />
+        <IconContainer>
+          <Logo />
+        </IconContainer>
         {/* Icons */}
         <LeftFooterText>
           The earth is a fine place
@@ -81,9 +94,7 @@ const BottomNav = () => {
           text3="Pricing"
           text4="Resources"
         />
-        <FooterText>
-          2023 all Right Reserved Term of use GO ECO
-        </FooterText>
+        <FooterText>2023 all Right Reserved Term of use GO ECO</FooterText>
       </RightFooter>
     </Footer>
   );
