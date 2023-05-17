@@ -32,6 +32,24 @@ const RightFooter = styled.div`
   background-color: rgba(30, 30, 30, 1);
 `;
 
+const RightFooterRow = styled.div`
+  color: rgba(217, 217, 217, 1);
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+`;
+
+const FooterText = styled.div`
+  top: 325px;
+  left: 97px;
+  color: rgba(217, 217, 217, 1);
+  position: absolute;
+  font-size: 18px;
+  font-style: Medium;
+  text-align: right;
+  font-weight: 700;
+`;
+
 const BottomNav = () => {
   return (
     <Footer>
@@ -63,9 +81,9 @@ const BottomNav = () => {
           text3="Pricing"
           text4="Resources"
         />
-        <div className="FooterText">
+        <FooterText>
           2023 all Right Reserved Term of use GO ECO
-        </div>
+        </FooterText>
       </RightFooter>
     </Footer>
   );
