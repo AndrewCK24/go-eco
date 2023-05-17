@@ -1,13 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import NavBar from "./components/Nav/NavBar";
 import BottomNav from "./components/Nav/BottomNav";
 import HomePage from "./HomePage";
 import LogInPage from "./LogInPage";
 import ProposalPage from "./ProposalPage";
-import { HashRouter, Route, Routes } from "react-router-dom";
 import EventCreatePage from "./EventCreatePage";
 
+// 基礎 style 設定
 const Container = styled.div`
   width: 100%;
   border: 0;
@@ -18,8 +18,8 @@ const Container = styled.div`
   font-family: "Noto Sans KR", sans-serif;
 `;
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+const App = () => {
+  return (
     <HashRouter>
       <Container>
         <NavBar />
@@ -35,5 +35,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <BottomNav />
       </Container>
     </HashRouter>
-  </React.StrictMode>
-);
+  );
+};
+
+export default App;
