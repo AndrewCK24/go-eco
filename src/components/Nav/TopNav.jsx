@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
+import { ReactComponent as UserIcon } from "../../assets/userIcon.svg";
 
-const NavBar = () => {
+const IconContainer = styled.div`
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+`;
+
+const TopNav = () => {
   const Nav = {
     gap: "40px",
     top: "2.5%",
@@ -11,7 +19,6 @@ const NavBar = () => {
   };
   const text = {
     color: "var(0, 0, 0, 0.4000000059604645)",
-    fontSize: "xx-large",
     textDecoration: "none",
     display: "flex",
     alignItems: "center",
@@ -28,7 +35,7 @@ const NavBar = () => {
   return (
     <div style={Nav}>
       <div>
-        <img src="/assets/LOGO_GOECO.png" />
+        <img src="../../assets/LOGO_GOECO.png" alt="logo" />
       </div>
       <Link to="/" style={text}>
         Home
@@ -40,10 +47,12 @@ const NavBar = () => {
         Contacts
       </Link>
       <Link to="/LogInPage" style={LogIn}>
-        <img src="/assets/personelIcon.svg" />
+        <IconContainer>
+          <UserIcon />
+        </IconContainer>
       </Link>
     </div>
   );
 };
 
-export default NavBar;
+export default TopNav;
