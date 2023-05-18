@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-// import Logo from "../../../public/assets/LOGO_GOECO.png";
 import { ReactComponent as Logo } from "../../icons/favicon.svg";
 import { ReactComponent as UserIcon } from "../../icons/userIcon.svg";
 
@@ -20,7 +19,7 @@ const LogoContainer = styled.div`
 	}
 `;
 
-const TabContainer = styled.div`
+const LinkContainer = styled.div`
 	font-family: "Poppins", sans-serif;
 	gap: 1rem;
 	font-size: 1.25rem;
@@ -50,20 +49,12 @@ padding-right: 2rem;
 `;
 
 const TopNav = () => {
-	const text = {
-		color: "var(0, 0, 0, 0.4000000059604645)",
-		textDecoration: "none",
-		display: "flex",
-		alignItems: "center",
-		flexDirection: "column",
-		position: "relative",
-	};
 	return (
 		<Container>
 			<LogoContainer>
 				<Logo />
 			</LogoContainer>
-			<TabContainer>
+			<LinkContainer>
 				<Link to="/">
 					<TabText>Home</TabText>
 				</Link>
@@ -73,7 +64,7 @@ const TopNav = () => {
 				<Link to="/">
 					<TabText>Contacts</TabText>
 				</Link>
-			</TabContainer>
+			</LinkContainer>
 			<Link to="/LogInPage">
 				<IconContainer>
 					<UserIcon />
