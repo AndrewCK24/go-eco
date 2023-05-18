@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-import { ReactComponent as UserIcon } from "../../assets/userIcon.svg";
+import { ReactComponent as UserIcon } from "../../icons/userIcon.svg";
 
 const IconContainer = styled.div`
   svg {
