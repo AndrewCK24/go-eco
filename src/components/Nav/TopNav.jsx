@@ -6,6 +6,7 @@ import { ReactComponent as UserIcon } from "../../icons/userIcon.svg";
 
 const Container = styled.nav`
 	width: 100%;
+	padding: 1rem 0;
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 	grid-column-gap: 1rem;
