@@ -12,7 +12,7 @@ import EventCreatePage from "./EventCreatePage";
 // 基礎 style 設定
 const Container = styled.div`
 	width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
 	display: grid;
 	grid-template-rows: 1fr auto;
 	margin: 0;
