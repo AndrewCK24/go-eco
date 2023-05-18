@@ -12,6 +12,7 @@ const Container = styled.div`
 	flex-direction: column;
 `;
 
+// 可用於 Recycle, CleanUp 兩區塊
 const EventContainer = styled.section`
 	width: 100%;
 	display: grid;
@@ -23,6 +24,9 @@ const EventContainer = styled.section`
 const FeedBackContainer = styled.section`
 	width: 100%;
 	display: flex;
+`;
+
+const AboutUsContainer = styled.section`
 `;
 
 const HomePage = () => {
