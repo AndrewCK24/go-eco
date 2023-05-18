@@ -1,1 +1,1 @@
-# goeco
+# go-eco
