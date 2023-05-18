@@ -1,6 +1,21 @@
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
+// import Logo from "../../../public/assets/LOGO_GOECO.png";
+import { ReactComponent as Logo } from "../../icons/favicon.svg";
 import { ReactComponent as UserIcon } from "../../icons/userIcon.svg";
+
+const Container = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 2.5rem;
+`;
+
+const LogoContainer = styled.div`
+  svg {
+    width: 12rem;
+    height: 3rem;
+  }
+`;
 
 const IconContainer = styled.div`
   svg {
@@ -12,10 +27,8 @@ const IconContainer = styled.div`
 const TopNav = () => {
   const Nav = {
     gap: "40px",
-    top: "2.5%",
     width: "100%",
     display: "flex",
-    position: "absolute",
   };
   const text = {
     color: "var(0, 0, 0, 0.4000000059604645)",
@@ -33,10 +46,14 @@ const TopNav = () => {
     position: "absolute",
   };
   return (
-    <div style={Nav}>
-      <div>
-        <img src="../../assets/LOGO_GOECO.png" alt="logo" />
-      </div>
+    <Container>
+      {/* <Container>
+        {/* <img src="../../assets/LOGO_GOECO.png" alt="logo" />
+        <img src={Logo} alt="logo" />
+      </div> */}
+      <LogoContainer>
+        <Logo />
+      </LogoContainer>
       <Link to="/" style={text}>
         Home
       </Link>
@@ -51,7 +68,7 @@ const TopNav = () => {
           <UserIcon />
         </IconContainer>
       </Link>
-    </div>
+    </Container>
   );
 };
 

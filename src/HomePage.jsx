@@ -1,9 +1,14 @@
 import styled from "@emotion/styled";
 import "../pageCSS/HomePage.css";
 
+const Container = styled.div`
+  width: 100vw;
+  overflow: hidden;
+`;
+
 const HomePage = () => {
 	return (
-		<div>
+		<Container>
 			<div className="frame77-container">
 				<div className="frame77-frame77">
 					<div className="frame77-frame3">
@@ -789,7 +794,7 @@ const HomePage = () => {
 					<span>View All</span>
 				</span>
 			</div>
-		</div>
+		</Container>
 	);
 };
 

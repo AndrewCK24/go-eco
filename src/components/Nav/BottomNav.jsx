@@ -2,8 +2,8 @@ import styled from "@emotion/styled";
 import BottomNavCol from "./BottomNavCol";
 import { ReactComponent as Logo } from "../../icons/favicon.svg";
 
-const Footer = styled.div`
-	width: 100vw;
+const Footer = styled.footer`
+	width: 100%;
   grid-row: 2 / 3;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
@@ -26,8 +26,8 @@ const LeftFooterText = styled.div`
 
 const IconContainer = styled.div`
 	svg {
-		width: 193px;
-		height: 50px;
+		width: 12rem;
+		height: 3rem;
 	}
 `;
 
