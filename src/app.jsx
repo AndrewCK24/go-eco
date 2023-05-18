@@ -15,6 +15,9 @@ const Container = styled.div`
   min-height: 100vh;
 	display: grid;
 	grid-template-rows: 1fr auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
 	font-size: 16px;
 	font-family: "Poppins", sans-serif;
 	overflow: overlay;

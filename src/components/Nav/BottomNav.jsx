@@ -14,7 +14,7 @@ const Footer = styled.footer`
 `;
 
 const LeftFooter = styled.div`
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
 	grid-column: 1 / 2;
   grid-row: 1 / 2;
 `;
@@ -32,7 +32,7 @@ const IconContainer = styled.div`
 `;
 
 const RightFooter = styled.div`
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 	display: grid;
@@ -45,7 +45,7 @@ const RightFooterRow = styled.div`
 `;
 
 const FooterText = styled.div`
-  padding: 1rem 3rem;
+  padding: 1rem 2rem;
   grid-column: 1 / 3;
   grid-row: 2 / 3;
 	color: rgba(217, 217, 217, 1);

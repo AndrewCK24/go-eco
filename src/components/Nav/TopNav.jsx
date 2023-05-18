@@ -4,72 +4,83 @@ import styled from "@emotion/styled";
 import { ReactComponent as Logo } from "../../icons/favicon.svg";
 import { ReactComponent as UserIcon } from "../../icons/userIcon.svg";
 
-const Container = styled.div`
-  width: 100%;
-  display: flex;
-  gap: 2.5rem;
+const Container = styled.nav`
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-column-gap: 1rem;
+	align-items: center;
 `;
 
 const LogoContainer = styled.div`
-  svg {
-    width: 12rem;
-    height: 3rem;
-  }
+  padding-left: 2rem;
+	svg {
+		width: 12rem;
+		height: 3rem;
+	}
+`;
+
+const TabContainer = styled.div`
+	font-family: "Poppins", sans-serif;
+	gap: 1rem;
+	font-size: 1.25rem;
+	width: max-content;
+	display: flex;
+	flex-direction: row;
+`;
+
+const TabText = styled.div`
+	color: rgba(30, 30, 30, 1);
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
 `;
 
 const IconContainer = styled.div`
-  svg {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
+padding-right: 2rem;
+	display: flex;
+	height: auto;
+	right: 0%;
+	svg {
+		width: 2rem;
+		height: 2rem;
+	}
 `;
 
 const TopNav = () => {
-  const Nav = {
-    gap: "40px",
-    width: "100%",
-    display: "flex",
-  };
-  const text = {
-    color: "var(0, 0, 0, 0.4000000059604645)",
-    textDecoration: "none",
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-    position: "relative",
-  };
-  const LogIn = {
-    display: "flex",
-    width: "5%",
-    height: "auto",
-    right: "0%",
-    position: "absolute",
-  };
-  return (
-    <Container>
-      {/* <Container>
-        {/* <img src="../../assets/LOGO_GOECO.png" alt="logo" />
-        <img src={Logo} alt="logo" />
-      </div> */}
-      <LogoContainer>
-        <Logo />
-      </LogoContainer>
-      <Link to="/" style={text}>
-        Home
-      </Link>
-      <Link to="/EventCreatePage" style={text}>
-        Proposals
-      </Link>
-      <Link to="/" style={text}>
-        Contacts
-      </Link>
-      <Link to="/LogInPage" style={LogIn}>
-        <IconContainer>
-          <UserIcon />
-        </IconContainer>
-      </Link>
-    </Container>
-  );
+	const text = {
+		color: "var(0, 0, 0, 0.4000000059604645)",
+		textDecoration: "none",
+		display: "flex",
+		alignItems: "center",
+		flexDirection: "column",
+		position: "relative",
+	};
+	return (
+		<Container>
+			<LogoContainer>
+				<Logo />
+			</LogoContainer>
+			<TabContainer>
+				<Link to="/">
+					<TabText>Home</TabText>
+				</Link>
+				<Link to="/EventCreatePage">
+					<TabText>Proposals</TabText>
+				</Link>
+				<Link to="/">
+					<TabText>Contacts</TabText>
+				</Link>
+			</TabContainer>
+			<Link to="/LogInPage">
+				<IconContainer>
+					<UserIcon />
+				</IconContainer>
+			</Link>
+		</Container>
+	);
 };
 
 export default TopNav;
