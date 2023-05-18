@@ -43,8 +43,8 @@ const TopNav = () => {
       <Link to="/EventCreatePage" style={text}>
         Proposals
       </Link>
-      <Link to="/" style={text}>
-        Contacts
+      <Link to="" style={text}>
+        Contacts    {/* TODO: wait for implememt */}
       </Link>
       <Link to="/LogInPage" style={LogIn}>
         <IconContainer>

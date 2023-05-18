@@ -40,7 +40,7 @@ const App = () => {
 						/>
 					</Routes>
 				</PageContainer>
-				<BottomNav />
+				{/* <BottomNav /> */}
 			</Container>
 		</HashRouter>
 	);
