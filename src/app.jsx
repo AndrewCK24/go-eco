@@ -41,7 +41,7 @@ const App = () => {
 						<Route path="/UserPage" element={<UserPage />} />
 					</Routes>
 				</PageContainer>
-				{/* <BottomNav /> */}
+				<BottomNav />
 			</Container>
 		</HashRouter>
 	);
