@@ -1,8 +1,7 @@
 import styled from "@emotion/styled";
 import "../pageCSS/HomePage.css";
 import Hero from "./components/HomePage/Hero";
-import Event from "./components/HomePage/Event";
-
+// import Event from "./components/HomePage/Event";
 
 const Container = styled.div`
 	width: 100%;
@@ -12,7 +11,7 @@ const Container = styled.div`
 	flex-direction: column;
 `;
 
-// 可用於 Event, Event 兩區塊
+// 可用於 Recycle, CleanUp 兩區塊
 const EventContainer = styled.section`
 	width: 100%;
 	display: grid;
@@ -21,84 +20,159 @@ const EventContainer = styled.section`
 	grid-gap: 1rem;
 `;
 
+const EventSectionTitle = styled.div`
+	grid-column: 1 / 5;
+	grid-row: 1 / 2;
+`;
+
 const FeedBackContainer = styled.section`
 	width: 100%;
 	display: flex;
-`;
-
-const AboutUsContainer = styled.section`
 `;
 
 const HomePage = () => {
 	return (
 		<Container>
 			<Hero />
-			
-			<Event
-				eventName="Plant conservation"
-				location="Chiayi county"
-				time="11:00 AM"
-				date="04.16.2023"
-				src="/assets/EventPicture1.png"
-				backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-			/>
-			{/* <Event
-				eventName="Event reusing"
-				location="Taipei City"
-				time="10:00 AM"
-				date=">04.22.2023"
-				src="/assets/EventPicture2.png"
-				backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-			/>
-			<Event
-				eventName="Kitchen waste reuse"
-				location="Yilan county"
-				time="02:00 PM"
-				date="05.06.2023"
-				src="/assets/EventPicture3.png"
-				backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-			/>
-			<Event
-				eventName="Garbage reuse way"
-				location="Kaohsiung City"
-				time="03:00 PM"
-				date="05.11.2023"
-				src="/assets/EventPicture4.png"
-				backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-			/> */}
-			
+			<EventContainer>
+				<EventSectionTitle>
+					<p>View All</p>
+				</EventSectionTitle>
+				{/* <Event
+					eventName="Plant conservation"
+					location="Chiayi county"
+					time="11:00 AM"
+					date="04.16.2023"
+					src="/assets/EventPicture1.png"
+					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+				/>
+				<Event
+					eventName="Event reusing"
+					location="Taipei City"
+					time="10:00 AM"
+					date=">04.22.2023"
+					src="/assets/EventPicture2.png"
+					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+				/>
+				<Event
+					eventName="Kitchen waste reuse"
+					location="Yilan county"
+					time="02:00 PM"
+					date="05.06.2023"
+					src="/assets/EventPicture3.png"
+					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+				/>
+				<Event
+					eventName="Garbage reuse way"
+					location="Kaohsiung City"
+					time="03:00 PM"
+					date="05.11.2023"
+					src="/assets/EventPicture4.png"
+					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+				/> */}
+			</EventContainer>
 
+			<EventContainer>
+				<EventSectionTitle>
+					<p>View All</p>
+				</EventSectionTitle>
+				{/* <Event
+					eventName="Mountain cleaning"
+					location="Yilan county"
+					time="08:00 AM"
+					date="04.15.2023"
+					src="/assets/EventPicture1.png"
+					backgroundColor=" rgba(179, 221, 230, 0.4300000071525574)"
+				/>
+				<Event
+					eventName="Beach Event"
+					location="Tainan City"
+					time="07:00 AM"
+					date="05.06.2023"
+					src="/assets/EventPicture2.png"
+				/>
+				<Event
+					eventName="Ｗetlands Event"
+					location="Taichung City"
+					time="05:00 PM"
+					date="04.25.2023"
+					src="/assets/EventPicture3.png"
+				/>
+				<Event
+					eventName="Beach Event"
+					location="New Taipei City"
+					time="12:00 PM"
+					date="04.17.2023"
+					src="/assets/EventPicture4.png"
+				/> */}
+			</EventContainer>
+			{/* <EventContainer>
+				<Recycle
+					eventName="Plant conservation"
+					location="Chiayi county"
+					time="11:00 AM"
+					date="04.16.2023"
+					src="/assets/recyclePicture1.png"
+				/>
+				<Recycle
+					eventName="Recycle reusing"
+					location="Taipei City"
+					time="10:00 AM"
+					date=">04.22.2023"
+					src="/assets/recyclePicture2.png"
+				/>
+				<Recycle
+					eventName="Kitchen waste reuse"
+					location="Yilan county"
+					time="02:00 PM"
+					date="05.06.2023"
+					src="/assets/recyclePicture3.png"
+				/>
+				<Recycle
+					eventName="Garbage reuse way"
+					location="Kaohsiung City"
+					time="03:00 PM"
+					date="05.11.2023"
+					src="/assets/recyclePicture4.png"
+				/>
+				<div className="frame77-text189">View All</div>
+			</EventContainer> */}
+			{/* <EventContainer>
+				<EventSectionTitle>
+					<p>View All</p>
+				</EventSectionTitle>
+				<CleanUp
+					eventName="Mountain cleaning"
+					location="Yilan county"
+					time="08:00 AM"
+					date="04.15.2023"
+					src="/assets/cleanUpPicture1.png"
+				/>
+				<CleanUp
+					eventName="Beach cleanup"
+					location="Tainan City"
+					time="07:00 AM"
+					date="05.06.2023"
+					src="/assets/cleanUpPicture2.png"
+				/>
+				<CleanUp
+					eventName="Ｗetlands cleanup"
+					location="Taichung City"
+					time="05:00 PM"
+					date="04.25.2023"
+					src="/assets/cleanUpPicture3.png"
+				/>
+				<CleanUp
+					eventName="Beach cleanup"
+					location="New Taipei City"
+					time="12:00 PM"
+					date="04.17.2023"
+					src="/assets/cleanUpPicture4.png"
+				/>
+				<div className="frame77-text187">View All</div>
+			</EventContainer> */}
 
-			<Event
-				eventName="Mountain cleaning"
-				location="Yilan county"
-				time="08:00 AM"
-				date="04.15.2023"
-				src="/assets/EventPicture1.png"
-				backgroundColor=" rgba(179, 221, 230, 0.4300000071525574)"
-			/>
-			{/* <Event
-				eventName="Beach Event"
-				location="Tainan City"
-				time="07:00 AM"
-				date="05.06.2023"
-				src="/assets/EventPicture2.png"
-			/>
-			<Event
-				eventName="Ｗetlands Event"
-				location="Taichung City"
-				time="05:00 PM"
-				date="04.25.2023"
-				src="/assets/EventPicture3.png"
-			/>
-			<Event
-				eventName="Beach Event"
-				location="New Taipei City"
-				time="12:00 PM"
-				date="04.17.2023"
-				src="/assets/EventPicture4.png"
-			/> */}
-			<div className="frame77-text121">Just go eco NOW!</div>
+			{/* <div className="frame77-text121">Just go eco NOW!</div>
 			<div className="frame77-text119">Let’s make our planet better!</div>
 			<div className="frame77-text123">What’s volunteers’ feesback?</div>
 			<div className="frame77-frame49">
@@ -149,79 +223,8 @@ const HomePage = () => {
 						className="frame77-unsplash-o3ymv-t-wf-uremovebgpreview"
 					/>
 				</div>
-			</div>
-			<div className="frame77-frame24">
-				<div className="frame77-frame17">
-					<div className="frame77-text137">About us</div>
-					<div className="frame77-text139">
-						Better late then never to protect our planet.
-					</div>
-				</div>
-				<div className="frame77-frame22">
-					<div className="frame77-frame19">
-						<div className="frame77-frame18">
-							<div className="frame77-group1">
-								<img
-									src="/assets/ellipse.png"
-									alt="Ellipse11996"
-									className="frame77-ellipse1"
-								/>
-								<img
-									src="/assets/vector1997-4en6.svg"
-									alt="Vector1997"
-									className="frame77-vector2"
-								/>
-							</div>
-							<div className="frame77-text141">Better environment</div>
-						</div>
-						<div className="frame77-text143">
-							We just want to make our environment better though our website.
-						</div>
-					</div>
-					<div className="frame77-frame20">
-						<div className="frame77-frame181">
-							<img
-								src="/assets/ellipse.png"
-								alt="Ellipse11100"
-								className="frame77-ellipse11"
-							/>
-							<img
-								src="/assets/vector1100-rw3.svg"
-								alt="Vector1100"
-								className="frame77-vector3"
-							/>
-							<div className="frame77-text145">Package eco activities</div>
-						</div>
-						<div className="frame77-text147">
-							No longer difficult to find out eco activities, we already find it
-							and pack it up for you.
-						</div>
-					</div>
-					<div className="frame77-frame21">
-						<div className="frame77-frame182">
-							<img
-								src="/assets/ellipse.png"
-								alt="Ellipse11101"
-								className="frame77-ellipse12"
-							/>
-							<img
-								src="/assets/telephoneoutbound1101-8rf8.svg"
-								alt="TelephoneOutbound1101"
-								className="frame77-telephone-outbound"
-							/>
-							<div className="frame77-text149">Always support</div>
-						</div>
-						<div className="frame77-text151">
-							Always provide support for any questions,
-							<br />
-							join eco activities is no longer confused.
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className="frame77-text187">View All</div>
-			<div className="frame77-text189">View All</div>
+			</div> */}
+			
 		</Container>
 	);
 };

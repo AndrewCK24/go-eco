@@ -12,7 +12,7 @@ const HeroLeft = styled.div`
 	width: 100%;
 	margin: 5%;
 	display: grid;
-	grid-template-rows: 2fr 1fr 1fr;
+	grid-template-rows: 2fr 1fr;
 `;
 
 const HeroTitle = styled.div`
@@ -70,10 +70,6 @@ const Hero = () => (
 					<HeroFigureTitle>Eco activities</HeroFigureTitle>
 				</HeroFigure>
 			</HeroFigureContainer>
-			<div className="SearchBlock">
-				<div className="SearchBlockText">What are you looking for?</div>
-				<img src="/assets/search.svg" className="search" />
-			</div>
 		</HeroLeft>
 		<HeroRight>
 			<img src="../public/assets/potPlant.png" alt="PotPlant" />
