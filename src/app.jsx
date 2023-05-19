@@ -10,17 +10,11 @@ import ProposalPage from "./ProposalPage";
 import EventCreatePage from "./EventCreatePage";
 import UserPage from "./UserPage";
 
-// 基礎 style 設定
 const Container = styled.div`
 	width: 100%;
   min-height: 100%;
 	display: grid;
 	grid-template-rows: 1fr auto;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 16px;
-	font-family: "Poppins", sans-serif;
 	overflow: overlay;
 `;
 
