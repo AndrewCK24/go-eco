@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-const Event = styled.div`
+const EventBox = styled.div`
   width: 100%;
   height: auto;
   display: flex;
@@ -7,18 +7,19 @@ const Event = styled.div`
   align-items: flex-start;
   flex-shrink: 0;
   border-radius: 15rem;
-  background-color: rgba(179, 230, 193, 0.4300000071525574);
+  ${ColorChange};
 `;
+ const ColorChange = (prop) =>`
+	background-color: ${prop.backgroundColor};
+ `;
 
-
-const Recycle = (prop) =>{
-    return(<div className="Event">
-		<Event></Event>
+const Event = (prop) =>{
+    return(<EventBox>
 		<div className="EventName">{prop.eventName}</div>
 		<div className="EventLocation">{prop.location}</div>
-		<div className="JoinButton">
+		<button className="JoinButton">
 			<div className="JoinTextStyle">Join now!</div>
-		</div>
+		</button>
 		<div className="CurrentParticipants">50+</div>
         {/* TODO:lifecycle */}
 		<div className="time">
@@ -42,7 +43,7 @@ const Recycle = (prop) =>{
 			alt="Screenshot20230412at035511821"
 			className="Picture"
 		/>
-	</div> 
+	</EventBox>
     )
 }
-export default Recycle;
+export default Event;

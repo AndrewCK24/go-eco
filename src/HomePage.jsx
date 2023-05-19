@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import "../pageCSS/HomePage.css";
 import Hero from "./components/HomePage/Hero";
-import Recycle from "./components/HomePage/Recycle";
-import CleanUp from "./components/HomePage/CleanUp";
+import Event from "./components/HomePage/Event";
+
 
 const Container = styled.div`
 	width: 100%;
@@ -12,7 +12,7 @@ const Container = styled.div`
 	flex-direction: column;
 `;
 
-// 可用於 Recycle, CleanUp 兩區塊
+// 可用於 Event, Event 兩區塊
 const EventContainer = styled.section`
 	width: 100%;
 	display: grid;
@@ -33,105 +33,79 @@ const HomePage = () => {
 	return (
 		<Container>
 			<Hero />
-			{/* <div className="MainBlock">
-				<div className="LeftBlock">
-					<div className="LeftBlockText">
-						Now’s the time
-						<br />
-						to do something
-						<br />
-						for our planet
-						<div className="frame77-frame6">
-							<div className="frame77-frame4">
-								<div className="frame77-text013">500+</div>
-								<div className="frame77-text015">Beach cleanup</div>
-							</div>
-
-							<div className="frame77-frame4">
-								<div className="frame77-text013">
-									<div>1000+</div>
-								</div>
-								<div className="frame77-text015">
-									<div>Eco activities</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<img src="/assets/mainBlockBackGround.png" />
-				<img src="/assets/potPlant.png" className="potPlant" />
-				<div className="SearchBlock">
-					<div className="SearchBlockText">What are you looking for?</div>
-					<img src="/assets/search.svg" className="search" />
-				</div>
-			</div> */}
-			<EventContainer>
-			<Recycle
+			
+			<Event
 				eventName="Plant conservation"
 				location="Chiayi county"
 				time="11:00 AM"
 				date="04.16.2023"
-				src="/assets/recyclePicture1.png"
+				src="/assets/EventPicture1.png"
+				backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
 			/>
-			<Recycle
-				eventName="Recycle reusing"
+			{/* <Event
+				eventName="Event reusing"
 				location="Taipei City"
 				time="10:00 AM"
 				date=">04.22.2023"
-				src="/assets/recyclePicture2.png"
+				src="/assets/EventPicture2.png"
+				backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
 			/>
-			<Recycle
+			<Event
 				eventName="Kitchen waste reuse"
 				location="Yilan county"
 				time="02:00 PM"
 				date="05.06.2023"
-				src="/assets/recyclePicture3.png"
+				src="/assets/EventPicture3.png"
+				backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
 			/>
-			<Recycle
+			<Event
 				eventName="Garbage reuse way"
 				location="Kaohsiung City"
 				time="03:00 PM"
 				date="05.11.2023"
-				src="/assets/recyclePicture4.png"
-			/>
-			</EventContainer>
+				src="/assets/EventPicture4.png"
+				backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+			/> */}
 			
-			<CleanUp
+
+
+			<Event
 				eventName="Mountain cleaning"
 				location="Yilan county"
 				time="08:00 AM"
 				date="04.15.2023"
-				src="/assets/cleanUpPicture1.png"
+				src="/assets/EventPicture1.png"
+				backgroundColor=" rgba(179, 221, 230, 0.4300000071525574)"
 			/>
-			<CleanUp
-				eventName="Beach cleanup"
+			{/* <Event
+				eventName="Beach Event"
 				location="Tainan City"
 				time="07:00 AM"
 				date="05.06.2023"
-				src="/assets/cleanUpPicture2.png"
+				src="/assets/EventPicture2.png"
 			/>
-			<CleanUp
-				eventName="Ｗetlands cleanup"
+			<Event
+				eventName="Ｗetlands Event"
 				location="Taichung City"
 				time="05:00 PM"
 				date="04.25.2023"
-				src="/assets/cleanUpPicture3.png"
+				src="/assets/EventPicture3.png"
 			/>
-			<CleanUp
-				eventName="Beach cleanup"
+			<Event
+				eventName="Beach Event"
 				location="New Taipei City"
 				time="12:00 PM"
 				date="04.17.2023"
-				src="/assets/cleanUpPicture4.png"
-			/>
+				src="/assets/EventPicture4.png"
+			/> */}
 			<div className="frame77-text121">Just go eco NOW!</div>
 			<div className="frame77-text119">Let’s make our planet better!</div>
 			<div className="frame77-text123">What’s volunteers’ feesback?</div>
 			<div className="frame77-frame49">
 				<div className="frame77-text125">
-					Beach cleanups are a great way to protect the environment and prevent
+					Beach Events are a great way to protect the environment and prevent
 					harm to marine life by removing trash and debris from beaches.
-					Participating in a beach cleanup is a rewarding experience that allows
+					Participating in a beach Event is a rewarding experience that allows
 					you to make a positive impact on the environment, connect with my
 					community.
 				</div>

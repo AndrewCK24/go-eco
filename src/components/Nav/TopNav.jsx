@@ -62,7 +62,7 @@ const TopNav = () => {
 				<Link to="/EventCreatePage">
 					<TabText>Proposals</TabText>
 				</Link>
-				<Link to="/">
+				<Link to="/UserPage">
 					<TabText>Contacts</TabText>
 				</Link>
 			</LinkContainer>
