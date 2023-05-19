@@ -1,113 +1,23 @@
-.HomePage {
-  width: 100%;
-  display: flex;
-  overflow: auto;
-  align-items: center;
-  flex-direction: column;
-}
-.MainBlock {
-  top: 157px;
-  left: 77px;
-  width: 1361px;
-  height: 511px;
-  display: flex;
-  overflow: hidden;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-radius: 24px;
-  background-color: rgba(179, 230, 193, 1);
-}
-.LeftBlock {
-  gap: 48px;
-  top: 48px;
-  left: 48px;
-  width: 550px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.LeftBlockText {
-  gap: 24px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  color: white;
-  width: 550px;
-  height: auto;
-  font-size: 64px;
-  font-style: ExtraBold;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 800;
-  line-height: 64px;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.frame77-frame6 {
-  gap: 48px;
-  width: 438px;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.frame77-frame4 {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.frame77-text013 {
-  color: var(--dl-color-default-color2);
-  height: auto;
-  font-size: 32px;
-  font-style: Medium;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.frame77-text015 {
-  color: var(--dl-color-default-color2);
-  height: auto;
-  font-size: 18px;
-  font-style: Medium;
-  text-align: left;
-  font-family: Poppins;
-  font-weight: 500;
-  line-height: normal;
-  font-stretch: normal;
-  text-decoration: none;
-}
-.potPlant {
-  top: 9px;
-  left: 805px;
-  width: 411px;
-  height: 514px;
-  position: absolute;
-}
 .SearchBlock {
-  top: 408px;
-  left: 37px;
-  width: 449px;
-  height: 64px;
+  top: 408rem;
+  left: 37rem;
+  width: 449rem;
+  height: 64rem;
   display: flex;
   overflow: hidden;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
-  border-radius: 12px;
+  border-radius: 12rem;
   background-color: rgba(255, 255, 255, 1);
 }
 .SearchBlockText {
-  top: 18px;
-  left: 18px;
+  top: 18rem;
+  left: 18rem;
   color: var(--dl-color-default-color4);
   height: auto;
   position: absolute;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Medium;
   text-align: left;
   font-family: Poppins;
@@ -117,33 +27,33 @@
   text-decoration: none;
 }
 .search {
-  top: 22px;
-  left: 407px;
-  width: 20px;
-  height: 20px;
+  top: 22rem;
+  left: 407rem;
+  width: 20rem;
+  height: 20rem;
   position: absolute;
 }
-.Chiyai {
-  top: 800.445068359375px;
-  left: 97px;
-  width: 307px;
-  height: 321.16668701171875px;
+.Event {
+  top: 800.445068359375rem;
+  left: 97rem;
+  width: 307rem;
+  height: 321.16668701171875rem;
   display: flex;
   overflow: hidden;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
-  border-radius: 15px;
+  border-radius: 15rem;
   background-color: rgba(179, 230, 193, 0.4300000071525574);
 }
-.frame77-text023 {
-  top: 210px;
-  left: 16.877216339111328px;
+.EventName{
+  top: 210rem;
+  left: 16.877216339111328rem;
   color: rgba(37, 34, 34, 1);
-  width: 259px;
+  width: 259rem;
   height: auto;
   position: absolute;
-  font-size: 20px;
+  font-size: 20rem;
   font-style: Bold;
   text-align: left;
   font-family: Al Bayan;
@@ -152,14 +62,14 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.frame77-text025 {
-  top: 286px;
-  left: 193.5915985107422px;
+.EventLocation {
+  top: 286rem;
+  left: 193.5915985107422rem;
   color: rgba(0, 0, 0, 0.5);
-  width: 100px;
+  width: 100rem;
   height: auto;
   position: absolute;
-  font-size: 12px;
+  font-size: 12rem;
   font-style: Plain;
   text-align: left;
   font-family: Al Bayan;
@@ -168,24 +78,24 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.frame77-frame26 {
-  gap: 10px;
-  top: 278px;
-  left: 17px;
-  width: 107px;
-  height: 31px;
+.JoinButton {
+  gap: 10rem;
+  top: 278rem;
+  left: 17rem;
+  width: 107rem;
+  height: 31rem;
   display: flex;
-  padding: 13px 35px 12px 10px;
+  padding: 13rem 35rem 12rem 10rem;
   position: absolute;
   align-items: center;
   flex-shrink: 0;
-  border-radius: 8px;
+  border-radius: 8rem;
   background-color: rgba(130, 174, 142, 1);
 }
-.frame77-text027 {
+.JoinTextStyle {
   color: var(--dl-color-default-color2);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Medium;
   text-align: center;
   font-family: Poppins;
@@ -194,14 +104,14 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.frame77-text029 {
-  top: 240.554931640625px;
-  left: 231px;
+.CurrentParticipants {
+  top: 240.554931640625rem;
+  left: 231rem;
   color: rgba(0, 0, 0, 0.5);
-  width: 58px;
+  width: 58rem;
   height: auto;
   position: absolute;
-  font-size: 14px;
+  font-size: 14rem;
   font-style: Plain;
   text-align: center;
   font-family: Al Bayan;
@@ -210,36 +120,36 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.frame77-time {
-  top: 242.554931640625px;
-  left: 128px;
-  width: 80px;
-  height: 15.86845588684082px;
+.time {
+  top: 242.554931640625rem;
+  left: 128rem;
+  width: 80rem;
+  height: 15.86845588684082rem;
   display: flex;
   overflow: hidden;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
 }
-.frame77-date {
-  top: 242.88230895996094px;
-  left: 19.17301368713379px;
-  width: 94px;
-  height: 16.92635154724121px;
+.date {
+  top: 242.88230895996094rem;
+  left: 19.17301368713379rem;
+  width: 94rem;
+  height: 16.92635154724121rem;
   display: flex;
   overflow: hidden;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
 }
-.frame77-text033 {
-  top: 1.21875px;
-  left: 20.5380802154541px;
+.TimeText {
+  top: 0.946044921875rem;
+  left: 21.382915496826172rem;
   color: rgba(0, 0, 0, 0.5);
-  width: 79px;
+  width: 89rem;
   height: auto;
   position: absolute;
-  font-size: 12px;
+  font-size: 12rem;
   font-style: Plain;
   text-align: left;
   font-family: Al Bayan;
@@ -248,49 +158,65 @@
   font-stretch: normal;
   text-decoration: none;
 }
-.frame77-user {
-  top: 240.554931640625px;
-  left: 223px;
-  width: 16px;
-  height: 15px;
+.DateText {
+  top: 1.21875rem;
+  left: 20.5380802154541rem;
+  color: rgba(0, 0, 0, 0.5);
+  width: 79rem;
+  height: auto;
+  position: absolute;
+  font-size: 12rem;
+  font-style: Plain;
+  text-align: left;
+  font-family: Al Bayan;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.user {
+  top: 240.554931640625rem;
+  left: 223rem;
+  width: 16rem;
+  height: 15rem;
   position: absolute;
 }
-.frame77-maptag {
-  top: 285px;
-  left: 172px;
-  width: 17px;
-  height: 17px;
+.maptag {
+  top: 285rem;
+  left: 172rem;
+  width: 17rem;
+  height: 17rem;
   position: absolute;
 }
-.frame77-screenshot20230412at03551 {
-  top: 19.554931640625px;
-  left: 17px;
-  width: 273px;
-  height: 178px;
+.Picture {
+  top: 19.554931640625rem;
+  left: 17rem;
+  width: 273rem;
+  height: 178rem;
   position: absolute;
-  border-radius: 8px;
+  border-radius: 8rem;
 }
 .Yilan {
-  top: 1278.78125px;
-  left: 97px;
-  width: 307px;
-  height: 325.5067443847656px;
+  top: 1278.78125rem;
+  left: 97rem;
+  width: 307rem;
+  height: 325.5067443847656rem;
   display: flex;
   overflow: hidden;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
-  border-radius: 15px;
+  border-radius: 15rem;
   background-color: rgba(179, 221, 230, 0.4300000071525574);
 }
 .frame77-text119 {
-  top: 1204.351318359375px;
-  left: 97px;
+  top: 1204.351318359375rem;
+  left: 97rem;
   color: rgba(0, 0, 0, 1);
-  width: 632px;
+  width: 632rem;
   height: auto;
   position: absolute;
-  font-size: 32px;
+  font-size: 32rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -300,13 +226,13 @@
   text-decoration: none;
 }
 .frame77-text121 {
-  top: 726px;
-  left: 97px;
+  top: 726rem;
+  left: 97rem;
   color: rgba(0, 0, 0, 1);
-  width: 509px;
+  width: 509rem;
   height: auto;
   position: absolute;
-  font-size: 32px;
+  font-size: 32rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -316,13 +242,13 @@
   text-decoration: none;
 }
 .frame77-text123 {
-  top: 1687px;
-  left: 97px;
+  top: 1687rem;
+  left: 97rem;
   color: rgba(0, 0, 0, 1);
-  width: 513px;
+  width: 513rem;
   height: auto;
   position: absolute;
-  font-size: 32px;
+  font-size: 32rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -332,26 +258,26 @@
   text-decoration: none;
 }
 .frame77-frame49 {
-  top: 1773px;
-  left: 97px;
-  width: 800px;
-  height: 330px;
+  top: 1773rem;
+  left: 97rem;
+  width: 800rem;
+  height: 330rem;
   display: flex;
   overflow: hidden;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
-  border-radius: 12px;
+  border-radius: 12rem;
   background-color: rgba(180, 221, 231, 0.5);
 }
 .frame77-text125 {
-  top: 48px;
-  left: 48px;
+  top: 48rem;
+  left: 48rem;
   color: rgba(30, 30, 30, 0.75);
-  width: 704px;
+  width: 704rem;
   height: auto;
   position: absolute;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Medium;
   text-align: left;
   font-family: Poppins;
@@ -361,33 +287,33 @@
   text-decoration: none;
 }
 .frame77-group9 {
-  top: 126px;
-  left: 13px;
-  width: 150px;
-  height: 205.9859161376953px;
+  top: 126rem;
+  left: 13rem;
+  width: 150rem;
+  height: 205.9859161376953rem;
   display: flex;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
 }
 .frame77-vector {
-  top: 62px;
-  left: 35px;
-  width: 48px;
-  height: 41px;
+  top: 62rem;
+  left: 35rem;
+  width: 48rem;
+  height: 41rem;
   position: absolute;
 }
 .frame77-unsplash5a--uy-cw-jwremovebgpreview {
-  top: 0px;
-  left: 0px;
-  width: 150px;
-  height: 206px;
+  top: 0rem;
+  left: 0rem;
+  width: 150rem;
+  height: 206rem;
   position: absolute;
 }
 .frame77-frame46 {
-  top: 183px;
-  left: 170px;
-  width: 110px;
+  top: 183rem;
+  left: 170rem;
+  width: 110rem;
   display: flex;
   position: absolute;
   align-items: flex-start;
@@ -396,7 +322,7 @@
 .frame77-text127 {
   color: var(--dl-color-default-color2);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -408,7 +334,7 @@
 .frame77-text129 {
   color: var(--dl-color-default-color4);
   height: auto;
-  font-size: 12px;
+  font-size: 12rem;
   font-style: Medium;
   text-align: left;
   font-family: Poppins;
@@ -418,26 +344,26 @@
   text-decoration: none;
 }
 .frame77-frame50 {
-  top: 1775px;
-  left: 946px;
-  width: 800px;
-  height: 330px;
+  top: 1775rem;
+  left: 946rem;
+  width: 800rem;
+  height: 330rem;
   display: flex;
   overflow: hidden;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 0;
-  border-radius: 12px;
+  border-radius: 12rem;
   background-color: rgba(180, 221, 231, 0.5);
 }
 .frame77-text131 {
-  top: 48px;
-  left: 48px;
+  top: 48rem;
+  left: 48rem;
   color: rgba(30, 30, 30, 0.75);
-  width: 704px;
+  width: 704rem;
   height: auto;
   position: absolute;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Medium;
   text-align: left;
   font-family: Poppins;
@@ -447,9 +373,9 @@
   text-decoration: none;
 }
 .frame77-frame461 {
-  top: 183px;
-  left: 170px;
-  width: 147px;
+  top: 183rem;
+  left: 170rem;
+  width: 147rem;
   display: flex;
   position: absolute;
   align-items: flex-start;
@@ -458,7 +384,7 @@
 .frame77-text133 {
   color: var(--dl-color-default-color2);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -470,7 +396,7 @@
 .frame77-text135 {
   color: var(--dl-color-default-color4);
   height: auto;
-  font-size: 12px;
+  font-size: 12rem;
   font-style: Medium;
   text-align: left;
   font-family: Poppins;
@@ -480,41 +406,41 @@
   text-decoration: none;
 }
 .frame77-group10 {
-  top: 138px;
-  left: 29px;
-  width: 128px;
-  height: 192px;
+  top: 138rem;
+  left: 29rem;
+  width: 128rem;
+  height: 192rem;
   display: flex;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
 }
 .frame77-vector1 {
-  top: 50px;
-  left: 19px;
-  width: 48px;
-  height: 41px;
+  top: 50rem;
+  left: 19rem;
+  width: 48rem;
+  height: 41rem;
   position: absolute;
 }
 .frame77-unsplash-o3ymv-t-wf-uremovebgpreview {
-  top: 0px;
-  left: 0px;
-  width: 128px;
-  height: 192px;
+  top: 0rem;
+  left: 0rem;
+  width: 128rem;
+  height: 192rem;
   position: absolute;
 }
 .frame77-frame24 {
-  gap: 48px;
-  top: 2177px;
-  left: 137px;
-  width: 1248px;
+  gap: 48rem;
+  top: 2177rem;
+  left: 137rem;
+  width: 1248rem;
   display: flex;
   position: absolute;
   align-items: center;
   flex-direction: column;
 }
 .frame77-frame17 {
-  gap: 12px;
+  gap: 12rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -522,7 +448,7 @@
 .frame77-text137 {
   color: var(--dl-color-default-color2);
   height: auto;
-  font-size: 32px;
+  font-size: 32rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -534,7 +460,7 @@
 .frame77-text139 {
   color: var(--dl-color-default-color4);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Medium;
   text-align: left;
   font-family: Poppins;
@@ -544,48 +470,48 @@
   text-decoration: none;
 }
 .frame77-frame22 {
-  gap: 24px;
+  gap: 24rem;
   display: flex;
   align-items: flex-start;
 }
 .frame77-frame19 {
-  gap: 12px;
+  gap: 12rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .frame77-frame18 {
-  gap: 24px;
+  gap: 24rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .frame77-group1 {
-  width: 96px;
-  height: 96px;
+  width: 96rem;
+  height: 96rem;
   display: flex;
   position: relative;
   align-items: flex-start;
   flex-shrink: 1;
 }
 .frame77-ellipse1 {
-  top: 0px;
-  left: 0px;
-  width: 96px;
-  height: 96px;
+  top: 0rem;
+  left: 0rem;
+  width: 96rem;
+  height: 96rem;
   position: absolute;
 }
 .frame77-vector2 {
-  top: 28px;
-  left: 28px;
-  width: 40px;
-  height: 40px;
+  top: 28rem;
+  left: 28rem;
+  width: 40rem;
+  height: 40rem;
   position: absolute;
 }
 .frame77-text141 {
   color: rgba(0, 0, 0, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -596,9 +522,9 @@
 }
 .frame77-text143 {
   color: rgba(30, 30, 30, 0.5);
-  width: 400px;
+  width: 400rem;
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Medium;
   text-align: center;
   font-family: Poppins;
@@ -608,43 +534,43 @@
   text-decoration: none;
 }
 .frame77-frame20 {
-  gap: 12px;
+  gap: 12rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .frame77-frame181 {
-  gap: 24px;
+  gap: 24rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .frame77-group11 {
-  width: 96px;
-  height: 96px;
+  width: 96rem;
+  height: 96rem;
   display: flex;
   position: relative;
   align-items: flex-start;
   flex-shrink: 1;
 }
 .frame77-ellipse11 {
-  top: 0px;
-  left: 0px;
-  width: 96px;
-  height: 96px;
+  top: 0rem;
+  left: 0rem;
+  width: 96rem;
+  height: 96rem;
   position: absolute;
 }
 .frame77-vector3 {
-  top: 28px;
-  left: 28px;
-  width: 40px;
-  height: 40px;
+  top: 28rem;
+  left: 28rem;
+  width: 40rem;
+  height: 40rem;
   position: absolute;
 }
 .frame77-text145 {
   color: rgba(0, 0, 0, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -655,9 +581,9 @@
 }
 .frame77-text147 {
   color: rgba(30, 30, 30, 0.5);
-  width: 400px;
+  width: 400rem;
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Medium;
   text-align: center;
   font-family: Poppins;
@@ -667,43 +593,43 @@
   text-decoration: none;
 }
 .frame77-frame21 {
-  gap: 12px;
+  gap: 12rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .frame77-frame182 {
-  gap: 24px;
+  gap: 24rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 .frame77-group12 {
-  width: 96px;
-  height: 96px;
+  width: 96rem;
+  height: 96rem;
   display: flex;
   position: relative;
   align-items: flex-start;
   flex-shrink: 1;
 }
 .frame77-ellipse12 {
-  top: 0px;
-  left: 0px;
-  width: 96px;
-  height: 96px;
+  top: 0rem;
+  left: 0rem;
+  width: 96rem;
+  height: 96rem;
   position: absolute;
 }
 .frame77-telephone-outbound {
-  top: 28px;
-  left: 28px;
-  width: 40px;
-  height: 40px;
+  top: 28rem;
+  left: 28rem;
+  width: 40rem;
+  height: 40rem;
   position: absolute;
 }
 .frame77-text149 {
   color: rgba(0, 0, 0, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -714,9 +640,9 @@
 }
 .frame77-text151 {
   color: rgba(30, 30, 30, 0.5);
-  width: 400px;
+  width: 400rem;
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Medium;
   text-align: center;
   font-family: Poppins;
@@ -726,10 +652,10 @@
   text-decoration: none;
 }
 .frame77-footer {
-  top: 2586px;
-  left: 0px;
-  width: 1514px;
-  height: 400px;
+  top: 2586rem;
+  left: 0rem;
+  width: 1514rem;
+  height: 400rem;
   display: flex;
   overflow: hidden;
   position: absolute;
@@ -738,11 +664,11 @@
   background-color: var(--dl-color-default-color2);
 }
 .frame77-frame52 {
-  gap: 24px;
-  top: 109px;
-  left: 97px;
-  width: 189px;
-  height: 65px;
+  gap: 24rem;
+  top: 109rem;
+  left: 97rem;
+  width: 189rem;
+  height: 65rem;
   display: flex;
   position: absolute;
   align-items: center;
@@ -750,82 +676,82 @@
   flex-direction: column;
 }
 .frame77-frame501 {
-  gap: 24px;
-  width: 156px;
-  height: 59px;
+  gap: 24rem;
+  width: 156rem;
+  height: 59rem;
   display: flex;
-  padding: 0 0 0 1px;
+  padding: 0 0 0 1rem;
   align-items: flex-start;
   flex-shrink: 0;
   flex-direction: column;
 }
 .frame77-vector4 {
-  top: 180px;
-  left: 258px;
-  width: 23px;
-  height: 19px;
+  top: 180rem;
+  left: 258rem;
+  width: 23rem;
+  height: 19rem;
   position: absolute;
 }
 .frame77-group12 {
-  top: 174px;
-  left: 175px;
-  width: 48px;
-  height: 48px;
+  top: 174rem;
+  left: 175rem;
+  width: 48rem;
+  height: 48rem;
   display: flex;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
 }
 .frame77-ellipse3 {
-  top: 0px;
-  left: 0px;
-  width: 48px;
-  height: 48px;
+  top: 0rem;
+  left: 0rem;
+  width: 48rem;
+  height: 48rem;
   position: absolute;
   border-color: rgba(30, 30, 30, 0.5);
   border-style: solid;
-  border-width: 1px;
+  border-width: 1rem;
 }
 .frame77-riinstagramfill {
-  top: 3px;
-  left: 11px;
-  width: 26px;
-  height: 25px;
+  top: 3rem;
+  left: 11rem;
+  width: 26rem;
+  height: 25rem;
   position: absolute;
 }
 .frame77-group11 {
-  top: 174px;
-  left: 110px;
-  width: 236.5px;
-  height: 55px;
+  top: 174rem;
+  left: 110rem;
+  width: 236.5rem;
+  height: 55rem;
   display: flex;
   position: absolute;
   align-items: flex-start;
   flex-shrink: 1;
 }
 .frame77-ggfacebook {
-  top: 3px;
-  left: 0px;
-  width: 30px;
-  height: 25px;
+  top: 3rem;
+  left: 0rem;
+  width: 30rem;
+  height: 25rem;
   position: absolute;
 }
 .frame77-ellipse2 {
-  top: 0px;
-  left: 181px;
-  width: 55px;
-  height: 55px;
+  top: 0rem;
+  left: 181rem;
+  width: 55rem;
+  height: 55rem;
   position: absolute;
   border-color: rgba(30, 30, 30, 0.75);
   border-style: solid;
-  border-width: 1px;
+  border-width: 1rem;
 }
 .frame77-frame56 {
-  gap: 40px;
-  top: 45px;
-  left: 980px;
-  width: 439px;
-  height: 180px;
+  gap: 40rem;
+  top: 45rem;
+  left: 980rem;
+  width: 439rem;
+  height: 180rem;
   display: flex;
   position: absolute;
   align-items: flex-start;
@@ -833,7 +759,7 @@
   background-color: rgba(30, 30, 30, 1);
 }
 .frame77-frame53 {
-  gap: 24px;
+  gap: 24rem;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -842,7 +768,7 @@
 .frame77-text156 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -854,7 +780,7 @@
 .frame77-text158 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Regular;
   text-align: left;
   font-family: Poppins;
@@ -866,7 +792,7 @@
 .frame77-text160 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Regular;
   text-align: left;
   font-family: Poppins;
@@ -878,7 +804,7 @@
 .frame77-text162 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Regular;
   text-align: left;
   font-family: Poppins;
@@ -888,7 +814,7 @@
   text-decoration: none;
 }
 .frame77-frame54 {
-  gap: 24px;
+  gap: 24rem;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -897,7 +823,7 @@
 .frame77-text164 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -909,7 +835,7 @@
 .frame77-text166 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Regular;
   text-align: left;
   font-family: Poppins;
@@ -921,7 +847,7 @@
 .frame77-text168 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Regular;
   text-align: left;
   font-family: Poppins;
@@ -933,7 +859,7 @@
 .frame77-text170 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Regular;
   text-align: left;
   font-family: Poppins;
@@ -943,7 +869,7 @@
   text-decoration: none;
 }
 .frame77-frame55 {
-  gap: 24px;
+  gap: 24rem;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -952,7 +878,7 @@
 .frame77-text172 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Bold;
   text-align: left;
   font-family: Poppins;
@@ -964,7 +890,7 @@
 .frame77-text174 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Regular;
   text-align: left;
   font-family: Poppins;
@@ -976,7 +902,7 @@
 .frame77-text176 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Regular;
   text-align: left;
   font-family: Poppins;
@@ -988,7 +914,7 @@
 .frame77-text178 {
   color: rgba(217, 217, 217, 1);
   height: auto;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Regular;
   text-align: left;
   font-family: Poppins;
@@ -998,12 +924,12 @@
   text-decoration: none;
 }
 .frame77-text180 {
-  top: 325px;
-  left: 97px;
+  top: 325rem;
+  left: 97rem;
   color: rgba(217, 217, 217, 1);
   height: auto;
   position: absolute;
-  font-size: 18px;
+  font-size: 18rem;
   font-style: Medium;
   text-align: left;
   font-family: Poppins;
@@ -1013,20 +939,20 @@
   text-decoration: none;
 }
 .frame77-screenshot20230411at15262 {
-  top: 45px;
-  left: 103px;
-  width: 193px;
-  height: 50px;
+  top: 45rem;
+  left: 103rem;
+  width: 193rem;
+  height: 50rem;
   position: absolute;
 }
 .frame77-text182 {
-  top: 109px;
-  left: 103px;
+  top: 109rem;
+  left: 103rem;
   color: rgba(255, 255, 255, 1);
-  width: 253px;
+  width: 253rem;
   height: auto;
   position: absolute;
-  font-size: 16px;
+  font-size: 16rem;
   font-style: Medium;
   text-align: left;
   font-family: Poppins;
@@ -1036,19 +962,19 @@
   text-decoration: none;
 }
 .frame77-screenshot20230411at15261 {
-  top: 61px;
-  left: 108px;
-  width: 193px;
-  height: 50px;
+  top: 61rem;
+  left: 108rem;
+  width: 193rem;
+  height: 50rem;
   position: absolute;
 }
 .frame77-text187 {
-  top: 756px;
-  left: 1364px;
+  top: 756rem;
+  left: 1364rem;
   color: rgba(37, 34, 34, 1);
   height: auto;
   position: absolute;
-  font-size: 15px;
+  font-size: 15rem;
   font-style: Bold;
   text-align: right;
   font-family: Al Bayan;
@@ -1058,12 +984,12 @@
   text-decoration: none;
 }
 .frame77-text189 {
-  top: 1237px;
-  left: 1364px;
+  top: 1237rem;
+  left: 1364rem;
   color: rgba(37, 34, 34, 1);
   height: auto;
   position: absolute;
-  font-size: 15px;
+  font-size: 15rem;
   font-style: Bold;
   text-align: right;
   font-family: Al Bayan;
@@ -1073,9 +999,9 @@
   text-decoration: none;
 }
 .frame77-screenshot20230412at03102 {
-  top: 0px;
-  left: 0px;
-  width: 1516px;
-  height: 35px;
+  top: 0rem;
+  left: 0rem;
+  width: 1516rem;
+  height: 35rem;
   position: absolute;
 }

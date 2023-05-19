@@ -1,10 +1,19 @@
 import LogInButton from "./components/LogInPage/LogInButton";
 import LogInTable from "./components/LogInPage/LogInTable";
+import styled from "@emotion/styled";
 import "../pageCSS/LogInPage.css";
 
+const Container = styled.div`
+	width: 100%;
+	display: flex;
+	overflow: auto;
+	align-items: center;
+	flex-direction: column;
+`;
 const LogInPage = () => {
   return (
-    <div>
+    <Container>
+      <div>
       <div className="LogInPage">
         <div className="LogInContainer">
           <div className="LogInTextSet">
@@ -30,6 +39,7 @@ const LogInPage = () => {
         </div>
       </div>
     </div>
+    </Container>
   );
 };
 
