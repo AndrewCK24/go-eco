@@ -65,6 +65,7 @@ const HomePage = () => {
 					<img src="/assets/search.svg" className="search" />
 				</div>
 			</div> */}
+			<EventContainer>
 			<Recycle
 				eventName="Plant conservation"
 				location="Chiayi county"
@@ -93,6 +94,8 @@ const HomePage = () => {
 				date="05.11.2023"
 				src="/assets/recyclePicture4.png"
 			/>
+			</EventContainer>
+			
 			<CleanUp
 				eventName="Mountain cleaning"
 				location="Yilan county"

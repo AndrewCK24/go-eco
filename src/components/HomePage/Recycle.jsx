@@ -1,36 +1,46 @@
+import styled from "@emotion/styled";
+const Event = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 15rem;
+  background-color: rgba(179, 230, 193, 0.4300000071525574);
+`;
+
+
 const Recycle = (prop) =>{
-    return(<div className="Chiyai">
-		<div className="frame77-text023">
-			<div>{prop.eventName}</div>
+    return(<div className="Event">
+		<Event></Event>
+		<div className="EventName">{prop.eventName}</div>
+		<div className="EventLocation">{prop.location}</div>
+		<div className="JoinButton">
+			<div className="JoinTextStyle">Join now!</div>
 		</div>
-		<div className="frame77-text025">
-			{prop.location}
-		</div>
-		<div className="frame77-frame26">
-			<div className="frame77-text027">Join now!</div>
-		</div>
-		<div className="frame77-text029">50+</div>
+		<div className="CurrentParticipants">50+</div>
         {/* TODO:lifecycle */}
-		<div className="frame77-time">
-			<div className="frame77-text031">{prop.time}</div>
+		<div className="time">
+			<div className="TimeText">{prop.time}</div>
 		</div>
-		<div className="frame77-date">
-			<div className="frame77-text033">{prop.date}</div>
+		<div className="date">
+			<div className="DateText">{prop.date}</div>
 		</div>
 		<img
 			src="/assets/userIcon.svg"
 			alt="user1819"
-			className="frame77-user"
+			className="user"
 		/>
 		<img
 			src="/assets/maptag.svg"
 			alt="maptag1820"
-			className="frame77-maptag"
+			className="maptag"
 		/>
 		<img
 			src={prop.src}
 			alt="Screenshot20230412at035511821"
-			className="frame77-screenshot20230412at03551"
+			className="Picture"
 		/>
 	</div> 
     )
