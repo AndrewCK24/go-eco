@@ -224,7 +224,6 @@ const HomePage = () => {
 					/>
 				</div>
 			</div> */}
-			
 		</Container>
 	);
 };

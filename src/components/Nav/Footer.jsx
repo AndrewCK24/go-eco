@@ -4,19 +4,19 @@ import { ReactComponent as Logo } from "../../icons/favicon.svg";
 
 const FooterContainer = styled.footer`
 	width: 100%;
-  grid-row: 2 / 3;
+	grid-row: 2 / 3;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr auto;
-  font-size: 1rem;
+	grid-template-rows: 1fr auto;
+	font-size: 1rem;
 	overflow: hidden;
 	background-color: rgba(30, 30, 30, 1);
 `;
 
 const LeftFooter = styled.div`
-  padding: 1rem 2rem;
+	padding: 1rem 2rem;
 	grid-column: 1 / 2;
-  grid-row: 1 / 2;
+	grid-row: 1 / 2;
 `;
 
 const LeftFooterText = styled.div`
@@ -32,9 +32,9 @@ const IconContainer = styled.div`
 `;
 
 const RightFooter = styled.div`
-  padding: 1rem 2rem;
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+	padding: 1rem 2rem;
+	grid-column: 2 / 3;
+	grid-row: 1 / 2;
 	display: grid;
 `;
 
@@ -45,9 +45,9 @@ const RightFooterRow = styled.div`
 `;
 
 const FooterText = styled.div`
-  padding: 1rem 2rem;
-  grid-column: 1 / 3;
-  grid-row: 2 / 3;
+	padding: 1rem 2rem;
+	grid-column: 1 / 3;
+	grid-row: 2 / 3;
 	color: rgba(217, 217, 217, 1);
 	font-weight: 700;
 `;
