@@ -2,7 +2,7 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import styled from "@emotion/styled";
 
 // React Component
-import NavBar from "./components/Nav/TopNav";
+import NavBar from "./components/Nav/NavBar";
 import BottomNav from "./components/Nav/BottomNav";
 import HomePage from "./HomePage";
 import LogInPage from "./LogInPage";
