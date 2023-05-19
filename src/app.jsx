@@ -8,6 +8,7 @@ import HomePage from "./HomePage";
 import LogInPage from "./LogInPage";
 import ProposalPage from "./ProposalPage";
 import EventCreatePage from "./EventCreatePage";
+import UserPage from "./UserPage";
 
 // 基礎 style 設定
 const Container = styled.div`
@@ -43,6 +44,7 @@ const App = () => {
 							path="/EventCreatePage/ProposalPage"
 							element={<ProposalPage />}
 						/>
+						<Route path="/UserPage" element={<UserPage />} />
 					</Routes>
 				</PageContainer>
 				{/* <BottomNav /> */}
