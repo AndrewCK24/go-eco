@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 // React Component
 import NavBar from "./components/Nav/NavBar";
-import BottomNav from "./components/Nav/BottomNav";
+import Footer from "./components/Nav/Footer";
 import HomePage from "./HomePage";
 import LogInPage from "./LogInPage";
 import ProposalPage from "./ProposalPage";
@@ -41,7 +41,7 @@ const App = () => {
 						<Route path="/UserPage" element={<UserPage />} />
 					</Routes>
 				</PageContainer>
-				<BottomNav />
+				<Footer />
 			</Container>
 		</HashRouter>
 	);

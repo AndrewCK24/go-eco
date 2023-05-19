@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import BottomNavCol from "./BottomNavCol";
 import { ReactComponent as Logo } from "../../icons/favicon.svg";
 
-const Footer = styled.footer`
+const FooterContainer = styled.footer`
 	width: 100%;
   grid-row: 2 / 3;
 	display: grid;
@@ -52,9 +52,9 @@ const FooterText = styled.div`
 	font-weight: 700;
 `;
 
-const BottomNav = () => {
+const Footer = () => {
 	return (
-		<Footer>
+		<FooterContainer>
 			<LeftFooter>
 				<IconContainer>
 					<Logo />
@@ -86,8 +86,8 @@ const BottomNav = () => {
 				/> */}
 			</RightFooter>
 			<FooterText>2023 all Right Reserved Term of use GO ECO</FooterText>
-		</Footer>
+		</FooterContainer>
 	);
 };
 
-export default BottomNav;
+export default Footer;
