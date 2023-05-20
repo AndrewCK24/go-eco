@@ -2,15 +2,15 @@ import styled from "@emotion/styled";
 const EventBox = styled.div`
 	display: flex;
 	flex-direction: column;
-	grid-template-rows: auto 1fr
-	border-radius: 15rem;
-	background-color: orange;
-`;
-// ${prop => prop.backgroundColor}
+	grid-template-rows: auto 1fr;
+	border-radius: 1rem;
+	background-color: ${prop => prop.backgroundColor};
+`;	
+//FIXME:background-color variable doesn"t work!
+
 const EventInfoContainer = styled.div`
-	width: 90%;
+	margin: 3%;
 	display: flex;
-	overflow: auto;
 	align-items: center;
 	flex-direction: column;
 `;
@@ -20,7 +20,7 @@ const EventPicture = styled.img`
 	border-radius: 1rem;
 `;
 const EventDetail = styled.div`
-	width:90%;
+	width:100%;
 	align-items: center;
 	display: grid;
 	grid-template-rows: repeat(3,1fr);
@@ -44,13 +44,15 @@ const EventDetailText = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items:center;
-	background-color: rgba(130, 174, 142, 1);
 `;
+const EventDetailText2 = styled.div`
+
+`; 
 const JoinButton =styled.button`
 	align-items: center;
 	display: flex;
 	align-items:flex-start;
-	border-radius: 8rem;
+	border-radius: 1rem;
   	background-color: rgba(130, 174, 142, 1);
   	height: auto;
 	text-align: center;

@@ -9,25 +9,62 @@ const Container = styled.div`
 	overflow: auto;
 	align-items: center;
 	flex-direction: column;
+	margin-bottom:3%;
 `;
 
-// 可用於 Recycle, CleanUp 兩區塊
 const EventContainer = styled.section`
 	width: 90%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: auto 1fr;
-	grid-gap: 1rem;
+	grid-gap: 3rem;
 `;
 
-const EventSectionTitle = styled.div`
+const SectionTitle = styled.div`
 	grid-column: 1 / 5;
 	grid-row: 1 / 2;
+	font-size:  2rem;
+  	font-style: Bold;
+  	font-family: Poppins;
+  	font-weight: 700;
 `;
 
-const FeedBackContainer = styled.section`
-	width: 100%;
+const EventTitle = styled.div`
 	display: flex;
+	flex-direction: column;
+	align-items:flex-start;
+`;
+// const Title2 = styled.div`
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items:flex-end;
+// 	font-size: 1rem;
+// `;
+
+const FeedBackContainer = styled.section`
+	width: 90%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr auto;
+	grid-gap: 2rem;
+`;
+
+const FeedBackBlock = styled.div`
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 1rem;
+	background-color: rgba(180, 221, 231, 0.5);
+`; 
+
+const FeedBack = styled.div`
+	color: rgba(30, 30, 30, 0.75);
+	font-size: 1rem;
+	font-style: Medium;
+	font-family: Poppins;
+	font-weight: 500;
+	line-height: normal;
+	margin:5%;
 `;
 
 const HomePage = () => {
@@ -35,34 +72,32 @@ const HomePage = () => {
 		<Container>
 			<Hero />
 			<EventContainer>
-				<EventSectionTitle>
-					<p>View All</p>
-				</EventSectionTitle>
+				<SectionTitle>
+					<EventTitle>Just go eco NOW!</EventTitle>
+					{/* <Title2>View All</Title2> */}
+				</SectionTitle>
 				<Event
 					eventName="Plant conservation"
 					location="Chiayi county"
 					time="11:00 AM"
 					date=">04.16.2023"
 					src="/assets/recyclePicture1.png"
-					// backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-					// rgba(179, 221, 230, 0.4300000071525574)
+					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
 				/>	
-				{/* <Event
+				<Event
 					eventName="Event reusing"
 					location="Taipei City"
 					time="10:00 AM"
 					date=">04.22.2023"
 					src="/assets/recyclePicture2.png"
-					// backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-					// rgba(179, 221, 230, 0.4300000071525574)
-				/> */}
-				{/*}
+					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+				/> 
 				<Event
 					eventName="Kitchen waste reuse"
 					location="Yilan county"
 					time="02:00 PM"
 					date="05.06.2023"
-					src="/assets/EventPicture3.png"
+					src="/assets/recyclePicture3.png"
 					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
 				/>
 				<Event
@@ -70,111 +105,65 @@ const HomePage = () => {
 					location="Kaohsiung City"
 					time="03:00 PM"
 					date="05.11.2023"
-					src="/assets/EventPicture4.png"
+					src="/assets/recyclePicture4.png"
 					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-				/> */}
+				/>
 			</EventContainer>
-
 			<EventContainer>
-				<EventSectionTitle>
-					<p>View All</p>
-				</EventSectionTitle>
-				{/* <Event
+				<SectionTitle>
+					<EventTitle>Let’s make our planet better!</EventTitle>
+					{/* <Title2>View All</Title2> */}
+				</SectionTitle>
+				<Event
 					eventName="Mountain cleaning"
 					location="Yilan county"
 					time="08:00 AM"
 					date="04.15.2023"
-					src="/assets/EventPicture1.png"
-					backgroundColor=" rgba(179, 221, 230, 0.4300000071525574)"
+					src="/assets/cleanUpPicture1.png"
+					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
 				/>
 				<Event
 					eventName="Beach Event"
 					location="Tainan City"
 					time="07:00 AM"
 					date="05.06.2023"
-					src="/assets/EventPicture2.png"
+					src="/assets/cleanUpPicture2.png"
 				/>
 				<Event
 					eventName="Ｗetlands Event"
 					location="Taichung City"
 					time="05:00 PM"
 					date="04.25.2023"
-					src="/assets/EventPicture3.png"
+					src="/assets/cleanUpPicture3.png"
 				/>
 				<Event
 					eventName="Beach Event"
 					location="New Taipei City"
 					time="12:00 PM"
 					date="04.17.2023"
-					src="/assets/EventPicture4.png"
-				/> */}
-			</EventContainer>
-			{/* <EventContainer>
-				<Recycle
-					eventName="Plant conservation"
-					location="Chiayi county"
-					time="11:00 AM"
-					date="04.16.2023"
-					src="/assets/recyclePicture1.png"
-				/>
-				<Recycle
-					eventName="Recycle reusing"
-					location="Taipei City"
-					time="10:00 AM"
-					date=">04.22.2023"
-					src="/assets/recyclePicture2.png"
-				/>
-				<Recycle
-					eventName="Kitchen waste reuse"
-					location="Yilan county"
-					time="02:00 PM"
-					date="05.06.2023"
-					src="/assets/recyclePicture3.png"
-				/>
-				<Recycle
-					eventName="Garbage reuse way"
-					location="Kaohsiung City"
-					time="03:00 PM"
-					date="05.11.2023"
-					src="/assets/recyclePicture4.png"
-				/>
-				<div className="frame77-text189">View All</div>
-			</EventContainer> */}
-			{/* <EventContainer>
-				<EventSectionTitle>
-					<p>View All</p>
-				</EventSectionTitle>
-				<CleanUp
-					eventName="Mountain cleaning"
-					location="Yilan county"
-					time="08:00 AM"
-					date="04.15.2023"
-					src="/assets/cleanUpPicture1.png"
-				/>
-				<CleanUp
-					eventName="Beach cleanup"
-					location="Tainan City"
-					time="07:00 AM"
-					date="05.06.2023"
-					src="/assets/cleanUpPicture2.png"
-				/>
-				<CleanUp
-					eventName="Ｗetlands cleanup"
-					location="Taichung City"
-					time="05:00 PM"
-					date="04.25.2023"
-					src="/assets/cleanUpPicture3.png"
-				/>
-				<CleanUp
-					eventName="Beach cleanup"
-					location="New Taipei City"
-					time="12:00 PM"
-					date="04.17.2023"
 					src="/assets/cleanUpPicture4.png"
 				/>
-				<div className="frame77-text187">View All</div>
-			</EventContainer> */}
-
+			</EventContainer>
+			<FeedBackContainer>
+				<SectionTitle>What’s volunteers’ feedback?</SectionTitle>
+				<FeedBackBlock>
+					<FeedBack>
+					Beach Events are a great way to protect the environment and prevent
+					harm to marine life by removing trash and debris from beaches.
+					Participating in a beach Event is a rewarding experience that allows
+					you to make a positive impact on the environment, connect with my
+					community.
+					</FeedBack>
+				</FeedBackBlock>
+				<FeedBackBlock>
+					<FeedBack>
+					Being eco-friendly means adopting behaviors that are sustainable and
+					have a minimal impact on the environment. This includes reducing
+					waste, conserving resources, and using environmentally friendly
+					products and practices.
+					</FeedBack>
+				</FeedBackBlock>
+			</FeedBackContainer>
 			{/* <div className="frame77-text121">Just go eco NOW!</div>
 			<div className="frame77-text119">Let’s make our planet better!</div>
 			<div className="frame77-text123">What’s volunteers’ feesback?</div>
