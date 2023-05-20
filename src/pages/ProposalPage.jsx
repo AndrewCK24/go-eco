@@ -1,4 +1,5 @@
-import "../pageCSS/ProposalPage.css";
+import styled from "@emotion/styled";
+import "../../pageCSS/ProposalPage.css";
 
 const ProposalPage = () => {
   return (

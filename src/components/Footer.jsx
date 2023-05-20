@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import BottomNavCol from "./Nav/BottomNavCol";
-import { ReactComponent as Logo } from "../../icons/favicon.svg";
+import { ReactComponent as Logo } from "../icons/favicon.svg";
 
 const FooterContainer = styled.footer`
 	width: 100%;

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 // import Logo from "../../../public/assets/LOGO_GOECO.png";
-import { ReactComponent as Logo } from "../../icons/favicon.svg";
-import { ReactComponent as UserIcon } from "../../icons/userIcon.svg";
-import { ReactComponent as SearchIcon } from "../../icons/search.svg";
+import { ReactComponent as Logo } from "../icons/favicon.svg";
+import { ReactComponent as UserIcon } from "../icons/userIcon.svg";
+import { ReactComponent as SearchIcon } from "../icons/search.svg";
 
 const Container = styled.nav`
 	width: 100%;

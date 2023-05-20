@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import "../pageCSS/UserPage.css";
+import "../../pageCSS/UserPage.css";
 
 
 const UserPage = () => {

@@ -1,4 +1,5 @@
-import "../pageCSS/EventCreatePage.css";
+import styled from "@emotion/styled";
+import "../../pageCSS/EventCreatePage.css";
 import Single from "../components/EventCreatePage/Single";
 import Longterm from "../components/EventCreatePage/Longterm";
 

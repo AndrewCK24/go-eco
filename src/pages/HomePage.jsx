@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import "../pageCSS/HomePage.css";
+import "../../pageCSS/HomePage.css";
 import Hero from "../components/HomePage/Hero";
 // import Event from "./components/HomePage/Event";
 

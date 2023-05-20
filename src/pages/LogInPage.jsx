@@ -1,7 +1,7 @@
+import styled from "@emotion/styled";
 import LogInButton from "../components/LogInPage/LogInButton";
 import LogInTable from "../components/LogInPage/LogInTable";
-import styled from "@emotion/styled";
-import "../pageCSS/LogInPage.css";
+import "../../pageCSS/LogInPage.css";
 
 const Container = styled.div`
 	width: 100%;
