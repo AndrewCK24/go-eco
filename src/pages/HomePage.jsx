@@ -80,7 +80,7 @@ const HomePage = () => {
 					eventName="Plant conservation"
 					location="Chiayi county"
 					time="11:00 AM"
-					date=">04.16.2023"
+					date="04.16.2023"
 					src="/assets/recyclePicture1.png"
 					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
 				/>	
@@ -88,7 +88,7 @@ const HomePage = () => {
 					eventName="Event reusing"
 					location="Taipei City"
 					time="10:00 AM"
-					date=">04.22.2023"
+					date="04.22.2023"
 					src="/assets/recyclePicture2.png"
 					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
 				/> 
