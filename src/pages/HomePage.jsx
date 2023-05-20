@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import "../../pageCSS/HomePage.css";
 import Hero from "../components/HomePage/Hero";
-// import Event from "./components/HomePage/Event";
+import Event from "../components/HomePage/Event";
 
 const Container = styled.div`
 	width: 100%;
@@ -13,7 +13,7 @@ const Container = styled.div`
 
 // 可用於 Recycle, CleanUp 兩區塊
 const EventContainer = styled.section`
-	width: 100%;
+	width: 90%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: auto 1fr;
@@ -38,22 +38,25 @@ const HomePage = () => {
 				<EventSectionTitle>
 					<p>View All</p>
 				</EventSectionTitle>
-				{/* <Event
+				<Event
 					eventName="Plant conservation"
 					location="Chiayi county"
 					time="11:00 AM"
-					date="04.16.2023"
-					src="/assets/EventPicture1.png"
-					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-				/>
-				<Event
+					date=">04.16.2023"
+					src="/assets/recyclePicture1.png"
+					// backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+					// rgba(179, 221, 230, 0.4300000071525574)
+				/>	
+				{/* <Event
 					eventName="Event reusing"
 					location="Taipei City"
 					time="10:00 AM"
 					date=">04.22.2023"
-					src="/assets/EventPicture2.png"
-					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-				/>
+					src="/assets/recyclePicture2.png"
+					// backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+					// rgba(179, 221, 230, 0.4300000071525574)
+				/> */}
+				{/*}
 				<Event
 					eventName="Kitchen waste reuse"
 					location="Yilan county"
