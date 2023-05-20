@@ -2,13 +2,13 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import styled from "@emotion/styled";
 
 // React Component
-import NavBar from "./components/Nav/NavBar";
-import Footer from "./components/Nav/Footer";
-import HomePage from "./HomePage";
-import LogInPage from "./LogInPage";
-import ProposalPage from "./ProposalPage";
-import EventCreatePage from "./EventCreatePage";
-import UserPage from "./UserPage";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import LogInPage from "./pages/LogInPage";
+import ProposalPage from "./pages/ProposalPage";
+import EventCreatePage from "./pages/EventCreatePage";
+import UserPage from "./pages/UserPage";
 
 const Container = styled.div`
 	width: 100%;
