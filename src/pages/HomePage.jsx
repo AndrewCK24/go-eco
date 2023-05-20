@@ -74,6 +74,7 @@ const HomePage = () => {
 			<EventContainer>
 				<SectionTitle>
 					<EventTitle>Just go eco NOW!</EventTitle>
+					{/* FIXME:title position need to be modified */}
 					{/* <Title2>View All</Title2> */}
 				</SectionTitle>
 				<Event

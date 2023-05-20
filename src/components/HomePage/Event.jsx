@@ -8,27 +8,30 @@ const EventBox = styled.div`
 `;	
 //FIXME:background-color variable doesn"t work!
 
+const EventPicture = styled.img`
+	width: 100%;
+	height: auto;
+	border-radius: 1rem;
+`;
+
 const EventInfoContainer = styled.div`
 	margin: 3%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 `;
-const EventPicture = styled.img`
-	width: 100%;
-	height: auto;
-	border-radius: 1rem;
-`;
+
 const EventDetail = styled.div`
 	width:100%;
 	align-items: center;
 	display: grid;
-	grid-template-rows: repeat(3,1fr);
+	grid-template-rows: repeat(2,1fr) auto;
 `;
 const EventTitle = styled.div`
 	width:100%;
 	font-style: Bold;
  	text-align: left;
+	font-size: 1.5rem;
   	font-family: Al Bayan;
   	font-weight: 700;
 	color: rgba(37, 34, 34, 1);
@@ -45,19 +48,23 @@ const EventDetailText = styled.div`
 	flex-direction: column;
 	align-items:center;
 `;
-const EventDetailText2 = styled.div`
-
+const EventTextContainer2 = styled.div`
+	width: 100%;
+	height: auto;
+	display: grid;
+	flex-direction: column;
+	align-items:center;
+	grid-template-columns: 1fr 1fr;
 `; 
 const JoinButton =styled.button`
+	width: 80%;
 	align-items: center;
 	display: flex;
-	align-items:flex-start;
-	border-radius: 1rem;
-  	background-color: rgba(130, 174, 142, 1);
-  	height: auto;
 	text-align: center;
+	border-radius: 0.5rem;
 	font-family: Poppins;
 	font-weight: 500;
+	background-color: rgba(130, 174, 142, 1);
 `;
 const Event = (prop) => {
 	return (
@@ -76,11 +83,13 @@ const Event = (prop) => {
 						</EventDetailText>
 						{/* TODO:lifecycle */}
 					</EventTextContainer>
+				</EventDetail>
+				<EventTextContainer2>
+					<JoinButton>Join now!</JoinButton>
 					<EventDetailText>
 					{/* <EventPicture src="/assets/maptag.svg" /> */}{prop.location}
 					</EventDetailText>
-				</EventDetail>
-				<JoinButton>Join now!</JoinButton>
+				</EventTextContainer2>
 			</EventInfoContainer>
 		</EventBox>
 	);
