@@ -17,7 +17,6 @@ const Text2 = styled.div`
 
 function Single(){
     const style={
-        width: '100%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -27,7 +26,7 @@ function Single(){
     };
     return(
     <Link to="/EventCreatePage/ProposalPage" style={style}>
-        <Text1>activity</Text1>
+        <Text1>Single activity</Text1>
         <Text2>For only one time</Text2>
     </Link>
     )
