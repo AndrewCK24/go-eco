@@ -12,6 +12,7 @@ const EventCreateContainer = styled.div`
 	width: 80%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 `;
 
 const TopBlock = styled.div`
@@ -24,7 +25,6 @@ const TopBlock = styled.div`
 const LeftText = styled.div`
 	font-size: 3rem;
 	font-weight: 700;
-	left: 5%;
 	display: flex;
 	align-items: flex-start;
 `;
@@ -36,6 +36,7 @@ const RightText = styled.div`
 `;
 
 const Proposals = styled.dev`
+	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 `;
@@ -70,8 +71,7 @@ const EventCreatePage = () => {
 				</TopBlock>
 					<div>Create your proposal</div>
 					<Proposals>
-						<Single />
-						<Single />
+						
 					</Proposals>
 				<TextBlock>
 				<div>FAQ</div>
