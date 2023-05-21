@@ -1,19 +1,18 @@
 import styled from "@emotion/styled";
 import LogInButton from "../components/LogInPage/LogInButton";
-import LogInTable from "../components/LogInPage/LogInTable";
-
+import LogInInputForm from "../components/LogInPage/LogInInputForm";
 
 const Container = styled.div`
 	width: 100%;
 	display: flex;
-	overflow: auto;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom:20%;
+	margin-bottom:20%;	
 `;
 
 const LogInContainer = styled.div`
-	width: 60%;
+	width: 50%;
+	height: 55rem;
 	display: flex;
 	margin-top: 5%;
 	align-items: center;
@@ -25,8 +24,8 @@ const LogInContainer = styled.div`
 `;
 
 const LogInTextSet = styled.div`
-	width: 100%;
-	margin: 5%;
+	width:80%;
+	margin: 10%;
 	gap: 1.25rem;
 	font-size: 1.75rem;
 	display: flex;
@@ -36,6 +35,7 @@ const LogInTextSet = styled.div`
 `;
 
 const LogInText = styled.div`
+	font-size: 4rem;
 	color: rgba(0, 0, 0);
 `;
 
@@ -43,7 +43,6 @@ const LogInButtonSet = styled.div`
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	background-color: black;
 `;
 
 const LogInPage = () => {
@@ -61,7 +60,7 @@ const LogInPage = () => {
 						/>
 					</LogInButtonSet>	
 					<div>Or with Email</div>
-					<LogInTable default1="Email" default2="Password" />
+					<LogInInputForm/>
 					<div>© 2023 GO ECO</div>
 				</LogInTextSet>
 			</LogInContainer>

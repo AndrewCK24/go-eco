@@ -47,12 +47,11 @@ const FeedBackContainer = styled.section`
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr auto;
 	grid-gap: 2rem;
+	padding: 1rem;
 `;
 
 const FeedBackBlock = styled.div`
 	display: flex;
-	align-items: center;
-	flex-direction: column;
 	border-radius: 1rem;
 	background-color: rgba(180, 221, 231, 0.5);
 `; 
@@ -64,7 +63,7 @@ const FeedBack = styled.div`
 	font-family: Poppins;
 	font-weight: 500;
 	line-height: normal;
-	margin:5%;
+	margin: 5%;
 `;
 
 const HomePage = () => {
@@ -165,11 +164,7 @@ const HomePage = () => {
 					</FeedBack>
 				</FeedBackBlock>
 			</FeedBackContainer>
-			{/* <div className="frame77-text121">Just go eco NOW!</div>
-			<div className="frame77-text119">Let’s make our planet better!</div>
-			<div className="frame77-text123">What’s volunteers’ feesback?</div>
-			<div className="frame77-frame49">
-				<div className="frame77-text125">
+				{/*<div className="frame77-text125">
 					Beach Events are a great way to protect the environment and prevent
 					harm to marine life by removing trash and debris from beaches.
 					Participating in a beach Event is a rewarding experience that allows

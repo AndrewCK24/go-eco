@@ -55,7 +55,6 @@ const HeroRight = styled.div`
 		height: 80%;
 	}
 `;
-
 const Hero = () => (
 	<HeroContainer>
 		<HeroLeft>

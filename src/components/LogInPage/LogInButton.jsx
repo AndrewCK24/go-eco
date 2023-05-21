@@ -1,11 +1,8 @@
 import styled from "@emotion/styled";
 const LogInButtonStyle = styled.button`
-    width: 90%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
     border-color: black;
     border-style: solid;
     border-radius: 0.5rem;

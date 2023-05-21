@@ -4,21 +4,6 @@ import "../../pageCSS/UserPage.css";
 
 const UserPage = () => {
   return (<div className="UserPage">
-              <div className="SearchBlock">
-                <div className="frame78-text">What are you looking for?</div>
-                    <div className="frame78-frame427319070">
-                      <img
-                        src="../assets/search.svg"
-                        alt="Search1106"
-                        className="frame78-search"
-                      />
-                      <img
-                        src="../assets/rectangle11106.png"
-                        alt="Rectangle11106"
-                        className="frame78-rectangle1"
-                      />
-                </div>
-              </div>
               <div className="EventNotify">
                 <div className="NextEvent">Next - Beach cleanup</div>
                 <div className="EventDetail">   
