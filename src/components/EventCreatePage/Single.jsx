@@ -1,18 +1,22 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
+const TextContainer = styled.div`
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+    padding: 5%;
+    color: rgba(30, 30, 30, 0.75);
+`;
+
 const Text1 = styled.div`
-    display: 'flex';
-    font-size: '2rem';
-    font-weight: '700';
-    color: 'rgba(0, 0, 0, 1)';
+    font-size: 2rem;
+    font-weight: 700;
 `;
    
 const Text2 = styled.div`
-    display: 'flex';
-    font-size: '1.5rem';
-    font-weight: '400;
-    color: 'rgba(0, 0, 0, 1)';
+    font-size: 1.5rem;
+    font-weight: 400;
 `;
 
 function Single(){
@@ -24,10 +28,13 @@ function Single(){
         backgroundColor: ' rgba(179, 230, 193, 0.5)',
         textDecoration: 'none'
     };
+
     return(
     <Link to="/EventCreatePage/ProposalPage" style={style}>
-        <Text1>Single activity</Text1>
-        <Text2>For only one time</Text2>
+        <TextContainer>
+            <Text1>Single activity</Text1>
+            <Text2>For only one time</Text2>
+        </TextContainer>
     </Link>
     )
 }
