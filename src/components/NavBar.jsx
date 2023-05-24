@@ -94,7 +94,7 @@ const TopNav = () => {
 			</MenuContainer>
 			<RightNav>
 				<SearchContainer>
-					<SearchInput />
+					<SearchInput placeholder="Search..." />
 					<SearchBtn>
 						<SearchIcon />
 					</SearchBtn>
