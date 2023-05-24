@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 
 import Logo from "./Logo";
-import { ReactComponent as UserIcon } from "../icons/userIcon.svg";
+import { ReactComponent as UserIcon } from "../icons/user.svg";
 import { ReactComponent as SearchIcon } from "../icons/search.svg";
 
 const OuterContainer = styled.nav`
