@@ -19,20 +19,24 @@ const EventContainer = styled.section`
 	grid-gap: 3rem;
 `;
 
+// const SectionTitle = styled.div`
+// 	grid-column: 1 / 5;
+// 	grid-row: 1 / 2;
+// 	font-size:  2rem;
+//   	font-style: Bold;
+//   	font-family: Poppins;
+//   	font-weight: 700;
+// `;
+
 const SectionTitle = styled.div`
-	grid-column: 1 / 5;
-	grid-row: 1 / 2;
+	display: flex;
+	margin:1% 1%;
 	font-size:  2rem;
   	font-style: Bold;
   	font-family: Poppins;
   	font-weight: 700;
 `;
 
-const EventTitle = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items:flex-start;
-`;
 // const Title2 = styled.div`
 // 	display: flex;
 // 	flex-direction: column;
@@ -46,7 +50,6 @@ const FeedBackContainer = styled.section`
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr auto;
 	grid-gap: 2rem;
-	padding: 1rem;
 `;
 
 const FeedBackBlock = styled.div`
@@ -62,19 +65,16 @@ const FeedBack = styled.div`
 	font-family: Poppins;
 	font-weight: 500;
 	line-height: normal;
-	margin: 5%;
+	padding: 5%;
 `;
 
 const HomePage = () => {
 	return (
 		<Container>
 			<Hero />
-			<EventContainer>
-				<SectionTitle>
-					<EventTitle>Just go eco NOW!</EventTitle>
-					{/* FIXME:title position need to be modified */}
+			<SectionTitle>Just go eco NOW!</SectionTitle>
 					{/* <Title2>View All</Title2> */}
-				</SectionTitle>
+			<EventContainer>
 				<Event
 					eventName="Plant conservation"
 					location="Chiayi county"
@@ -108,11 +108,9 @@ const HomePage = () => {
 					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
 				/>
 			</EventContainer>
-			<EventContainer>
-				<SectionTitle>
-					<EventTitle>Let’s make our planet better!</EventTitle>
+			<SectionTitle>Let’s make our planet better!</SectionTitle>
 					{/* <Title2>View All</Title2> */}
-				</SectionTitle>
+			<EventContainer>
 				<Event
 					eventName="Mountain cleaning"
 					location="Yilan county"
@@ -146,8 +144,8 @@ const HomePage = () => {
 					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
 				/>
 			</EventContainer>
+			<SectionTitle>What’s volunteers’ feedback?</SectionTitle>
 			<FeedBackContainer>
-				<SectionTitle>What’s volunteers’ feedback?</SectionTitle>
 				<FeedBackBlock>
 					<FeedBack>
 					Beach Events are a great way to protect the environment and prevent

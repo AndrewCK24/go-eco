@@ -15,7 +15,7 @@ const EventPicture = styled.img`
 `;
 
 const EventInfoContainer = styled.div`
-	margin: 3%;
+	margin: 3.5%;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -26,6 +26,7 @@ const EventDetail = styled.div`
 	align-items: center;
 	display: grid;
 	grid-template-rows: repeat(2,1fr) auto;
+	margin: 2%;
 `;
 const EventTitle = styled.div`
 	width:100%;
@@ -58,7 +59,6 @@ const EventTextContainer2 = styled.div`
 `; 
 const JoinButton =styled.button`
 	width: 80%;
-	align-items: center;
 	display: flex;
 	text-align: center;
 	border-radius: 0.5rem;

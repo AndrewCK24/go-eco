@@ -43,9 +43,15 @@ const RightColumnText = styled.div`
 	width:100%;
 	display: grid;
 	grid-template-rows: 1fr auto;
+	padding: 5%;
+`;
+const RightColumnText1 = styled.div`
+	display: flex;
 	font-weight: 600;
 `;
+
 const RightColumnText2 = styled.div`
+	display: flex;
 	font-size: 1.75rem;
 `;
 
@@ -87,15 +93,15 @@ const EventCreatePage = () => {
 					</LeftTitleText>	
 					<RightTitleText>
 						<RightColumnText>
-							<div>Successful proposal</div>
+							<RightColumnText1>Successful proposal</RightColumnText1>
 							<RightColumnText2>5000+</RightColumnText2>
 						</RightColumnText>
 						<RightColumnText>
-							<div>Eco activities</div>
+							<RightColumnText1>Eco activities</RightColumnText1>
 							<RightColumnText2>1000+</RightColumnText2>
 						</RightColumnText>
 						<RightColumnText>
-							<div>Active volunteers</div>
+							<RightColumnText1>Active volunteers</RightColumnText1>
 							<RightColumnText2>800+</RightColumnText2>
 						</RightColumnText>		
 					</RightTitleText>
