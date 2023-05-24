@@ -5,7 +5,7 @@ import { ReactComponent as LogoIcon } from "../icons/favicon.svg";
 import { ReactComponent as UserIcon } from "../icons/userIcon.svg";
 import { ReactComponent as SearchIcon } from "../icons/search.svg";
 
-const OuterContainer = styled.div`
+const OuterContainer = styled.nav`
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -13,7 +13,7 @@ const OuterContainer = styled.div`
 	align-items: center;
 `;
 
-const Container = styled.nav`
+const Container = styled.div`
 	width: 90%;
 	padding: 0.75rem 0;
 	display: grid;
