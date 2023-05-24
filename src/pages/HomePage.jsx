@@ -8,7 +8,7 @@ const Container = styled.div`
 	overflow: auto;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom:3%;
+	margin-bottom: 3%;
 `;
 
 const EventContainer = styled.section`
@@ -16,7 +16,7 @@ const EventContainer = styled.section`
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: auto 1fr;
-	grid-gap: 3rem;
+	grid-gap: 1.25%;
 `;
 
 // const SectionTitle = styled.div`
@@ -30,11 +30,11 @@ const EventContainer = styled.section`
 
 const SectionTitle = styled.div`
 	display: flex;
-	margin:1% 1%;
-	font-size:  2rem;
-  	font-style: Bold;
-  	font-family: Poppins;
-  	font-weight: 700;
+	margin: 1% 1%;
+	font-size: 2rem;
+	font-style: Bold;
+	font-family: Poppins;
+	font-weight: 700;
 `;
 
 // const Title2 = styled.div`
@@ -56,7 +56,7 @@ const FeedBackBlock = styled.div`
 	display: flex;
 	border-radius: 1rem;
 	background-color: rgba(180, 221, 231, 0.5);
-`; 
+`;
 
 const FeedBack = styled.div`
 	color: rgba(30, 30, 30, 0.75);
@@ -73,7 +73,7 @@ const HomePage = () => {
 		<Container>
 			<Hero />
 			<SectionTitle>Just go eco NOW!</SectionTitle>
-					{/* <Title2>View All</Title2> */}
+			{/* <Title2>View All</Title2> */}
 			<EventContainer>
 				<Event
 					eventName="Plant conservation"
@@ -82,7 +82,7 @@ const HomePage = () => {
 					date="04.16.2023"
 					src="/assets/recyclePicture1.png"
 					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-				/>	
+				/>
 				<Event
 					eventName="Event reusing"
 					location="Taipei City"
@@ -90,7 +90,7 @@ const HomePage = () => {
 					date="04.22.2023"
 					src="/assets/recyclePicture2.png"
 					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-				/> 
+				/>
 				<Event
 					eventName="Kitchen waste reuse"
 					location="Yilan county"
@@ -109,7 +109,7 @@ const HomePage = () => {
 				/>
 			</EventContainer>
 			<SectionTitle>Let’s make our planet better!</SectionTitle>
-					{/* <Title2>View All</Title2> */}
+			{/* <Title2>View All</Title2> */}
 			<EventContainer>
 				<Event
 					eventName="Mountain cleaning"
@@ -148,23 +148,23 @@ const HomePage = () => {
 			<FeedBackContainer>
 				<FeedBackBlock>
 					<FeedBack>
-					Beach Events are a great way to protect the environment and prevent
-					harm to marine life by removing trash and debris from beaches.
-					Participating in a beach Event is a rewarding experience that allows
-					you to make a positive impact on the environment, connect with my
-					community.
+						Beach Events are a great way to protect the environment and prevent
+						harm to marine life by removing trash and debris from beaches.
+						Participating in a beach Event is a rewarding experience that allows
+						you to make a positive impact on the environment, connect with my
+						community.
 					</FeedBack>
 				</FeedBackBlock>
 				<FeedBackBlock>
 					<FeedBack>
-					Being eco-friendly means adopting behaviors that are sustainable and
-					have a minimal impact on the environment. This includes reducing
-					waste, conserving resources, and using environmentally friendly
-					products and practices.
+						Being eco-friendly means adopting behaviors that are sustainable and
+						have a minimal impact on the environment. This includes reducing
+						waste, conserving resources, and using environmentally friendly
+						products and practices.
 					</FeedBack>
 				</FeedBackBlock>
 			</FeedBackContainer>
-				{/*<div className="frame77-text125">
+			{/*<div className="frame77-text125">
 					Beach Events are a great way to protect the environment and prevent
 					harm to marine life by removing trash and debris from beaches.
 					Participating in a beach Event is a rewarding experience that allows
