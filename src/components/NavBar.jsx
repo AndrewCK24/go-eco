@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
 
-import { ReactComponent as LogoIcon } from "../icons/favicon.svg";
+import Logo from "./Logo";
 import { ReactComponent as UserIcon } from "../icons/userIcon.svg";
 import { ReactComponent as SearchIcon } from "../icons/search.svg";
 
@@ -20,12 +20,6 @@ const Container = styled.div`
 	grid-template-columns: auto 1fr auto;
 	grid-column-gap: 1rem;
 	align-items: center;
-`;
-
-const Logo = styled(LogoIcon)`
-	width: 20vw;
-	max-width: 12rem;
-	height: 3rem;
 `;
 
 const MenuContainer = styled.div`
