@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import { ReactComponent as LocationIcon } from "../../icons/location.svg";
 import { ReactComponent as ParticipantIcon } from "../../icons/userIcon.svg";
 
-const Container = styled.div`
+const Container = styled(Link)`
+	color: var(--text-black);
+	text-decoration: none;
 	display: grid;
 	grid-template-rows: auto 1fr;
 	border-radius: 1rem;
@@ -34,15 +36,12 @@ const EventTitle = styled.div`
 const EventDetail = styled.div`
 	align-items: center;
 	display: grid;
-	grid-template-rows: repeat(2, 1fr) auto;
-`;
-
-const EventTextContainer = styled.div`
-	display: grid;
-	grid-template-columns: 1fr 1fr auto;
+	grid-template-rows: auto auto;
+	grid-template-columns: repeat(2, 1fr);
 `;
 
 const EventDetailText = styled.div`
+	color: var(--text-gray);
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -52,49 +51,38 @@ const EventDetailText = styled.div`
 	}
 `;
 
-const EventTextContainer2 = styled.div`
-	height: auto;
-	display: grid;
-	align-items: center;
-	grid-template-columns: 1fr auto;
-`;
-
-const JoinButton = styled(Link)`
-	width: 80%;
-	padding: 0.25rem;
-	display: flex;
-	justify-content: center;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 0.5rem;
-	color: var(--primary-black);
-	font-weight: 500;
-	background-color: var(--bg-green-main);
-`;
+// const JoinButton = styled(Link)`
+// 	width: 80%;
+// 	padding: 0.25rem;
+// 	display: flex;
+// 	justify-content: center;
+// 	text-align: center;
+// 	text-decoration: none;
+// 	border-radius: 0.5rem;
+// 	color: var(--primary-black);
+// 	font-weight: 500;
+// 	background-color: var(--bg-green-main);
+// `;
 
 const Event = (prop) => {
 	return (
-		<Container backgroundColor={prop.backgroundColor}>
+		<Container to="/RegisterPage" backgroundColor={prop.backgroundColor}>
 			<EventPicture src={prop.src} />
 			<EventInfoContainer>
 				<EventTitle>{prop.eventName}</EventTitle>
 				<EventDetail>
-					<EventTextContainer>
-						<EventDetailText>{prop.date}</EventDetailText>
-						<EventDetailText>{prop.time}</EventDetailText>
-						<EventDetailText>
-							<ParticipantIcon />
-							50+
-						</EventDetailText>
-						{/* TODO:lifecycle */}
-					</EventTextContainer>
-					<EventTextContainer2>
-						<JoinButton to="/RegisterPage">Join now!</JoinButton>
-						<EventDetailText>
-							<LocationIcon />
-							{prop.location}
-						</EventDetailText>
-					</EventTextContainer2>
+					<EventDetailText>{prop.date}</EventDetailText>
+					<EventDetailText>
+						<ParticipantIcon />
+						250+
+					</EventDetailText>
+					{/* TODO:lifecycle */}
+					{/* <JoinButton to="/RegisterPage">Join now!</JoinButton> */}
+					<EventDetailText>{prop.time}</EventDetailText>
+					<EventDetailText>
+						<LocationIcon />
+						{prop.location}
+					</EventDetailText>
 				</EventDetail>
 			</EventInfoContainer>
 		</Container>
