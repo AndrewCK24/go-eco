@@ -1,66 +1,61 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
-const EventBox = styled.div`
-	display: flex;
-	flex-direction: column;
+import { ReactComponent as LocationIcon } from "../../icons/location.svg";
+
+const Container = styled.div`
+	display: grid;
 	grid-template-rows: auto 1fr;
 	border-radius: 1rem;
 	background-color: ${(prop) => prop.backgroundColor};
 `;
 
 const EventPicture = styled.img`
-	width: 100%;
-	height: auto;
+	width: 90%;
+	padding: 5% 5% 0% 5%;
 	border-radius: 1rem;
 `;
 
 const EventInfoContainer = styled.div`
-	margin: 3.5%;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-`;
-
-const EventDetail = styled.div`
-	width: 100%;
-	align-items: center;
+	width: 90%;
+	padding: 0% 5% 5% 5%;
 	display: grid;
-	grid-template-rows: repeat(2, 1fr) auto;
-	margin: 2%;
+	grid-template-rows: auto 1fr;
 `;
 
 const EventTitle = styled.div`
-	width: 100%;
-	font-style: Bold;
-	text-align: left;
-	font-size: 1.5rem;
-	font-family: Al Bayan;
+	padding: 0.5rem 0;
+	font-size: 1.25rem;
 	font-weight: 700;
-	color: rgba(37, 34, 34, 1);
+	color: var(--text-black);
+`;
+
+const EventDetail = styled.div`
+	align-items: center;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr) auto;
 `;
 
 const EventTextContainer = styled.div`
-	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr 1fr auto;
 `;
 
 const EventDetailText = styled.div`
-	width: 100%;
-	height: auto;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
+	svg {
+		width: 1rem;
+		height: 1rem;
+	}
 `;
 
 const EventTextContainer2 = styled.div`
-	width: 100%;
 	height: auto;
 	display: grid;
-	flex-direction: column;
 	align-items: center;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr auto;
 `;
 
 const JoinButton = styled(Link)`
@@ -72,18 +67,17 @@ const JoinButton = styled(Link)`
 	text-decoration: none;
 	border-radius: 0.5rem;
 	color: var(--primary-black);
-	font-family: Poppins;
 	font-weight: 500;
-	background-color: rgba(130, 174, 142, 1);
+	background-color: var(--bg-green-main);
 `;
 
 const Event = (prop) => {
 	return (
-		<EventBox backgroundColor={prop.backgroundColor}>
+		<Container backgroundColor={prop.backgroundColor}>
+			<EventPicture src={prop.src} />
 			<EventInfoContainer>
-				<EventPicture src={prop.src} />
+				<EventTitle>{prop.eventName}</EventTitle>
 				<EventDetail>
-					<EventTitle>{prop.eventName}</EventTitle>
 					<EventTextContainer>
 						<EventDetailText>{prop.date}</EventDetailText>
 						<EventDetailText>{prop.time}</EventDetailText>
@@ -92,16 +86,16 @@ const Event = (prop) => {
 						</EventDetailText>
 						{/* TODO:lifecycle */}
 					</EventTextContainer>
+					<EventTextContainer2>
+						<JoinButton to="/RegisterPage">Join now!</JoinButton>
+						<EventDetailText>
+							<LocationIcon />
+							{prop.location}
+						</EventDetailText>
+					</EventTextContainer2>
 				</EventDetail>
-				<EventTextContainer2>
-					<JoinButton to="/RegisterPage">Join now!</JoinButton>
-					<EventDetailText>
-						{/* <EventPicture src="/assets/maptag.svg" /> */}
-						{prop.location}
-					</EventDetailText>
-				</EventTextContainer2>
 			</EventInfoContainer>
-		</EventBox>
+		</Container>
 	);
 };
 
