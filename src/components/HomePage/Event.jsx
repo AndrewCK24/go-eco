@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const EventBox = styled.div`
 	display: flex;
@@ -67,6 +68,9 @@ const JoinButton =styled.button`
 	background-color: rgba(130, 174, 142, 1);
 `;
 const Event = (prop) => {
+	const style={
+        textDecoration: 'none'
+    };
 	return (
 		<EventBox backgroundColor={prop.backgroundColor}>
 			<EventInfoContainer>
@@ -85,7 +89,9 @@ const Event = (prop) => {
 					</EventTextContainer>
 				</EventDetail>
 				<EventTextContainer2>
-					<JoinButton>Join now!</JoinButton>
+					<Link to="/RegisterPage" style={style}>
+						<JoinButton>Join now!</JoinButton>
+					</Link>
 					<EventDetailText>
 					{/* <EventPicture src="/assets/maptag.svg" /> */}{prop.location}
 					</EventDetailText>

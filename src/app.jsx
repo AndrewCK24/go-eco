@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
+import RegisterPage from "./pages/RegisterPage";
 import LogInPage from "./pages/LogInPage";
 import ProposalPage from "./pages/ProposalPage";
 import EventCreatePage from "./pages/EventCreatePage";
@@ -32,6 +33,7 @@ const App = () => {
 				<PageContainer>
 					<Routes>
 						<Route path="/" element={<HomePage />} />
+						<Route path="/RegisterPage" element={<RegisterPage />} />
 						<Route path="/LogInPage" element={<LogInPage />} />
 						<Route path="/EventCreatePage" element={<EventCreatePage />} />
 						<Route

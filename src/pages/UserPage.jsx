@@ -89,12 +89,6 @@ const UserPage = () => {
                 alt="Screenshot20230412at040621112"
                 className="frame78-screenshot20230412at04062"
               />
-              <div className="frame78-block3">
-                <div className="frame78-frame427319000">
-                  <div className="frame78-text108">Notifications</div>
-                </div>
-              </div>
-              
               <div className="frame78-frame427319075">
                 <div className="frame78-card">
                   <div className="frame78-project-card">
@@ -475,70 +469,6 @@ const UserPage = () => {
                 <div className="frame78-text244">Settings</div>
               </div>
             </div>
-          
-          
-          <div className="frame78-notifications1">
-            <div className="frame78-avatar-text-time11">
-              <div className="frame78-featured-icon5">
-                <button className="frame78-button5">
-                  <img
-                    src="../assets/bug.svg"
-                    alt="BugBeetleI111"
-                    className="frame78-bug-beetle"
-                  />
-                </button>
-              </div>
-              <div className="frame78-frame110">
-                <div className="frame78-text246 14Regular">You have a bug that needs to be fixed.</div>
-                <div className="frame78-text248 12Regular1">5m ago</div>
-              </div>
-            </div>
-            <div className="frame78-avatar-text-time12">
-              <div className="frame78-featured-icon6">
-                <button className="frame78-button6">
-                  <img
-                    src="../assets/user.svg"
-                    alt="UserI111"
-                    className="frame78-user"
-                  />
-                </button>
-              </div>
-              <div className="frame78-frame111">
-                <div className="frame78-text250 14Regular">New user registered</div>
-                <div className="frame78-text252 12Regular1">1:23 AM</div>
-              </div>
-            </div>
-            <div className="frame78-avatar-text-time13">
-              <div className="frame78-featured-icon7">
-                <button className="frame78-button7">
-                  <img
-                    src="../assets/bug.svg"
-                    alt="BugBeetleI111"
-                    className="frame78-bug-beetle1"
-                  />
-                </button>
-              </div>
-              <div className="frame78-frame112">
-                <div className="frame78-text254 14Regular">You have a bug that needs to be fixed.</div>
-                <div className="frame78-text256 12Regular1">0:32 AM</div>
-              </div>
-            </div>
-            <div className="frame78-avatar-text-time14">
-              <div className="frame78-featured-icon8">
-                <button className="frame78-button8">
-                  <img
-                    src="../assets/broadcast.svg"
-                    alt="BroadcastI111"
-                    className="frame78-broadcast"
-                  />
-                </button>
-              </div>
-              <div className="frame78-frame113">
-                <div className="frame78-text258 14Regular">Andi Lane subscribed to you</div>
-                <div className="frame78-text260 12Regular1">Yesterday 12:39 AM</div>
-              </div>
-            </div>
-          </div>
     </div>
   );
 };
