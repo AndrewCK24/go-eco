@@ -66,7 +66,6 @@ const SearchInput = styled.input`
 	border: none;
 	padding-left: 0.5rem;
 	background-color: transparent;
-	/* border-radius: 0.5rem; */
 	&:focus {
 		outline: none;
 	}

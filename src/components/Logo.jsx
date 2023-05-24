@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import styled from "@emotion/styled";
 
 import { ReactComponent as LogoIcon } from "../icons/favicon.svg";
 
-const Container = styled(Link)`
+const Container = styled(Redirect)`
 	svg {
 		width: 20vw;
 		max-width: 12rem;
@@ -13,7 +13,7 @@ const Container = styled(Link)`
 
 const Logo = () => {
   return (
-    <Container to="/">
+    <Container to="/" exact>
       <LogoIcon />
     </Container>
   );
