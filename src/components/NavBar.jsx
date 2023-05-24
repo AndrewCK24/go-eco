@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-// import Logo from "../../../public/assets/LOGO_GOECO.png";
-import { ReactComponent as Logo } from "../icons/favicon.svg";
+
+import { ReactComponent as LogoIcon } from "../icons/favicon.svg";
 import { ReactComponent as UserIcon } from "../icons/userIcon.svg";
 import { ReactComponent as SearchIcon } from "../icons/search.svg";
 
@@ -19,17 +19,16 @@ const Container = styled.nav`
 	}
 `;
 
-const LogoContainer = styled.div`
+const Logo = styled(LogoIcon)`
 	padding-left: 2rem;
-	svg {
-		width: 12rem;
-		height: 3rem;
-	}
+	width: 20vw;
+	max-width: 12rem;
+	height: 3rem;
 `;
 const LinkContainer = styled.div`
 	font-family: "Poppins", sans-serif;
 	gap: 1rem;
-	font-size: 1.25rem;
+	font-size: auto;
 	width: max-content;
 	display: flex;
 	flex-direction: row;
@@ -82,9 +81,7 @@ const SearchBtn = styled.button`
 const TopNav = () => {
 	return (
 		<Container>
-			<LogoContainer>
-				<Logo />
-			</LogoContainer>
+			<Logo />
 			<LinkContainer>
 				<Link to="/">
 					<TabText>Home</TabText>
