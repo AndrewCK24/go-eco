@@ -32,7 +32,7 @@ const MenuContainer = styled.div`
 `;
 
 const MenuText = styled(Link)`
-	color: var(--primary-black);
+	color: var(--text-black);
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -53,7 +53,7 @@ const RightNav = styled.div`
 const SearchContainer = styled.form`
 	display: grid;
 	grid-template-columns: auto auto;
-	background-color: var(--background-gray);
+	background-color: var(--bg-gray);
 	border-radius: 0.5rem;
 `;
 

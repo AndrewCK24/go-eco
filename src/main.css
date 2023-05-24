@@ -1,7 +1,9 @@
 /* 基礎 style 設定 */
 :root {
 	/* 色票變數 */
+	/* 背景顏色 */
 	--primary-black: rgba(30, 30, 30, 1);
+	--bg-gray: rgba(217, 217, 217, 0.34);
 	/* 文字顏色 */
 	--text-black: rgba(30, 30, 30, 1);
 	--text-gray: rgba(42, 45, 55, 0.6);
