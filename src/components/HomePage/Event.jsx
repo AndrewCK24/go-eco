@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
 import { ReactComponent as LocationIcon } from "../../icons/location.svg";
+import { ReactComponent as ParticipantIcon } from "../../icons/userIcon.svg";
 
 const Container = styled.div`
 	display: grid;
@@ -82,7 +83,8 @@ const Event = (prop) => {
 						<EventDetailText>{prop.date}</EventDetailText>
 						<EventDetailText>{prop.time}</EventDetailText>
 						<EventDetailText>
-							{/* <EventPicture src="/assets/userIcon.svg" /> */}50+
+							<ParticipantIcon />
+							50+
 						</EventDetailText>
 						{/* TODO:lifecycle */}
 					</EventTextContainer>
