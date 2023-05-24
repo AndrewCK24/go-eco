@@ -1,8 +1,10 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
+import { ReactComponent as DateIcon } from "../../icons/date.svg";
+import { ReactComponent as TimeIcon } from "../../icons/time.svg";
 import { ReactComponent as LocationIcon } from "../../icons/location.svg";
-import { ReactComponent as ParticipantIcon } from "../../icons/userIcon.svg";
+import { ReactComponent as ParticipantIcon } from "../../icons/participant.svg";
 
 const Container = styled(Link)`
 	color: var(--text-black);
@@ -27,7 +29,7 @@ const EventInfoContainer = styled.div`
 `;
 
 const EventTitle = styled.div`
-	padding: 0.5rem 0;
+	padding: 0.5rem 0.25rem;
 	font-size: 1.25rem;
 	font-weight: 700;
 	color: var(--text-black);
@@ -42,9 +44,11 @@ const EventDetail = styled.div`
 
 const EventDetailText = styled.div`
 	color: var(--text-gray);
+	padding-left: 0.25rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	gap: 0.25rem;
 	svg {
 		width: 1rem;
 		height: 1rem;
@@ -73,14 +77,20 @@ const Event = (prop) => {
 			<EventInfoContainer>
 				<EventTitle>{prop.eventName}</EventTitle>
 				<EventDetail>
-					<EventDetailText>{prop.date}</EventDetailText>
+					<EventDetailText>
+						<DateIcon />
+						{prop.date}
+					</EventDetailText>
 					<EventDetailText>
 						<ParticipantIcon />
 						250+
 					</EventDetailText>
 					{/* TODO:lifecycle */}
 					{/* <JoinButton to="/RegisterPage">Join now!</JoinButton> */}
-					<EventDetailText>{prop.time}</EventDetailText>
+					<EventDetailText>
+						<TimeIcon />
+						{prop.time}
+					</EventDetailText>
 					<EventDetailText>
 						<LocationIcon />
 						{prop.location}
