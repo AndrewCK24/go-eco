@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import "../../pageCSS/EventCreatePage.css";
 import Project from "../components/EventCreatePage/Project";
 
 const Container = styled.div`

@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import "../../pageCSS/ProposalPage.css";
 
 const Container = styled.div`
   width: 100%;
