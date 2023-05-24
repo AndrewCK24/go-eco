@@ -12,6 +12,7 @@ const Container = styled(Link)`
 	display: grid;
 	grid-template-rows: auto 1fr;
 	border-radius: 1rem;
+	/* TODO: 改用 themeProvider 變更背景顏色 */
 	background-color: ${(prop) => prop.backgroundColor};
 `;
 
