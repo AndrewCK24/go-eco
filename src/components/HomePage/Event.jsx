@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
+
 const EventBox = styled.div`
 	display: flex;
 	flex-direction: column;
 	grid-template-rows: auto 1fr;
 	border-radius: 1rem;
-	background-color: ${prop => prop.backgroundColor};
+	background-color: ${prop => prop.backgroundColor}
 `;	
-//FIXME:background-color variable doesn"t work!
 
 const EventPicture = styled.img`
 	width: 100%;
@@ -68,7 +68,7 @@ const JoinButton =styled.button`
 `;
 const Event = (prop) => {
 	return (
-		<EventBox>
+		<EventBox backgroundColor={prop.backgroundColor}>
 			<EventInfoContainer>
 				<EventPicture src={prop.src} />
 				<EventDetail>

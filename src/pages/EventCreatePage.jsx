@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import "../../pageCSS/EventCreatePage.css";
-import Single from "../components/EventCreatePage/Single";
-import Longterm from "../components/EventCreatePage/Longterm";
+import Project from "../components/EventCreatePage/Project";
 
 const Container = styled.div`
 	width: 100%;
@@ -42,6 +41,7 @@ const RightTitleText = styled.div`
 `;
 
 const RightColumnText = styled.div`
+	width:100%;
 	display: grid;
 	grid-template-rows: 1fr auto;
 	font-weight: 600;
@@ -99,27 +99,35 @@ const EventCreatePage = () => {
 							<div>Active volunteers</div>
 							<RightColumnText2>800+</RightColumnText2>
 						</RightColumnText>		
- 					</RightTitleText>
+					</RightTitleText>
 				</TopBlock>
 				<TitleText>Create your proposal</TitleText>
 				<Proposals>
-					<Single />
-					<Longterm />
+					<Project 
+					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+					Text1="Single activity"
+					Text2="For only one time"
+					/>
+					<Project 
+					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
+					Text1="Longterm project"
+					Text2="For continuous"
+					/>
 				</Proposals>
 				<BottomBlock>
- 					<TitleText>FAQ</TitleText>
- 					<div>
- 						Is there a time limit for fundraising?
+					<TitleText>FAQ</TitleText>
+					<div>
+						Is there a time limit for fundraising?
 						<br /><br /><br /><br />
- 						Is there a limit to fundraising goals?
+						Is there a limit to fundraising goals?
 						<br /><br /><br /><br />
 						Do I need to pay to start a project?
 						<br /><br /><br /><br />
- 						The fundraising project I launched is successful,when will I get the
- 						sponsorship money?
-						 <br /><br /><br /><br />
- 					</div>
- 				</BottomBlock>
+						The fundraising project I launched is successful,when will I get the
+						sponsorship money?
+						<br /><br /><br /><br />
+						</div>
+				</BottomBlock>
 			</EventCreateContainer>
 		</Container>
 	);

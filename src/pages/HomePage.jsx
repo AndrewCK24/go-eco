@@ -128,6 +128,7 @@ const HomePage = () => {
 					time="07:00 AM"
 					date="05.06.2023"
 					src="/assets/cleanUpPicture2.png"
+					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
 				/>
 				<Event
 					eventName="Ｗetlands Event"
@@ -135,6 +136,7 @@ const HomePage = () => {
 					time="05:00 PM"
 					date="04.25.2023"
 					src="/assets/cleanUpPicture3.png"
+					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
 				/>
 				<Event
 					eventName="Beach Event"
@@ -142,6 +144,7 @@ const HomePage = () => {
 					time="12:00 PM"
 					date="04.17.2023"
 					src="/assets/cleanUpPicture4.png"
+					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
 				/>
 			</EventContainer>
 			<FeedBackContainer>

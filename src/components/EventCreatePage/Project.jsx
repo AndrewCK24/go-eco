@@ -1,6 +1,14 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem;
+    background-color: ${prop => prop.backgroundColor}
+`;
+
 const TextContainer = styled.div`
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -19,23 +27,20 @@ const Text2 = styled.div`
     font-weight: 400;
 `;
 
-function Single(){
+function Project(prop){
     const style={
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        borderRadius: '1.5rem',
-        backgroundColor: ' rgba(179, 230, 193, 0.5)',
         textDecoration: 'none'
     };
 
     return(
     <Link to="/EventCreatePage/ProposalPage" style={style}>
-        <TextContainer>
-            <Text1>Single activity</Text1>
-            <Text2>For only one time</Text2>
-        </TextContainer>
+        <Container backgroundColor={prop.backgroundColor}>
+            <TextContainer>
+                <Text1>{prop.Text1}</Text1>
+                <Text2>{prop.Text2}</Text2>
+            </TextContainer>
+        </Container>    
     </Link>
     )
 }
-export default Single;
+export default Project;
