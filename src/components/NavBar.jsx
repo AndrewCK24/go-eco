@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 
 import Logo from "./Logo";
@@ -31,12 +31,16 @@ const MenuContainer = styled.div`
 	flex-direction: row;
 `;
 
-const MenuText = styled(Link)`
-	color: var(--text-black);
+const MenuLink = styled(NavLink)`
+	color: var(--text-gray);
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	text-decoration: none;
+	&.active {
+		color: var(--text-black);
+		font-weight: 700;
+	}
 `;
 
 const RightNav = styled.div`
@@ -85,9 +89,9 @@ const TopNav = () => {
 		<Container>
 			<Logo />
 			<MenuContainer>
-				<MenuText to="/">Home</MenuText>
-				<MenuText to="/EventCreatePage">Proposals</MenuText>
-				<MenuText to="/UserPage">Contacts</MenuText>
+				<MenuLink to="/">Home</MenuLink>
+				<MenuLink to="/EventCreatePage">Proposals</MenuLink>
+				<MenuLink to="/UserPage">Contacts</MenuLink>
 			</MenuContainer>
 			<RightNav>
 				<SearchContainer>
