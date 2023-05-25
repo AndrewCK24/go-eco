@@ -20,8 +20,13 @@
 	padding: 0;
 	border: 0;
 
-	/* 自行設定 */
+	/* 字形設定 */
 	font-size: 16px;
 	font-family: "Poppins", sans-serif;
-	color: var(--primary-black);
+	color: var(--text-black);
+}
+
+* {
+	/* 操作設定 */
+	overscroll-behavior: none;
 }
