@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
+
 import Hero from "../components/HomePage/Hero";
 import Event from "../components/HomePage/Event";
 
@@ -6,12 +8,12 @@ const Container = styled.div`
 	width: 100%;
 	display: flex;
 	overflow: auto;
+	gap: 1.5rem;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom: 3%;
 `;
 
-const EventContainer = styled.section`
+const EventSection = styled.section`
 	width: 90%;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -19,32 +21,26 @@ const EventContainer = styled.section`
 	grid-gap: 1.25%;
 `;
 
-// const SectionTitle = styled.div`
-// 	grid-column: 1 / 5;
-// 	grid-row: 1 / 2;
-// 	font-size:  2rem;
-//   	font-style: Bold;
-//   	font-family: Poppins;
-//   	font-weight: 700;
-// `;
-
 const SectionTitle = styled.div`
-	display: flex;
-	margin: 1% 1%;
+	padding: 0.5rem 0.5rem;
+	grid-column: 1 / 5;
+	grid-row: 1 / 2;
 	font-size: 2rem;
-	font-style: Bold;
-	font-family: Poppins;
 	font-weight: 700;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
 `;
 
-// const Title2 = styled.div`
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items:flex-end;
-// 	font-size: 1rem;
-// `;
+const ViewAll = styled(Link)`
+	grid-column: 2 / 3;
+	text-align: right;
+	font-size: 1rem;
+	text-decoration: none;
+	color: var(--text-gray);
+`;
 
-const FeedBackContainer = styled.section`
+const FeedBackSection = styled.section`
 	width: 90%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -72,9 +68,11 @@ const HomePage = () => {
 	return (
 		<Container>
 			<Hero />
-			<SectionTitle>Just go eco NOW!</SectionTitle>
-			{/* <Title2>View All</Title2> */}
-			<EventContainer>
+			<EventSection>
+				<SectionTitle>
+					Just go eco NOW!
+					<ViewAll to="/events">View All</ViewAll>
+				</SectionTitle>
 				<Event
 					eventName="Plant conservation"
 					location="Chiayi county"
@@ -107,10 +105,12 @@ const HomePage = () => {
 					src="/assets/recyclePicture4.png"
 					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
 				/>
-			</EventContainer>
-			<SectionTitle>Let’s make our planet better!</SectionTitle>
-			{/* <Title2>View All</Title2> */}
-			<EventContainer>
+			</EventSection>
+			<EventSection>
+				<SectionTitle>
+					Let’s make our planet better!
+					<ViewAll to="/events">View All</ViewAll>
+				</SectionTitle>
 				<Event
 					eventName="Mountain cleaning"
 					location="Yilan county"
@@ -143,9 +143,9 @@ const HomePage = () => {
 					src="/assets/cleanUpPicture4.png"
 					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
 				/>
-			</EventContainer>
+			</EventSection>
 			<SectionTitle>What’s volunteers’ feedback?</SectionTitle>
-			<FeedBackContainer>
+			<FeedBackSection>
 				<FeedBackBlock>
 					<FeedBack>
 						Beach Events are a great way to protect the environment and prevent
@@ -163,55 +163,7 @@ const HomePage = () => {
 						products and practices.
 					</FeedBack>
 				</FeedBackBlock>
-			</FeedBackContainer>
-			{/*<div className="frame77-text125">
-					Beach Events are a great way to protect the environment and prevent
-					harm to marine life by removing trash and debris from beaches.
-					Participating in a beach Event is a rewarding experience that allows
-					you to make a positive impact on the environment, connect with my
-					community.
-				</div>
-				<div className="frame77-group9">
-					<img
-						src="/assets/vector1975.svg"
-						alt="Vector1975"
-						className="frame77-vector"
-					/>
-					<img
-						src="/assets/unsplash5aguycwpjwremovebgpreview1976-z7m-300h.png"
-						alt="unsplash5aGUyCWPJwremovebgpreview1976"
-						className="frame77-unsplash5a--uy-cw-jwremovebgpreview"
-					/>
-				</div>
-				<div className="frame77-frame46">
-					<div className="frame77-text127">John Kenny</div>
-					<div className="frame77-text129">The HR in Google</div>
-				</div>
-			</div>
-			<div className="frame77-frame50">
-				<div className="frame77-text131">
-					Being eco-friendly means adopting behaviors that are sustainable and
-					have a minimal impact on the environment. This includes reducing
-					waste, conserving resources, and using environmentally friendly
-					products and practices.
-				</div>
-				<div className="frame77-frame461">
-					<div className="frame77-text133">Yara van dovan</div>
-					<div className="frame77-text135">Doctor</div>
-				</div>
-				<div className="frame77-group10">
-					<img
-						src="/assets/vector1975.svg"
-						alt="Vector1986"
-						className="frame77-vector1"
-					/>
-					<img
-						src="/assets/unsplasho3ymvt7wf9uremovebgpreview1987-lpr4-200w.png"
-						alt="unsplashO3ymvT7Wf9Uremovebgpreview1987"
-						className="frame77-unsplash-o3ymv-t-wf-uremovebgpreview"
-					/>
-				</div>
-			</div> */}
+			</FeedBackSection>
 		</Container>
 	);
 };
