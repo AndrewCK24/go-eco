@@ -5,11 +5,10 @@ const HeroContainer = styled.section`
 	display: grid;
 	grid-template-columns: 1fr auto;
 	border-radius: 1.5rem;
-	background-color: rgba(179, 230, 193, 1);
+	background-color: var(--bg-green-main);
 `;
 
 const HeroLeft = styled.div`
-	width: 100%;
 	margin: 5%;
 	display: grid;
 	grid-template-rows: 2fr 1fr;

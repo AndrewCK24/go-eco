@@ -6,6 +6,7 @@ import Event from "../components/HomePage/Event";
 
 const Container = styled.div`
 	width: 100%;
+	padding-bottom: 2rem;
 	display: flex;
 	overflow: auto;
 	gap: 1.5rem;
@@ -23,7 +24,7 @@ const EventSection = styled.section`
 
 const SectionTitle = styled.div`
 	padding: 0.5rem 0.5rem;
-	grid-column: 1 / 5;
+	grid-column: 1 / -1;
 	grid-row: 1 / 2;
 	font-size: 2rem;
 	font-weight: 700;
@@ -44,21 +45,16 @@ const FeedBackSection = styled.section`
 	width: 90%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr auto;
-	grid-gap: 2rem;
-`;
-
-const FeedBackBlock = styled.div`
-	display: flex;
-	border-radius: 1rem;
-	background-color: rgba(180, 221, 231, 0.5);
+	grid-template-rows: auto 1fr;
+	grid-gap: 1.25%;
 `;
 
 const FeedBack = styled.div`
+	display: flex;
+	border-radius: 1rem;
+	background-color: var(--bg-blue-light);
 	color: rgba(30, 30, 30, 0.75);
 	font-size: 1rem;
-	font-style: Medium;
-	font-family: Poppins;
 	font-weight: 500;
 	line-height: normal;
 	padding: 5%;
@@ -144,25 +140,21 @@ const HomePage = () => {
 					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
 				/>
 			</EventSection>
-			<SectionTitle>What’s volunteers’ feedback?</SectionTitle>
 			<FeedBackSection>
-				<FeedBackBlock>
-					<FeedBack>
-						Beach Events are a great way to protect the environment and prevent
-						harm to marine life by removing trash and debris from beaches.
-						Participating in a beach Event is a rewarding experience that allows
-						you to make a positive impact on the environment, connect with my
-						community.
-					</FeedBack>
-				</FeedBackBlock>
-				<FeedBackBlock>
-					<FeedBack>
-						Being eco-friendly means adopting behaviors that are sustainable and
-						have a minimal impact on the environment. This includes reducing
-						waste, conserving resources, and using environmentally friendly
-						products and practices.
-					</FeedBack>
-				</FeedBackBlock>
+				<SectionTitle>What’s volunteers’ feedback?</SectionTitle>
+				<FeedBack>
+					Beach Events are a great way to protect the environment and prevent
+					harm to marine life by removing trash and debris from beaches.
+					Participating in a beach Event is a rewarding experience that allows
+					you to make a positive impact on the environment, connect with my
+					community.
+				</FeedBack>
+				<FeedBack>
+					Being eco-friendly means adopting behaviors that are sustainable and
+					have a minimal impact on the environment. This includes reducing
+					waste, conserving resources, and using environmentally friendly
+					products and practices.
+				</FeedBack>
 			</FeedBackSection>
 		</Container>
 	);
