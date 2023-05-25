@@ -47,15 +47,15 @@ const LogInButtonStyle2 = styled.button`
 
 function LogInInputForm(){
 
-    const [email,setEmail] = useState(" Email");
-    const [password,setPassword] = useState(" Password");
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
 
     return(
     <LogInInputFormContainer>
         <LogInInputSet>
-            <LogInInput defaultValue={email} value={email} 
+            <LogInInput placeholder=" Email:"  value={email} 
             onChange = { e => {setEmail(e.target.value)} }/>
-            <LogInInput defaultValue={password} value={password} 
+            <LogInInput placeholder=" Password:"  value={password} 
             onChange={ e => {setPassword(e.target.value)} }/>
         </LogInInputSet>
         <LogInButtonSet2>
