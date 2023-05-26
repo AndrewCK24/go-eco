@@ -21,8 +21,8 @@ const  data = {
 }
 
 const styles = {
-    rowTitleTextSize: '2rem',
-    rowContentTextSize: '2rem',
+    rowTitleTextSize: '1.75rem',
+    rowContentTextSize: '1.5rem',
     rowContentPaddingTop: '1rem',
     rowContentPaddingBottom: '1rem',
 };
