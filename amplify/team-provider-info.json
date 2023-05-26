@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-goeco-dev-210549-authRole",
+      "UnauthRoleArn": "arn:aws:iam::589591079450:role/amplify-goeco-dev-210549-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::589591079450:role/amplify-goeco-dev-210549-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-goeco-dev-210549-deployment",
+      "UnauthRoleName": "amplify-goeco-dev-210549-unauthRole",
+      "StackName": "amplify-goeco-dev-210549",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:589591079450:stack/amplify-goeco-dev-210549/0ac2d330-fbc6-11ed-a571-0ee84cb9c6eb",
+      "AmplifyAppId": "d1a2wdczly4scn"
+    },
+    "categories": {
+      "auth": {
+        "goecob3456910": {}
+      }
+    }
+  }
+}
