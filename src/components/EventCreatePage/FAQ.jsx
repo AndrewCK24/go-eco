@@ -1,12 +1,6 @@
-import styled from "@emotion/styled";
 import Faq from "react-faq-component";
 
-const FAQContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-`
-
-const data = {
+const  data = {
     rows: [
         {
             title: "Is there a time limit for fundraising?",
@@ -23,22 +17,19 @@ const data = {
         {
             title: "The fundraising project I launched is successful,when will I get the sponsorship money?",
             content: "textArea4"
-        }]
+        }],
 }
+
 const styles = {
-    rowTitleTextSize: "medium",
-    rowContentTextSize:  "medium",
-    rowContentPaddingTop: "1rem",
-    rowContentPaddingBottom: "1rem",
-    rowContentPaddingLeft: "1rem;",
-    rowContentPaddingRight: "1rem",
+    rowTitleTextSize: '2rem',
+    rowContentTextSize: '2rem',
+    rowContentPaddingTop: '1rem',
+    rowContentPaddingBottom: '1rem',
 };
-  
- const FAQ = () =>{
-    return( 
-        <FAQContainer>
-            <Faq data={data} styles={styles}/>
-        </FAQContainer>
-    )
- }
+
+const FAQ= () => {
+  return(
+    <Faq data={data} styles={styles} />
+  )
+}
  export default FAQ;

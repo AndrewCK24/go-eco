@@ -73,10 +73,10 @@ const Proposals = styled.div`
 `;
 
 const BottomBlock = styled.div`
+	width: 100%;
 	display: grid;
 	grid-template-rows: 1fr auto;
 	color: rgba(0, 0, 0, 1);
-	font-size: 2rem;
     font-weight: 700;
 	margin-bottom: 5%;
 `;
@@ -123,17 +123,6 @@ const EventCreatePage = () => {
 				<BottomBlock>
 					<TitleText>FAQ</TitleText>
 					<FAQ />
-					{/* <div>
-						Is there a time limit for fundraising?
-						<br /><br /><br /><br />
-						Is there a limit to fundraising goals?
-						<br /><br /><br /><br />
-						Do I need to pay to start a project?
-						<br /><br /><br /><br />
-						The fundraising project I launched is successful,when will I get the
-						sponsorship money?
-						<br /><br /><br /><br />
-					</div> */}
 				</BottomBlock>
 			</EventCreateContainer>
 		</Container>
