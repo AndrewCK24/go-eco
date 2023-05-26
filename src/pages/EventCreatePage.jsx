@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import Project from "../components/EventCreatePage/Project";
+import FAQ from "../components/EventCreatePage/FAQ";
 
 const Container = styled.div`
 	width: 100%;
@@ -121,7 +122,8 @@ const EventCreatePage = () => {
 				</Proposals>
 				<BottomBlock>
 					<TitleText>FAQ</TitleText>
-					<div>
+					<FAQ />
+					{/* <div>
 						Is there a time limit for fundraising?
 						<br /><br /><br /><br />
 						Is there a limit to fundraising goals?
@@ -131,7 +133,7 @@ const EventCreatePage = () => {
 						The fundraising project I launched is successful,when will I get the
 						sponsorship money?
 						<br /><br /><br /><br />
-						</div>
+					</div> */}
 				</BottomBlock>
 			</EventCreateContainer>
 		</Container>
