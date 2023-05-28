@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
+import UserSideBar from "../components/UserSideBar";
 
 const Container = styled.div`
   width: 100%;
@@ -17,35 +17,6 @@ const UserPageContainer = styled.div`
   grid-template-columns: auto 1fr;
   gap: 3rem;
   align-items: center;
-`;
-
-const SideBar = styled.div`
-  display: grid;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  grid-template-rows: repeat(6,1fr);
-`;
-
-const TopSide = styled.div`
-  display: grid;
-  grid-row: 1/2;
-  align-items: center;
-`;
-
-const BottomSide = styled.div`
-  display: grid;
-  grid-row: 6/7;
-  align-items: center;
-`;
-
-const SideRow = styled(Link)`
-  width: 100%;
-  display: flex;
-  font-size: 1.5rem;
-  color: var(--text-gray);
-  text-decoration: none;
-  place-items: center;
 `;
 
 const UserInfo = styled.div`
@@ -91,39 +62,20 @@ const UserPage = (prop) => {
   return (
     <Container>
       <UserPageContainer>
-        <SideBar>
-          <TopSide>
-            <SideRow>
-
-            </SideRow>
-            <SideRow>
-              <img src="../assets/packageIcon.svg"/>
-              &nbsp;My activities
-            </SideRow>
-          </TopSide>
-          <BottomSide>
-            <SideRow>
-              <img src="../assets/settingIcon.svg"/>
-              &nbsp;Settings
-            </SideRow>
-            <SideRow to="/">
-              <img src="../assets/logoutIcon.svg"/>
-              &nbsp;Logout
-            </SideRow>
-          </BottomSide>
-        </SideBar>
+        <UserSideBar/>
         <UserInfo>
           <NextEventNotify>
               <NextEventLeftCol>
-                <EventRow1>Next - {prop.name}</EventRow1>   {/* TODO:EventName */}
+                <EventRow1>Next - {prop.name}</EventRow1>   
                 <EventRow2>Date - {prop.date}</EventRow2>
                 <EventRow2>Time - {prop.time}</EventRow2>
                 <EventRow2>Destination - {prop.destination}</EventRow2>
               </NextEventLeftCol>
+              {/* TODO: EventDetail change with event */}
               <img src="/assets/cleanUpPicture4.png"
               style={{width:'100%', height:'auto'}}
               />
-              {/* TODO: EventPicture */}
+              {/* TODO: EventPicture change with event*/}
           </NextEventNotify>
           <EventRecord>
               <EventRow1>My achievement</EventRow1>
