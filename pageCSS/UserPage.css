@@ -1,24 +1,11 @@
-.UserPage {
+/* .UserPage {
   width: 100%;
   height: auto;
   display: flex;
   overflow: hidden;
   align-items: center;
   flex-direction: column;
-}
-.SearchBlock {
-  top: 50px;
-  left: 928px;
-  width: 373px;
-  height: 39px;
-  display: flex;
-  overflow: hidden;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-radius: 12px;
-  background-color: rgba(217, 217, 217, 0.3400000035762787);
-}
+} */
 .frame78-frame427319072 {
   top: 4px;
   left: 11px;
