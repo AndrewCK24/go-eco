@@ -10,6 +10,8 @@ import LogInPage from "./pages/LogInPage";
 import ProposalPage from "./pages/ProposalPage";
 import EventCreatePage from "./pages/EventCreatePage";
 import UserPage from "./pages/UserPage";
+import BeachCleanPage from "./pages/BeachCleanPage";
+import RecyclePage from "./pages/RecyclePage";
 
 const Container = styled.div`
 	width: 100%;
@@ -41,6 +43,8 @@ const App = () => {
 							element={<ProposalPage />}
 						/>
 						<Route path="/UserPage" element={<UserPage />} />
+						<Route path="/BeachCleanPage" element={<BeachCleanPage />} />
+						<Route path="/RecyclePage" element={<RecyclePage />} />
 					</Routes>
 				</PageContainer>
 				<Footer />
