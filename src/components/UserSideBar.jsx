@@ -40,12 +40,40 @@ const LogOut = styled.button`
   place-items: center;
 `;
 
+const UserSideBar = () => {
+  const [check,setLogOut] = useState(false)
+    return(
+    <SideBar>
+        <TopSide>
+            <SideRow></SideRow>
+            <SideRow to="/">
+              <img src="/assets/packageIcon.svg"/>&nbsp;My activities
+            </SideRow>
+        </TopSide>
+        <BottomSide>
+            <SideRow>
+              <img src="/assets/settingIcon.svg"/>&nbsp;Settings
+            </SideRow>
+            <SideRow>
+              <LogOut onClick={()=> setLogOut(true)}> 
+                <img src="/assets/logoutIcon.svg"/>&nbsp;Logout
+              </LogOut>
+              <LogOutCheck trigger={check} setLogOut={setLogOut}/>
+            </SideRow>
+        </BottomSide>
+    </SideBar>
+    )
+}
+export default UserSideBar;
+
+
 const LogOutCheck = (prop) =>{
   return (prop.trigger)?(
     <LogOutWimdow>
       <LogOutWimdowRow1>Are you sure to logout?</LogOutWimdowRow1>
       <LogOutWimdowRow2>
-        <button style={{border: "0", fontSize: '2.75rem',fontWeight: '500'}}>Yes</button>
+        <button style={{border: "0", fontSize: '2.75rem',fontWeight: '500'}}
+        onClick>Yes</button>
         {/* TODO: Logout implement  */}
         <button 
         style={{border: "0", fontSize: '2.75rem',fontWeight: '500'}} 
@@ -83,29 +111,3 @@ const LogOutWimdowRow2 = styled.div`
   gap: 3rem;
   align-items: center;
 `;
-
-const UserSideBar = () => {
-  const [check,setLogOut] = useState(false)
-    return(
-    <SideBar>
-        <TopSide>
-            <SideRow></SideRow>
-            <SideRow>
-            <img src="/assets/packageIcon.svg"/>&nbsp;My activities
-            </SideRow>
-        </TopSide>
-        <BottomSide>
-            <SideRow>
-            <img src="/assets/settingIcon.svg"/>&nbsp;Settings
-            </SideRow>
-            <SideRow>
-            <LogOut onClick={()=> setLogOut(true)} > 
-              <img src="/assets/logoutIcon.svg"/> &nbsp;Logout
-              </LogOut>
-            <LogOutCheck trigger={check} setLogOut={setLogOut}/>
-            </SideRow>
-        </BottomSide>
-    </SideBar>
-    )
-}
-export default UserSideBar;
