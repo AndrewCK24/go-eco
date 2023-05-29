@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
 
 const Container = styled.div`
     width: 100%;
@@ -58,6 +59,15 @@ const JoinButton = styled(Link)`
  `;
 
  const RegisterPage = () => {
+    const containerStyle = {
+        width: '60%',
+        height: '400px'
+      };
+      
+      const center = {
+        lat: 25.1777,
+        lng: 121.4497
+      };
     return(
         <Container>
             <RegisterContainer>
@@ -75,7 +85,20 @@ const JoinButton = styled(Link)`
                     <br />
                     <div>Capacity: 40 volunteers - 3 spaces left</div>
                     <br />
-                    <div>Check on map: <img src="/assets/map.png" /></div>
+                    <div>Check on map: </div>
+                    
+                    {/* TODO: GOOGLE MAP */}
+                    <LoadScript googleMapsApiKey="AIzaSyDJ3glifWE4FiuEm5ycid-1Upl--0IHTuo">
+                        <GoogleMap
+                        mapContainerStyle={containerStyle}
+                        center={center}
+                        zoom={10}
+                        >
+                        <MarkerF  
+                        position={center}
+                        />
+                        </GoogleMap>
+                    </LoadScript>
                     <br />
                     <div>
                         Members of the cross party group are invited alongside anyone
@@ -129,4 +152,6 @@ const JoinButton = styled(Link)`
  }
  export default RegisterPage;
 
- 
+<script async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ3glifWE4FiuEm5ycid-1Upl--0IHTuo&callback=initMap">
+</script>
