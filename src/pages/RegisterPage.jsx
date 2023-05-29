@@ -86,13 +86,11 @@ const JoinButton = styled(Link)`
                     <div>Capacity: 40 volunteers - 3 spaces left</div>
                     <br />
                     <div>Check on map: </div>
-                    
-                    {/* TODO: GOOGLE MAP */}
                     <LoadScript googleMapsApiKey="AIzaSyDJ3glifWE4FiuEm5ycid-1Upl--0IHTuo">
                         <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={center}
-                        zoom={10}
+                        zoom={15}
                         >
                         <MarkerF  
                         position={center}
