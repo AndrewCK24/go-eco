@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const SideBar = styled.div`
   display: grid;
@@ -30,7 +31,61 @@ const SideRow = styled(Link)`
   place-items: center;
 `;
 
+const LogOut = styled.button`
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  color: var(--text-gray);
+  border: 0;
+  place-items: center;
+`;
+
+const LogOutCheck = (prop) =>{
+  return (prop.trigger)?(
+    <LogOutWimdow>
+      <LogOutWimdowRow1>Are you sure to logout?</LogOutWimdowRow1>
+      <LogOutWimdowRow2>
+        <button style={{border: "0", fontSize: '2.75rem',fontWeight: '500'}}>Yes</button>
+        {/* TODO: Logout implement  */}
+        <button 
+        style={{border: "0", fontSize: '2.75rem',fontWeight: '500'}} 
+        onClick={()=>prop.setLogOut(false)}>No</button>
+      </LogOutWimdowRow2>
+    </LogOutWimdow>
+  ):"";
+}
+
+const LogOutWimdow = styled.div`
+  top: 30%;
+  width: 45%;
+  height: 20%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 2rem;
+  justify-content: center;
+  position: fixed;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-white);
+  border-style: solid;
+	border-color: green;
+  color: var(--text-black);
+`;
+
+const LogOutWimdowRow1 = styled.div`
+  font-size:3rem;
+  font-weight: 700;
+`;
+
+const LogOutWimdowRow2 = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+`;
+
 const UserSideBar = () => {
+  const [check,setLogOut] = useState(false)
     return(
     <SideBar>
         <TopSide>
@@ -45,9 +100,10 @@ const UserSideBar = () => {
             <img src="/assets/settingIcon.svg"/>
             &nbsp;Settings
             </SideRow>
-            <SideRow to="/">
+            <SideRow>
             <img src="/assets/logoutIcon.svg"/>
-            &nbsp;Logout
+            <LogOut onClick={()=> setLogOut(true)} >Logout</LogOut>
+            <LogOutCheck trigger={check} setLogOut={setLogOut}/>
             </SideRow>
         </BottomSide>
     </SideBar>

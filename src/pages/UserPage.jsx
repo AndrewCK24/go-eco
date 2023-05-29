@@ -57,8 +57,8 @@ const EventRow2 = styled.div`
   font-weight: 500;
 `;
 
-
 const UserPage = (prop) => {
+ 
   return (
     <Container>
       <UserPageContainer>
