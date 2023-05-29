@@ -58,7 +58,6 @@ const EventRow2 = styled.div`
 `;
 
 const UserPage = (prop) => {
- 
   return (
     <Container>
       <UserPageContainer>
