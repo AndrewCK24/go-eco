@@ -58,9 +58,9 @@ const UserSideBar = () => {
               <LogOut onClick={()=> setLogOut(true)}> 
                 <img src="/assets/logoutIcon.svg"/>&nbsp;Logout
               </LogOut>
-              <LogOutCheck trigger={check} setLogOut={setLogOut}/>
             </SideRow>
         </BottomSide>
+        <LogOutCheck trigger={check} setLogOut={setLogOut}/>
     </SideBar>
     )
 }
@@ -72,11 +72,11 @@ const LogOutCheck = (prop) =>{
     <LogOutWimdow>
       <LogOutWimdowRow1>Are you sure to logout?</LogOutWimdowRow1>
       <LogOutWimdowRow2>
-        <button style={{border: "0", fontSize: '2.75rem',fontWeight: '500'}}
+        <button style={{fontSize: '2.75rem',fontWeight: '500'}}
         onClick>Yes</button>
         {/* TODO: Logout implement  */}
         <button 
-        style={{border: "0", fontSize: '2.75rem',fontWeight: '500'}} 
+        style={{fontSize: '2.75rem',fontWeight: '500'}} 
         onClick={()=>prop.setLogOut(false)}>No</button>
       </LogOutWimdowRow2>
     </LogOutWimdow>
@@ -85,7 +85,8 @@ const LogOutCheck = (prop) =>{
 
 const LogOutWimdow = styled.div`
   top: 30%;
-  width: 45%;
+  width: 40%;
+  padding: 30% 30%;
   height: 20%;
   display: grid;
   grid-template-rows: 1fr auto;
