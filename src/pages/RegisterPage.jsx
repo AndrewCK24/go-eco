@@ -152,6 +152,4 @@ const JoinButton = styled(Link)`
  }
  export default RegisterPage;
 
-<script async
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ3glifWE4FiuEm5ycid-1Upl--0IHTuo&callback=initMap">
-</script>
+
