@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
+import Geocode from "react-geocode";
 
 const Container = styled.div`
     width: 100%;
@@ -64,14 +65,15 @@ const RegisterPage = () => {
         height: '400px'
     };
     
-    const geocoder = new google.maps.Geocoder();
-    var address = '總統府';
+
     var center;
-    geocoder.geocode( { 'address': address}, function(results, status) {
-        if (status == 'OK') {
-            center = results[0].geometry.location;
-        }
-    });
+    Geocode.setApiKey("AIzaSyDJ3glifWE4FiuEm5ycid-1Upl--0IHTuo");
+    Geocode.setLanguage("zh");
+    Geocode.fromAddress("總統府").then(
+        (response) => {
+          center = response.results[0].geometry.location;
+        },
+    );
 
     // const center = {
     //     lat: 25.1777,
