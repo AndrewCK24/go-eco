@@ -58,16 +58,26 @@ const JoinButton = styled(Link)`
  	background-color: var(--bg-green-main);
  `;
 
- const RegisterPage = () => {
+const RegisterPage = () => {
     const containerStyle = {
         width: '60%',
         height: '400px'
-      };
-      
-      const center = {
-        lat: 25.1777,
-        lng: 121.4497
-      };
+    };
+    
+    const geocoder = new google.maps.Geocoder();
+    var address = '總統府';
+    var center;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == 'OK') {
+            center = results[0].geometry.location;
+        }
+    });
+
+    // const center = {
+    //     lat: 25.1777,
+    //     lng: 121.4497
+    // };
+
     return(
         <Container>
             <RegisterContainer>
@@ -148,6 +158,4 @@ const JoinButton = styled(Link)`
         </Container>
     )
  }
- export default RegisterPage;
-
-
+export default RegisterPage;
