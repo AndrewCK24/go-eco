@@ -59,21 +59,24 @@ const JoinButton = styled(Link)`
  	background-color: var(--bg-green-main);
  `;
 
+
+
 const RegisterPage = () => {
     const containerStyle = {
         width: '60%',
         height: '400px'
     };
-    
-
     var center;
     Geocode.setApiKey("AIzaSyDJ3glifWE4FiuEm5ycid-1Upl--0IHTuo");
-    Geocode.setLanguage("zh");
-    Geocode.fromAddress("總統府").then(
-        (response) => {
-          center = response.results[0].geometry.location;
-        },
+    Geocode.setLanguage("zh-TW");
+    Geocode.setRegion("tw");
+    Geocode.fromAddress("台北市大安區").then(// TODO: 更改位置
+    (response) => {
+        center = response.results[0].geometry.location;
+        // const { lat, lng } = response.results[0].geometry.location;   
+        }
     );
+
 
     // const center = {
     //     lat: 25.1777,
