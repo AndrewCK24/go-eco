@@ -8,6 +8,7 @@ const Container = styled.div`
     border-radius: 1.5rem;
     background-color: ${prop => prop.backgroundColor}
 `;
+// background-color: ${prop => prop.backgroundColor}
 
 const TextContainer = styled.div`
     display: grid;

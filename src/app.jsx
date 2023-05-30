@@ -10,6 +10,7 @@ import LogInPage from "./pages/LogInPage";
 import ProposalPage from "./pages/ProposalPage";
 import EventCreatePage from "./pages/EventCreatePage";
 import UserPage from "./pages/UserPage";
+import MyActivity from "./pages/MyActivity";
 
 const Container = styled.div`
 	width: 100%;
@@ -41,6 +42,7 @@ const App = () => {
 							element={<ProposalPage />}
 						/>
 						<Route path="/UserPage" element={<UserPage />} />
+						<Route path="/UserPage/MyActivity" element={<MyActivity/>} />
 					</Routes>
 				</PageContainer>
 				<Footer />

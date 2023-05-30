@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import { useState } from "react";
 
 const SideBar = styled.div`
@@ -22,7 +22,7 @@ const BottomSide = styled.div`
   align-items: center;
 `;
 
-const SideRow = styled(Link)`
+const SideLink = styled(Link)`
   width: 100%;
   display: flex;
   font-size: 1.5rem;
@@ -45,20 +45,23 @@ const UserSideBar = () => {
     return(
     <SideBar>
         <TopSide>
-            <SideRow></SideRow>
-            <SideRow to="/">
+            <SideLink to="/UserPage">
+              <img src="/assets/homeIcon.svg"/>&nbsp;UserPage
+            </SideLink>
+            <SideLink to="/UserPage/MyActivity">
               <img src="/assets/packageIcon.svg"/>&nbsp;My activities
-            </SideRow>
+            </SideLink>
         </TopSide>
         <BottomSide>
-            <SideRow>
+            <SideLink to="/">
+              {/* TODO:SettingPage */}
               <img src="/assets/settingIcon.svg"/>&nbsp;Settings
-            </SideRow>
-            <SideRow>
+            </SideLink>
+            <SideLink>
               <LogOut onClick={()=> setLogOut(true)}> 
                 <img src="/assets/logoutIcon.svg"/>&nbsp;Logout
               </LogOut>
-            </SideRow>
+            </SideLink>
         </BottomSide>
         <LogOutCheck trigger={check} setLogOut={setLogOut}/>
     </SideBar>
@@ -69,24 +72,24 @@ export default UserSideBar;
 
 const LogOutCheck = (prop) =>{
   return (prop.trigger)?(
-    <LogOutWimdow>
-      <LogOutWimdowRow1>Are you sure to logout?</LogOutWimdowRow1>
-      <LogOutWimdowRow2>
+    <LogOutWindow>
+      <LogOutWindowRow1>Are you sure to logout?</LogOutWindowRow1>
+      <LogOutWindowRow2>
         <button style={{fontSize: '2.75rem',fontWeight: '500'}}
         onClick>Yes</button>
         {/* TODO: Logout implement  */}
         <button 
         style={{fontSize: '2.75rem',fontWeight: '500'}} 
         onClick={()=>prop.setLogOut(false)}>No</button>
-      </LogOutWimdowRow2>
-    </LogOutWimdow>
+      </LogOutWindowRow2>
+    </LogOutWindow>
   ):"";
 }
 
-const LogOutWimdow = styled.div`
+const LogOutWindow = styled.div`
   top: 30%;
+  left: 27.5%;
   width: 40%;
-  padding: 30% 30%;
   height: 20%;
   display: grid;
   grid-template-rows: 1fr auto;
@@ -101,12 +104,12 @@ const LogOutWimdow = styled.div`
   color: var(--text-black);
 `;
 
-const LogOutWimdowRow1 = styled.div`
+const LogOutWindowRow1 = styled.div`
   font-size:3rem;
   font-weight: 700;
 `;
 
-const LogOutWimdowRow2 = styled.div`
+const LogOutWindowRow2 = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
