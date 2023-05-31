@@ -35,16 +35,16 @@ const App = () => {
 				<PageContainer>
 					<Routes>
 						<Route path="/" element={<HomePage />} />
-						<Route path="/RegisterPage" element={<RegisterPage />} />
-						<Route path="/LogInPage" element={<LogInPage />} />
-						<Route path="/EventCreatePage" element={<EventCreatePage />} />
+						<Route path="/registerpage" element={<RegisterPage />} />
+						<Route path="/loginpage" element={<LogInPage />} />
+						<Route path="/eventcreatepage" element={<EventCreatePage />} />
 						<Route
-							path="/EventCreatePage/ProposalPage"
+							path="/eventcreatepage/proposalpage"
 							element={<ProposalPage />}
 						/>
-						<Route path="/UserPage" element={<UserPage />} />
-						<Route path="/BeachCleanPage" element={<BeachCleanPage />} />
-						<Route path="/RecyclePage" element={<RecyclePage />} />
+						<Route path="/userpage" element={<UserPage />} />
+						<Route path="/beachcleanpage" element={<BeachCleanPage />} />
+						<Route path="/recyclepage" element={<RecyclePage />} />
 					</Routes>
 				</PageContainer>
 				<Footer />
