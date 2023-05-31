@@ -3,29 +3,28 @@ import UserSideBar from "../components/UserSideBar";
 
 const Container = styled.div`
   width: 100%;
-  height: 40rem;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-  margin-bottom: 2.5%;
 `;
 
 const UserPageContainer = styled.div`
   width: 100%;
   height: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns:1fr 2fr 1fr;
   align-items: center;
   flex-direction: column;
 `;
 
 const UserInfo = styled.div`
+  width: 100%;
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 3rem;
+  grid-template-rows:1fr auto auto;
+  gap: 1rem;
 `;
 
 const NextEventNotify = styled.div`
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: var(--bg-green-main);
@@ -39,34 +38,58 @@ const NextEventLeftCol = styled.div`
   text-align: left;
 `;
 
-const EventRecord = styled.div`
+const EventBoxContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+`;
+const EventBox = styled.div`
+  flex: 16rem;
+	max-height: 16rem;
+	min-height: 8rem;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows:1fr 2fr;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--bg-blue-main);
 `;
 
-const EventRow1 = styled.div`
+const Title = styled.div`
   display: flex;
   font-size: 2rem;
   font-weight: 700;
 `;
 
-const EventRow2 = styled.div`
+const Text = styled.div`
   display: flex;
   font-size: 1.5rem;
   font-weight: 500;
+`;
+
+const Text2 = styled.div`
+  display: flex;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 700;
+  justify-content: center;
+  text-align: center;
 `;
 
 const UserPage = (prop) => {
   return (
     <Container>
       <UserPageContainer>
+      <UserSideBar/>
         <UserInfo>
           <NextEventNotify>
               <NextEventLeftCol>
-                <EventRow1>Next - {prop.name}</EventRow1>   
-                <EventRow2>Date - {prop.date}</EventRow2>
-                <EventRow2>Time - {prop.time}</EventRow2>
-                <EventRow2>Destination - {prop.destination}</EventRow2>
+                <Title>Next - {prop.name}</Title>   
+                <Text>Date - {prop.date}</Text>
+                <Text>Time - {prop.time}</Text>
+                <Text>Destination - {prop.destination}</Text>
               </NextEventLeftCol>
               {/* TODO: EventDetail change with event */}
               <img src="/assets/cleanUpPicture4.png"
@@ -74,15 +97,24 @@ const UserPage = (prop) => {
               />
               {/* TODO: EventPicture change with event*/}
           </NextEventNotify>
-          <EventRecord>
-              <EventRow1>My achievement</EventRow1>
-              <EventRow2>Event participated:</EventRow2>
-              <EventRow2>Number of recycle:</EventRow2>
-              <EventRow2>Number of cleanUp:</EventRow2>
-          </EventRecord>
+          <Title>My achievement</Title>
+          <EventBoxContainer>
+            <EventBox>
+              <Text>Event participated:</Text>
+              <Text2>Number1</Text2>
+            </EventBox>
+            <EventBox>
+              <Text>Number of recycle:</Text>
+              <Text2>Number2</Text2>
+            </EventBox>  
+            <EventBox>
+              <Text>Number of cleanUp:</Text>
+              <Text2>Number3</Text2>
+            </EventBox>
+            {/* TODO: eventNumber record */}
+          </EventBoxContainer>
         </UserInfo>      
       </UserPageContainer>
-      <UserSideBar/>
     </Container> 
   );
 };

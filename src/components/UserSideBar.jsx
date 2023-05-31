@@ -4,7 +4,6 @@ import { useState } from "react";
 
 const SideBar = styled.div`
   display: grid;
-  position: fixed;
   left: 0%;
   width: auto;
   height: 40rem;
