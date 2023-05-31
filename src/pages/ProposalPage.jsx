@@ -135,12 +135,7 @@ const ProposalPage = () => {
       <Line1/>
       <br/><br/>
       <ProposalContainer>
-      <RowContainer leftText="Real name" rightText="Proposers must use their real names to register as members, Gee Gee does not accept anonymous proposals or proposals using other people's names. If the proposer is not an individual, the team representative can first register a team account with the team name, and then invite the team members' respective member accounts to join the collaboration through Team Settings."/>
-      <Line2/>
-      <RowContainer leftText="Email" rightText="Please make sure that your mailbox address is correct, otherwise tsk
-            tsk will not be able to contact you. If there is a mistake, please
-            go to your member page to modify it."/>
-      <Line2/>
+      
       <RowContainer leftText="Start time"/>
       <Line2/>
       <RowContainer leftText="End time"/>
@@ -165,13 +160,7 @@ const ProposalPage = () => {
       <RowContainer leftText="Destination"/>
       <RowContainer leftText="Meet point"/>
       <Line2/>
-      <RowContainer leftText="Relate page" rightText="The purpose of this page is to allow the project department to review
-          the authenticity and feasibility of your plan, and to allow sponsors
-          to better understand your plan, so please be sure to provide it. If
-          there is no official website, the relevant webpage can also be
-          temporarily replaced by media reports or social media links (such as:
-          Meta fans)."/>
-      <Line2/>
+      
       
         
         <Row>
