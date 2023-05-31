@@ -59,29 +59,22 @@ const JoinButton = styled(Link)`
  	background-color: var(--bg-green-main);
  `;
 
+var center = {};
+Geocode.setApiKey("AIzaSyDJ3glifWE4FiuEm5ycid-1Upl--0IHTuo");
+Geocode.setLanguage("zh-TW");
+Geocode.setRegion("tw");
+Geocode.fromAddress("淡水").then(// TODO: 更改位置
+    (response) => {
+        center = response.results[0].geometry.location;
+})
 
 
 const RegisterPage = () => {
+
     const containerStyle = {
         width: '60%',
         height: '400px'
     };
-    var center;
-    Geocode.setApiKey("AIzaSyDJ3glifWE4FiuEm5ycid-1Upl--0IHTuo");
-    Geocode.setLanguage("zh-TW");
-    Geocode.setRegion("tw");
-    Geocode.fromAddress("台北市大安區").then(// TODO: 更改位置
-    (response) => {
-        center = response.results[0].geometry.location;
-        // const { lat, lng } = response.results[0].geometry.location;   
-        }
-    );
-
-
-    // const center = {
-    //     lat: 25.1777,
-    //     lng: 121.4497
-    // };
 
     return(
         <Container>
@@ -105,7 +98,7 @@ const RegisterPage = () => {
                         <GoogleMap
                         mapContainerStyle={containerStyle}
                         center={center}
-                        zoom={15}
+                        zoom={14}
                         >
                         <MarkerF  
                         position={center}
