@@ -1,11 +1,13 @@
 import styled from "@emotion/styled";
-import { Link, NavLink} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const SideBar = styled.div`
   display: grid;
-  width: 100%;
-  height: 100%;
+  position: fixed;
+  left: 0%;
+  width: auto;
+  height: 40rem;
   padding: 1rem;
   grid-template-rows: repeat(6,1fr);
 `;

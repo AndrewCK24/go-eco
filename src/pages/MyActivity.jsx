@@ -7,17 +7,16 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 2.5%;
     margin-bottom: 2.5%;
 `;
 
 const MyActivityContainer = styled.div`
-    width: 80%;
+    width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     gap: 3rem;
     align-items: center;
+    flex-direction: column;
 `;
 
 const ActivityRecord = styled.div`
@@ -26,6 +25,7 @@ const ActivityRecord = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto 1fr;
     grid-gap: 2.5%;
+    background-color: red;
 `;
 
 const SectionTitle = styled.div`
@@ -53,7 +53,6 @@ const MyActivity = () =>{
     return(
         <Container>
             <MyActivityContainer>
-                <UserSideBar />
                 <div>
                     <ActivityRecord>
                         <SectionTitle>Activties Incoming:</SectionTitle>
@@ -99,6 +98,7 @@ const MyActivity = () =>{
                     </ActivityRecord>
                 </div>   
             </MyActivityContainer>
+            <UserSideBar />
         </Container>  
     )
 };

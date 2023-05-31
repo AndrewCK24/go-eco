@@ -3,20 +3,19 @@ import UserSideBar from "../components/UserSideBar";
 
 const Container = styled.div`
   width: 100%;
+  height: 40rem;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-  margin-top: 2.5%;
   margin-bottom: 2.5%;
 `;
 
 const UserPageContainer = styled.div`
-  width: 50%;
+  width: 100%;
   height: auto;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 3rem;
+  display: flex;
   align-items: center;
+  flex-direction: column;
 `;
 
 const UserInfo = styled.div`
@@ -61,7 +60,6 @@ const UserPage = (prop) => {
   return (
     <Container>
       <UserPageContainer>
-        <UserSideBar/>
         <UserInfo>
           <NextEventNotify>
               <NextEventLeftCol>
@@ -84,6 +82,7 @@ const UserPage = (prop) => {
           </EventRecord>
         </UserInfo>      
       </UserPageContainer>
+      <UserSideBar/>
     </Container> 
   );
 };
