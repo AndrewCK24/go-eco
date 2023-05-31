@@ -34,7 +34,7 @@ function Project(prop){
     };
 
     return(
-    <Link to="/EventCreatePage/ProposalPage" style={style}>
+    <Link to="/eventcreatepage/proposalpage" style={style}>
         <Container backgroundColor={prop.backgroundColor}>
             <TextContainer>
                 <Text1>{prop.Text1}</Text1>

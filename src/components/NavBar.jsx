@@ -89,8 +89,8 @@ const TopNav = () => {
 			<Logo />
 			<MenuContainer>
 				<MenuLink to="/">Home</MenuLink>
-				<MenuLink to="/EventCreatePage">Proposals</MenuLink>
-				<MenuLink to="/UserPage">Contacts</MenuLink>
+				<MenuLink to="/eventcreatepage">Proposals</MenuLink>
+				<MenuLink to="/userpage">Contacts</MenuLink>
 			</MenuContainer>
 			<RightNav>
 				<SearchContainer>
@@ -99,7 +99,7 @@ const TopNav = () => {
 						<SearchIcon />
 					</SearchBtn>
 				</SearchContainer>
-				<Link to="/LogInPage">
+				<Link to="/loginpage">
 					<UserIcon />
 				</Link>
 			</RightNav>

@@ -38,6 +38,7 @@ const LogOut = styled.button`
   color: var(--text-gray);
   border: 0;
   place-items: center;
+  background-color: var(--bg-white);
 `;
 
 const UserSideBar = () => {
@@ -45,10 +46,10 @@ const UserSideBar = () => {
     return(
     <SideBar>
         <TopSide>
-            <SideLink to="/UserPage">
+            <SideLink to="/userpage">
               <img src="/assets/homeIcon.svg"/>&nbsp;UserPage
             </SideLink>
-            <SideLink to="/UserPage/MyActivity">
+            <SideLink to="/userpage/MyActivity">
               <img src="/assets/packageIcon.svg"/>&nbsp;My activities
             </SideLink>
         </TopSide>

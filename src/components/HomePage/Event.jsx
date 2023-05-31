@@ -73,7 +73,7 @@ const Event = (prop) => {
 	// TODO: 設定 onClick 事件，點擊後跳轉到活動詳情頁面
 
 	return (
-		<Container to="/RegisterPage" backgroundColor={prop.backgroundColor}>
+		<Container to="/registerpage" backgroundColor={prop.backgroundColor}>
 			<EventPicture src={prop.src} />
 			<EventInfoContainer>
 				<EventTitle>{prop.eventName}</EventTitle>

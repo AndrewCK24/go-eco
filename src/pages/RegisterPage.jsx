@@ -122,7 +122,7 @@ const JoinButton = styled(Link)`
                         clean organiser.
                     </div>
                 </Paragrath>
-                <JoinButton>Join NOW!</JoinButton>
+                <JoinButton to="/">Join NOW!</JoinButton>
             </RegisterContainer>
         </Container>
     )
