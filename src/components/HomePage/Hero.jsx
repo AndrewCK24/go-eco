@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const HeroContainer = styled.section`
 	width: 90%;
@@ -70,7 +71,7 @@ const Hero = () => (
 			</HeroFigureContainer>
 		</HeroLeft>
 		<HeroRight>
-			<img src="../public/assets/potPlant.png" alt="PotPlant" />
+			<Link to="/userpage"><img src="../public/assets/potPlant.png" alt="PotPlant" /></Link>
 		</HeroRight>
 	</HeroContainer>
 );
