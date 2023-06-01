@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
-import Geocode from "react-geocode";
 import Map from "../components/Map";
 
 const Container = styled.div`
@@ -60,23 +58,7 @@ const JoinButton = styled(Link)`
  	background-color: var(--bg-green-main);
  `;
 
-var center = {};
-Geocode.setApiKey("AIzaSyDJ3glifWE4FiuEm5ycid-1Upl--0IHTuo");
-Geocode.setLanguage("zh-TW");
-Geocode.setRegion("tw");
-Geocode.fromAddress("淡水").then(// TODO: 更改位置
-    (response) => {
-        center = response.results[0].geometry.location;
-})
-
-
 const RegisterPage = () => {
-
-    const containerStyle = {
-        width: '60%',
-        height: '400px'
-    };
-
     return(
         <Container>
             <RegisterContainer>
