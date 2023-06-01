@@ -6,7 +6,6 @@ const Container = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-  margin-bottom: 2%;
 `;
 
 const UserPageContainer = styled.div`
@@ -16,6 +15,7 @@ const UserPageContainer = styled.div`
   grid-template-columns:1fr 2fr 1fr;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 2%;
 `;
 
 const UserInfo = styled.div`

@@ -6,6 +6,7 @@ const SideBar = styled.div`
   display: grid;
   left: 0%;
   width: auto;
+  height: 100%;
   padding: 1rem;
   grid-template-rows: repeat(6,1fr);
 `;

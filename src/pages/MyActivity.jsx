@@ -7,7 +7,6 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 1%;
 `;
 
 const MyActivityContainer = styled.div`
@@ -17,6 +16,7 @@ const MyActivityContainer = styled.div`
     grid-template-columns:1fr 3fr 1fr;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 2%;
 `;
 
 const ActivityRecord = styled.div`
