@@ -6,7 +6,6 @@ const SideBar = styled.div`
   display: grid;
   left: 0%;
   width: auto;
-  height: 40rem;
   padding: 1rem;
   grid-template-rows: repeat(6,1fr);
 `;
@@ -39,7 +38,7 @@ const LogOut = styled.button`
   color: var(--text-gray);
   border: 0;
   place-items: center;
-  background-color: var(--bg-white);
+  background-color: white;
 `;
 
 const UserSideBar = () => {
