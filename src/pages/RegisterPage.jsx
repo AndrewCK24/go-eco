@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
 import Geocode from "react-geocode";
+import Map from "../components/Map";
 
 const Container = styled.div`
     width: 100%;
@@ -94,17 +95,10 @@ const RegisterPage = () => {
                     <div>Capacity: 40 volunteers - 3 spaces left</div>
                     <br />
                     <div>Check on map: </div>
-                    <LoadScript googleMapsApiKey="AIzaSyDJ3glifWE4FiuEm5ycid-1Upl--0IHTuo">
-                        <GoogleMap
-                        mapContainerStyle={containerStyle}
-                        center={center}
-                        zoom={14}
-                        >
-                        <MarkerF  
-                        position={center}
-                        />
-                        </GoogleMap>
-                    </LoadScript>
+                    
+                    <Map location="淡水"/>
+                    {/* TODO:更改位置 */}
+
                     <br />
                     <div>
                         Members of the cross party group are invited alongside anyone
