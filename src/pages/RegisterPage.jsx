@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+import { GoogleMap, LoadScript, MarkerF } from '@react-google-maps/api';
+import Geocode from "react-geocode";
 import Map from "../components/Map";
 
 const Container = styled.div`
