@@ -101,15 +101,15 @@ const UserPage = (prop) => {
           <Title>My achievement</Title>
           <EventBoxContainer>
             <EventBox>
-              <Text>Event participated:</Text>
-              <Text2>Number1</Text2>
-            </EventBox>
-            <EventBox>
               <Text>Number of recycle:</Text>
-              <Text2>Number2</Text2>
+              <Text2>Number1</Text2>
             </EventBox>  
             <EventBox>
               <Text>Number of cleanUp:</Text>
+              <Text2>Number2</Text2>
+            </EventBox>
+            <EventBox>
+              <Text>Event participated:</Text>
               <Text2>Number3</Text2>
             </EventBox>
             {/* TODO: eventNumber record */}
