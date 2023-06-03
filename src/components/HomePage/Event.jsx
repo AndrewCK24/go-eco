@@ -7,6 +7,7 @@ import { ReactComponent as LocationIcon } from "../../icons/location.svg";
 import { ReactComponent as ParticipantIcon } from "../../icons/participant.svg";
 
 const Container = styled(Link)`
+	width: 100%;
 	color: var(--text-black);
 	text-decoration: none;
 	display: grid;
@@ -17,8 +18,12 @@ const Container = styled(Link)`
 `;
 
 const EventPicture = styled.img`
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	width: 90%;
-	padding: 5% 5% 0% 5%;
+	height: auto;
+	padding: 5%;
 	border-radius: 1rem;
 `;
 
@@ -30,7 +35,7 @@ const EventInfoContainer = styled.div`
 `;
 
 const EventTitle = styled.div`
-	padding: 0.5rem 0.25rem;
+	padding: 0 0.25rem;
 	font-size: 1.25rem;
 	font-weight: 700;
 	color: var(--text-black);
