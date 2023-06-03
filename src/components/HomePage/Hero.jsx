@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
+
 const HeroContainer = styled.section`
 	width: 90%;
 	display: grid;
@@ -44,7 +45,7 @@ const HeroFigureTitle = styled.div`
 `;
 
 const HeroRight = styled.div`
-	background-image: url("/assets/mainBlockBackGround.png");
+	background-image: url("../public/assets/mainBlockBackGround.png");
 	background-size: 75%;
 	background-repeat: no-repeat;
 	background-position: bottom;
@@ -70,9 +71,7 @@ const Hero = () => (
 			</HeroFigureContainer>
 		</HeroLeft>
 		<HeroRight>
-			<Link to="/userpage">
-				<img src="/assets/potPlant.png" alt="PotPlant" />
-			</Link>
+			<Link to="/userpage"><img src="../public/assets/potPlant.png" alt="PotPlant" /></Link>
 		</HeroRight>
 	</HeroContainer>
 );
