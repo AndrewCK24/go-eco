@@ -46,8 +46,8 @@ const App = () => {
 						<Route path="/userpage" element={<UserPage />} />
 						<Route path="/knowledgepage" element={<KnowledgePage />}>
 							<Route index element={<BeachCleanPage />} />
-							<Route path="/knowledgepage/beachcleanpage" element={<BeachCleanPage />} />
-							<Route path="/knowledgepage/recyclepage" element={<RecyclePage />} />
+							<Route path="/knowledgepage" element={<BeachCleanPage />} />
+							<Route path="/knowledgepage/2" element={<RecyclePage />} />
 						</Route>
 					</Routes>
 				</PageContainer>
