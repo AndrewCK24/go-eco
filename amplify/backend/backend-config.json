@@ -35,6 +35,7 @@
           "passwordPolicyCharacters": [
             "REQUIRES_LOWERCASE",
             "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
             "REQUIRES_UPPERCASE"
           ],
           "passwordPolicyMinLength": 8
@@ -42,10 +43,9 @@
         "signupAttributes": [
           "EMAIL",
           "BIRTHDATE",
-          "GENDER",
-          "NAME",
+          "PICTURE",
           "PHONE_NUMBER",
-          "PICTURE"
+          "NAME"
         ],
         "socialProviders": [
           "GOOGLE"
