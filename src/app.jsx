@@ -9,7 +9,6 @@ import RegisterPage from "./pages/RegisterPage";
 import LogInPage from "./pages/LogInPage";
 import ProposalPage from "./pages/ProposalPage";
 import EventCreatePage from "./pages/EventCreatePage";
-
 import BeachCleanPage from "./pages/BeachCleanPage";
 import RecyclePage from "./pages/RecyclePage";
 
@@ -43,8 +42,8 @@ const App = () => {
 							element={<ProposalPage />}
 						/>
 						
-						<Route path="/beachcleanpage" element={<BeachCleanPage />} />
-						<Route path="/recyclepage" element={<RecyclePage />} />
+						<Route path="/knowledgepage/beachcleanpage" element={<BeachCleanPage />} />
+						<Route path="/knowledgepage/recyclepage" element={<RecyclePage />} />
 					</Routes>
 				</PageContainer>
 				<Footer />

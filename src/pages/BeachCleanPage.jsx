@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;
@@ -10,20 +11,38 @@ const Container = styled.div`
     background-color: #3C9DA4;
 `;
 
-const RegisterContainer = styled.div`
+const LinkSection = styled.div`
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    background-color:  #3C9DA4;
+`;
+
+const LinkContainer = styled.div`
+    display: flex;
+    gap: 2rem;
+    height: -10%;
+`;
+
+const LinkStyle = styled(Link)`
+    width: 10rem;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-black);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #FFFFFF;
+`;
+
+
+const PageContainer = styled.div`
     width: 80%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     background-color: #FFFFFF;
-`;
-
-const Title = styled.div`
-    padding: 0.5rem 0.5rem;
-    font-size: 3rem;
-    font-style: Bold;
-    text-align: left;
-    font-weight: 700;
 `;
 
 const SectionTitle = styled.div`
@@ -45,8 +64,13 @@ const Paragraph = styled.div`
     
     return (
 		<Container>
-            <RegisterContainer>
-                
+            <LinkSection>
+                <LinkContainer>
+                    <LinkStyle to="/knowledgepage/beachcleanpage">clean</LinkStyle>
+                    <LinkStyle to="/knowledgepage/recyclepage">recycle</LinkStyle>  
+                </LinkContainer>
+            </LinkSection>
+            <PageContainer>
                 <SectionTitle> 為什麼要淨灘? </SectionTitle><br/>
                 <Paragraph>
                 淨灘活動是一種有助於讓參與者認識海洋污染原因和對生態的危害的方式。透過環境教育，我們能夠改變日常生活習慣，擴展學習的領域，減少海洋廢棄物對海洋生物造成的傷害，並減少人類對海洋的汙染。<br/><br/>
@@ -148,7 +172,7 @@ const Paragraph = styled.div`
                 </Paragraph>
                 
 
-            </RegisterContainer>
+            </PageContainer>
         </Container>
     
 	);

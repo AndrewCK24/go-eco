@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;
@@ -10,7 +11,32 @@ const Container = styled.div`
     background-color: #3C9DA4;
 `;
 
-const RegisterContainer = styled.div`
+const LinkSection = styled.div`
+width: 80%;
+height: auto;
+display: grid;
+grid-template-columns: repeat(6,1fr);
+background-color:  #3C9DA4;
+`;
+
+const LinkContainer = styled.div`
+display: flex;
+gap: 2rem;
+height: -10%;
+`;
+
+const LinkStyle = styled(Link)`
+width: 10rem;
+font-size: 2rem;
+text-align: center;
+text-decoration: none;
+color: var(--text-black);
+padding: 0.5rem;
+border-radius: 0.25rem;
+background-color: #FFFFFF;
+`;
+
+const PageContainer = styled.div`
     width: 80%;
     padding: 2rem;
     display: flex;
@@ -18,13 +44,6 @@ const RegisterContainer = styled.div`
     background-color: #FFFFFF;
 `;
 
-const Title = styled.div`
-    padding: 0.5rem 0.5rem;
-    font-size: 3rem;
-    font-style: Bold;
-    text-align: left;
-    font-weight: 700;
-`;
 
 const SectionTitle = styled.div`
     font-size: 2rem;
@@ -45,8 +64,13 @@ const Paragraph = styled.div`
     
     return (
 		<Container>
-            <RegisterContainer>
-                
+             <LinkSection>
+                <LinkContainer>
+                    <LinkStyle to="/knowledgepage/beachcleanpage">clean</LinkStyle>
+                    <LinkStyle to="/knowledgepage/recyclepage">recycle</LinkStyle>  
+                </LinkContainer>
+            </LinkSection>
+            <PageContainer>
                 <SectionTitle>資源回收目的</SectionTitle><br/>
                 <Paragraph>
                 資源回收能預防浪費有潛在利用價值的資源、削減原料消耗，由此減少：能量消耗、空氣污染和水污染。收集本來要廢棄的材料，分解再製成新產品，或者是收集用過的產品，清潔、處理之後再出售。相對於垃圾遺棄，回收可以節省資源、降低溫室氣體排放。
@@ -93,7 +117,7 @@ const Paragraph = styled.div`
                 <a href="https://recycle.epa.gov.tw/Understanding/KnowLedge">環保署資源回收網</a>
                 </Paragraph>
 
-            </RegisterContainer>
+            </PageContainer>
         </Container>
     
 	);
