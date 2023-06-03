@@ -19,7 +19,7 @@ const EventCreateContainer = styled.div`
 const TopBlock = styled.div`
 	width: 100%;
 	display: grid;
-    grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	border-radius: 1.5rem;
 	background-color: rgba(213, 217, 8, 0.17000000178813934);
 `;
@@ -41,7 +41,7 @@ const RightTitleText = styled.div`
 `;
 
 const RightColumnText = styled.div`
-	width:100%;
+	width: 100%;
 	display: grid;
 	grid-template-rows: 1fr auto;
 	padding: 5%;
@@ -77,7 +77,7 @@ const BottomBlock = styled.div`
 	display: grid;
 	grid-template-rows: 1fr auto;
 	color: rgba(0, 0, 0, 1);
-    font-weight: 700;
+	font-weight: 700;
 	margin-bottom: 5%;
 `;
 
@@ -91,7 +91,7 @@ const EventCreatePage = () => {
 						<br />
 						<br />
 						Make things happen!
-					</LeftTitleText>	
+					</LeftTitleText>
 					<RightTitleText>
 						<RightColumnText>
 							<RightColumnText1>Successful proposal</RightColumnText1>
@@ -104,20 +104,20 @@ const EventCreatePage = () => {
 						<RightColumnText>
 							<RightColumnText1>Active volunteers</RightColumnText1>
 							<RightColumnText2>800+</RightColumnText2>
-						</RightColumnText>		
+						</RightColumnText>
 					</RightTitleText>
 				</TopBlock>
 				<TitleText>Create your proposal</TitleText>
 				<Proposals>
-					<Project 
-					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-					Text1="Single activity"
-					Text2="For only one time"
+					<Project
+						backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+						Text1="Single activity"
+						Text2="For only one time"
 					/>
-					<Project 
-					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
-					Text1="Longterm project"
-					Text2="For continuous"
+					<Project
+						backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
+						Text1="Longterm project"
+						Text2="For continuous"
 					/>
 				</Proposals>
 				<BottomBlock>
@@ -130,6 +130,3 @@ const EventCreatePage = () => {
 };
 
 export default EventCreatePage;
-
-
-

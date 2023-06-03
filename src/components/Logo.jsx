@@ -12,11 +12,11 @@ const Container = styled(Link)`
 `;
 
 const Logo = () => {
-  return (
-    <Container to="/" exact>
-      <LogoIcon />
-    </Container>
-  );
-}
+	return (
+		<Container to="/" exact>
+			<LogoIcon />
+		</Container>
+	);
+};
 
 export default Logo;

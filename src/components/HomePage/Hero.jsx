@@ -44,7 +44,7 @@ const HeroFigureTitle = styled.div`
 `;
 
 const HeroRight = styled.div`
-	background-image: url("../public/assets/mainBlockBackGround.png");
+	background-image: url("/assets/mainBlockBackGround.png");
 	background-size: 75%;
 	background-repeat: no-repeat;
 	background-position: bottom;
@@ -71,7 +71,7 @@ const Hero = () => (
 		</HeroLeft>
 		<HeroRight>
 			<Link to="/userpage">
-			<img src="../public/assets/potPlant.png" alt="PotPlant" />
+				<img src="/assets/potPlant.png" alt="PotPlant" />
 			</Link>
 		</HeroRight>
 	</HeroContainer>

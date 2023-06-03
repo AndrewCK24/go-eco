@@ -42,7 +42,7 @@ const App = () => {
 							element={<ProposalPage />}
 						/>
 						<Route path="/userpage" element={<UserPage />} />
-						<Route path="/userpage/myactivity" element={<MyActivity/>} />
+						<Route path="/userpage/myactivity" element={<MyActivity />} />
 					</Routes>
 				</PageContainer>
 				<Footer />

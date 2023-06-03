@@ -85,25 +85,25 @@ const SearchBtn = styled.button`
 const TopNav = () => {
 	return (
 		<OuterContainer>
-		<Container>
-			<Logo />
-			<MenuContainer>
-				<MenuLink to="/">Home</MenuLink>
-				<MenuLink to="/eventcreatepage">Proposals</MenuLink>
-				<MenuLink to="/">Contacts</MenuLink>
-			</MenuContainer>
-			<RightNav>
-				<SearchContainer>
-					<SearchInput placeholder="Search..." />
-					<SearchBtn>
-						<SearchIcon />
-					</SearchBtn>
-				</SearchContainer>
-				<Link to="/loginpage">
-					<UserIcon />
-				</Link>
-			</RightNav>
-		</Container>
+			<Container>
+				<Logo />
+				<MenuContainer>
+					<MenuLink to="/">Home</MenuLink>
+					<MenuLink to="/eventcreatepage">Proposals</MenuLink>
+					<MenuLink to="/">Contacts</MenuLink>
+				</MenuContainer>
+				<RightNav>
+					<SearchContainer>
+						<SearchInput placeholder="Search..." />
+						<SearchBtn>
+							<SearchIcon />
+						</SearchBtn>
+					</SearchContainer>
+					<Link to="/loginpage">
+						<UserIcon />
+					</Link>
+				</RightNav>
+			</Container>
 		</OuterContainer>
 	);
 };

@@ -7,7 +7,7 @@ const Container = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-bottom:20%;	
+	margin-bottom: 20%;
 `;
 
 const LogInContainer = styled.div`
@@ -24,7 +24,7 @@ const LogInContainer = styled.div`
 `;
 
 const LogInTextSet = styled.div`
-	width:80%;
+	width: 80%;
 	margin: 10%;
 	gap: 1.25rem;
 	font-size: 1.75rem;
@@ -58,9 +58,9 @@ const LogInPage = () => {
 							src="/assets/appleIcon.svg"
 							name="Sign in with Apple"
 						/>
-					</LogInButtonSet>	
+					</LogInButtonSet>
 					<div>Or with Email</div>
-					<LogInInputForm/>
+					<LogInInputForm />
 					<div>© 2023 GO ECO</div>
 				</LogInTextSet>
 			</LogInContainer>
