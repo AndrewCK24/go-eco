@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;
@@ -14,26 +14,28 @@ const Container = styled.div`
 const LinkSection = styled.div`
     width: 80%;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
+    display: flex;
     background-color:  #3C9DA4;
 `;
 
 const LinkContainer = styled.div`
     display: flex;
     gap: 2rem;
-    height: -10%;
 `;
 
-const LinkStyle = styled(Link)`
+const LinkStyle = styled(NavLink)`
     width: 10rem;
     font-size: 2rem;
+    font-weight: 700;
     text-align: center;
     text-decoration: none;
-    color: var(--text-black);
-    padding: 0.5rem;
-    border-radius: 0.25rem;
-    background-color: #FFFFFF;
+    color: var(--text-white);
+    padding: 0.25rem;
+    background-color: var(--bg-gray);
+    &.active {
+		background-color: white;
+        color: var(--text-black);
+	}
 `;
 
 
@@ -66,8 +68,8 @@ const Paragraph = styled.div`
 		<Container>
             <LinkSection>
                 <LinkContainer>
-                    <LinkStyle to="/knowledgepage/beachcleanpage">clean</LinkStyle>
-                    <LinkStyle to="/knowledgepage/recyclepage">recycle</LinkStyle>  
+                    <LinkStyle to="/beachcleanpage">淨灘</LinkStyle>
+                    <LinkStyle to="/recyclepage">回收</LinkStyle>  
                 </LinkContainer>
             </LinkSection>
             <PageContainer>
