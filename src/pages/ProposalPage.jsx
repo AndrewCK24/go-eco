@@ -201,10 +201,10 @@ const ProposalPage = () => {
             feasibility of the plan, the plan will not be put on the shelves."/>
       <Line2/>
       <RowContainer leftText="Maximum number of volunteers"/>
-      <Line2/>
       <RowContainer leftText="Minimum number of volunteers"/>
       <Line2/>
-      <RowContainer leftText="Destination"/>
+      <RowContainer leftText="Location"/>
+      <RowContainer leftText="Address"/>
       <RowContainer leftText="Meet point"/>
       <Line2/>
       
