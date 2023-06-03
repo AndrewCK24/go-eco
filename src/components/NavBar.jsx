@@ -90,7 +90,7 @@ const TopNav = () => {
 			<MenuContainer>
 				<MenuLink to="/">Home</MenuLink>
 				<MenuLink to="/eventcreatepage">Proposals</MenuLink>
-				<MenuLink to="/">Contacts</MenuLink>
+				<MenuLink to="/knowledgepage">Contacts</MenuLink>
 			</MenuContainer>
 			<RightNav>
 				<SearchContainer>

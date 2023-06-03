@@ -9,6 +9,9 @@ import RegisterPage from "./pages/RegisterPage";
 import LogInPage from "./pages/LogInPage";
 import ProposalPage from "./pages/ProposalPage";
 import EventCreatePage from "./pages/EventCreatePage";
+import KnowledgePage from "./pages/KnowledePage";
+import BeachCleanPage from "./pages/BeachCleanPage";
+import RecyclePage from "./pages/RecyclePage";
 import UserPage from "./pages/UserPage";
 
 const Container = styled.div`
@@ -41,6 +44,11 @@ const App = () => {
 							element={<ProposalPage />}
 						/>
 						<Route path="/userpage" element={<UserPage />} />
+						<Route path="/knowledgepage" element={<KnowledgePage />}>
+							<Route index element={<BeachCleanPage />} />
+							<Route path="/knowledgepage/beachcleanpage" element={<BeachCleanPage />} />
+							<Route path="/knowledgepage/recyclepage" element={<RecyclePage />} />
+						</Route>
 					</Routes>
 				</PageContainer>
 				<Footer />
