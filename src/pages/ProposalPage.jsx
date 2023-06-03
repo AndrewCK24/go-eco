@@ -49,6 +49,11 @@ const TextArea = styled.textarea`
   height: ${props => (props.height)};
 
 `;
+const DateTime = styled.input`
+  
+  width: 15%;
+
+`;
 
 const Title = styled.div`
   color: rgba(0, 0, 0, 1);
@@ -72,6 +77,11 @@ const RightBlock = styled.div`
   width:85%;
   text-align: left;
   font-weight: 600;
+`;
+const DateTimeContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 `;
 
 
@@ -136,11 +146,48 @@ const ProposalPage = () => {
       <br/><br/>
       <ProposalContainer>
       
-      <RowContainer leftText="Start time"/>
+      <Row>
+          <LeftBlock>Event Start Date/Time</LeftBlock>
+          <RightBlock>
+            <DateTimeContainer>
+            <DateTime type="date"/>
+            <DateTime type="time"/>
+            </DateTimeContainer>
+          </RightBlock>
+      </Row>
+      
       <Line2/>
-      <RowContainer leftText="End time"/>
+      <Row>
+          <LeftBlock>Event End Date/Time</LeftBlock>
+          <RightBlock>
+            <DateTimeContainer>
+            <DateTime type="date"/>
+            <DateTime type="time"/>
+            </DateTimeContainer>
+          </RightBlock>
+      </Row>
       <Line2/>
-      <RowContainer leftText="Classification"/>
+      <Row>
+          <LeftBlock>Apply Start Date</LeftBlock>
+          <RightBlock>
+            <DateTime type="date"/>
+          </RightBlock>
+      </Row>
+      <Row>
+          <LeftBlock>Apply End Date</LeftBlock>
+          <RightBlock>
+            <DateTime type="date"/>
+          </RightBlock>
+      </Row>
+
+      <Line2/>
+      <Row>
+          <LeftBlock>Classification</LeftBlock>
+          <RightBlock>
+            
+            
+          </RightBlock>
+      </Row>
       <Line2/>
       <RowContainer leftText="Project name"/>
       <RowContainer leftText="Brief introdution" height="5rem"/>
@@ -166,12 +213,7 @@ const ProposalPage = () => {
         <Row>
           <LeftBlock>Terms of cooperation</LeftBlock>
           <RightBlock>
-          <CheckBoxLabel>
-            <CheckBox type="checkbox"/>
-            <Text1>
-            &emsp;Agreement to Proposal
-            </Text1>
-          </CheckBoxLabel>
+          
           <CheckBoxLabel>
             <CheckBox type="checkbox"/>
             <Text1>
