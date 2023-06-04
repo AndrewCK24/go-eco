@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import styled from "@emotion/styled";
-import { uuid } from "uuidv4";
+import { v4 } from "uuid";
 
 import { createEvent } from "../dbMethods/eventMethods";
 
@@ -58,7 +59,7 @@ const TextArea = styled.textarea`
 const DateTime = styled.input`
 	border-radius: 0.5rem;
 	width: 20%;
-  min-width: 9rem;
+	min-width: 9rem;
 `;
 
 const Title = styled.div`
@@ -150,22 +151,24 @@ const RowContainer = (prop) => {
 
 const ProposalPage = () => {
 	const [formData, setFormData] = useState({});
-  const eventID = uuid().slice(0, 10);
+	const eventID = v4().slice(0, 10);
 	const handleConfirm = (formData) => {
 		setFormData({
 			...formData,
 			id: eventID,
 			// TODO: hostUserId should be the id of the current user
 			hostUserId: "HOST_USER_ID",
-      // TODO: 增加時間驗證功能，確保結束時間在開始時間之後等
+			// TODO: 增加時間驗證功能，確保結束時間在開始時間之後等
 			begDate: new Date(formData.begDate).toISOString().slice(0, 10),
 			endDate: new Date(formData.endDate).toISOString().slice(0, 10),
 			// applyBegDate: new Date(formData.applyBegDate).toISOString().slice(0, 10),
 			applyEndDate: new Date(formData.applyEndDate).toISOString().slice(0, 10),
 		});
 		createEvent(formData);
+    // TODO: 跳轉到該活動的頁面，注意要帶上eventID，注意Invalid hook call
 	};
 
+	// TODO: 記得加上必填選項
 	return (
 		<Container>
 			<Title>Create your proposal</Title>
@@ -236,7 +239,7 @@ const ProposalPage = () => {
 				</Row>
 
 				<Line2 />
-        {/* TODO: 應增加分類(recycle, cleanUp) */}
+				{/* TODO: 應增加分類(recycle, cleanUp) */}
 				<Row>
 					<LeftBlock>Classification</LeftBlock>
 					<RightBlock></RightBlock>
