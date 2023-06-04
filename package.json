@@ -24,6 +24,7 @@
     "react-geocode": "^0.2.3",
     "react-router-dom": "^6.11.1",
     "uuidv4": "^6.2.13",
+    "recoil": "^0.7.7",
     "vite-plugin-svgr": "^3.2.0"
   },
   "devDependencies": {
