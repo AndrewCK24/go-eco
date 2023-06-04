@@ -1,6 +1,8 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useRecoilState } from "recoil";
+import { logInState } from "../logInState";
 
 const SideBar = styled.div`
 	display: grid;
@@ -42,61 +44,6 @@ const LogOut = styled.button`
 	background-color: white;
 `;
 
-const UserSideBar = () => {
-	const [check, setLogOut] = useState(false);
-	return (
-		<SideBar>
-			<TopSide>
-				<SideLink to="/userpage">
-					<img src="/assets/homeIcon.svg" />
-					&nbsp;UserPage
-				</SideLink>
-				<SideLink to="/userpage/MyActivity">
-					<img src="/assets/packageIcon.svg" />
-					&nbsp;My activities
-				</SideLink>
-			</TopSide>
-			<BottomSide>
-				<SideLink to="/">
-					{/* TODO:SettingPage */}
-					<img src="/assets/settingIcon.svg" />
-					&nbsp;Settings
-				</SideLink>
-				<SideLink>
-					<LogOut onClick={() => setLogOut(true)}>
-						<img src="/assets/logoutIcon.svg" />
-						&nbsp;Logout
-					</LogOut>
-				</SideLink>
-			</BottomSide>
-			<LogOutCheck trigger={check} setLogOut={setLogOut} />
-		</SideBar>
-	);
-};
-export default UserSideBar;
-
-const LogOutCheck = (prop) => {
-	return prop.trigger ? (
-		<LogOutWindow>
-			<LogOutWindowRow1>Are you sure to logout?</LogOutWindowRow1>
-			<LogOutWindowRow2>
-				<button style={{ fontSize: "2.75rem", fontWeight: "500" }} onClick>
-					Yes
-				</button>
-				{/* TODO: Logout implement  */}
-				<button
-					style={{ fontSize: "2.75rem", fontWeight: "500" }}
-					onClick={() => prop.setLogOut(false)}
-				>
-					No
-				</button>
-			</LogOutWindowRow2>
-		</LogOutWindow>
-	) : (
-		""
-	);
-};
-
 const LogOutWindow = styled.div`
 	top: 30%;
 	left: 27.5%;
@@ -126,3 +73,76 @@ const LogOutWindowRow2 = styled.div`
 	gap: 3rem;
 	align-items: center;
 `;
+
+const UserSideBar = () => {
+	const [show, setWindowShow] = useState(false);
+	const [logIn, setLogIn] = useRecoilState(logInState);
+
+	function handleLogOut(){ 
+		if(logIn) setLogIn(false); 
+	}
+
+	const Window = (prop) => {
+		return prop.trigger ? (
+			<LogOutWindow>
+				<LogOutWindowRow1>Are you sure to logout?</LogOutWindowRow1>
+				<LogOutWindowRow2>
+					<Link
+						to="/" 
+						style={{ fontSize: "2.75rem", fontWeight: "500",  textDecoration: "none",
+								border: 'solid', borderRadius: "0.25rem", width: '15rem',
+								textAlign: "center", color: "var(--text-black)"	
+							}} 
+						onClick={handleLogOut}
+					>
+						Yes
+					</Link>
+					<button
+						style={{ fontSize: "2.75rem", fontWeight: "500", 
+								border: 'solid', borderRadius: "0.25rem", width: '15rem'
+							}}
+						onClick={() => prop.setWindowShow(false)}
+					>
+						No
+					</button>
+				</LogOutWindowRow2>
+			</LogOutWindow>
+		) : (
+			""
+		);
+	};
+
+	return (
+		<SideBar>
+			<TopSide>
+				<SideLink to="/userpage">
+					<img src="/assets/homeIcon.svg" />
+					&nbsp;UserPage
+				</SideLink>
+				<SideLink to="/userpage/MyActivity">
+					<img src="/assets/packageIcon.svg" />
+					&nbsp;My activities
+				</SideLink>
+			</TopSide>
+			<BottomSide>
+				<SideLink to="/">
+					{/* TODO:SettingPage */}
+					<img src="/assets/settingIcon.svg" />
+					&nbsp;Settings
+				</SideLink>
+				<SideLink>
+					<LogOut onClick={() => setWindowShow(true)}>
+						<img src="/assets/logoutIcon.svg" />
+						&nbsp;Logout
+					</LogOut>
+				</SideLink>
+			</BottomSide>
+			<Window trigger={show} setWindowShow={setWindowShow} />
+		</SideBar>
+	);
+};
+export default UserSideBar;
+
+
+
+

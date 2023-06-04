@@ -53,7 +53,10 @@ const LogInPage = () => {
 					<LogInText>Sign In</LogInText>
 					<div>Your Social Campaigns</div>
 					<LogInButtonSet>
-						<LogInButton src="" name="Sign in with Google" />
+						<LogInButton 
+							src="" 
+							name="Sign in with Google" 
+						/>
 						<LogInButton
 							src="/assets/appleIcon.svg"
 							name="Sign in with Apple"

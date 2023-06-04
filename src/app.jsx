@@ -1,4 +1,5 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
+import { RecoilRoot } from "recoil";
 import styled from "@emotion/styled";
 
 // React Component
@@ -13,6 +14,7 @@ import KnowledgePage from "./pages/KnowledePage";
 import BeachCleanPage from "./pages/BeachCleanPage";
 import RecyclePage from "./pages/RecyclePage";
 import UserPage from "./pages/UserPage";
+import MyActivity from "./pages/MyActivity";
 
 const Container = styled.div`
 	width: 100%;
@@ -30,7 +32,8 @@ const PageContainer = styled.main`
 
 const App = () => {
 	return (
-		<HashRouter>
+		<RecoilRoot>
+			<HashRouter>
 			<NavBar />
 			<Container>
 				<PageContainer>
@@ -44,6 +47,7 @@ const App = () => {
 							element={<ProposalPage />}
 						/>
 						<Route path="/userpage" element={<UserPage />} />
+						<Route path="/userpage/myactivity" element={<MyActivity />} />
 						<Route path="/knowledgepage" element={<KnowledgePage />}>
 							<Route index element={<BeachCleanPage />} />
 							<Route path="/knowledgepage" element={<BeachCleanPage />} />
@@ -53,7 +57,8 @@ const App = () => {
 				</PageContainer>
 				<Footer />
 			</Container>
-		</HashRouter>
+			</HashRouter>
+		</RecoilRoot>
 	);
 };
 
