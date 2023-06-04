@@ -1,5 +1,7 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import styled from "@emotion/styled";
+// import { Amplify, API } from "aws-amplify";
+// import awsconfig from "./aws-exports";
 
 // React Component
 import NavBar from "./components/NavBar";
@@ -27,6 +29,8 @@ const PageContainer = styled.main`
 	grid-row: 1 / 2;
 	overflow-x: hidden;
 `;
+
+// Amplify.configure(awsconfig);
 
 const App = () => {
 	return (
