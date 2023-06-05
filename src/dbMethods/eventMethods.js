@@ -20,3 +20,27 @@ export const createEvent = async (event) => {
 		console.log("event create error:", error);
 	}
 };
+
+export const findEventsByType = async (type, num) => {
+	try {
+		const params = {
+			TableName: "Event-goeco",
+			FilterExpression: "#eventType = :typeValue",
+			ExpressionAttributeNames: {
+				"#eventType": "type",
+			},
+			ExpressionAttributeValues: {
+				":typeValue": type,
+			},
+			Limit: num,
+		};
+
+		const result = await dynamoDb.scan(params).promise();
+		const events = result.Items;
+
+		return events;
+	} catch (error) {
+		console.error("發生錯誤：", error);
+		throw error;
+	}
+};
