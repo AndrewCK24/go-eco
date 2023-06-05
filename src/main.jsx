@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "normalize.css";
 import "./main.css";
 import App from "./app";
+import { RecoilRoot } from "recoil";
 
 // import AWS from "aws-sdk";
 
@@ -15,6 +16,8 @@ import App from "./app";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<App />
+		<RecoilRoot>
+			<App />
+		</RecoilRoot>
 	</React.StrictMode>
 );
