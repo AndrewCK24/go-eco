@@ -6,17 +6,23 @@ import svgr from "vite-plugin-svgr";
 export default defineConfig({
 	base: process.env.NODE_ENV === "production" ? "/go-eco/" : "/",
 	plugins: [react(), svgr()],
-	resolve: {
-		alias: [
-			{
-				find: "./runtimeConfig",
-				replacement: "./runtimeConfig.browser",
-			},
-		],
-	},
-	test: {
-		globals: true,
-		environment: "jsdom",
-		setupFiles: "./src/test/setup.ts",
-	},
+	build: {
+    commonjsOptions: { include: [] },
+  },
+  optimizeDeps: {
+    disabled: false,
+  },
+	// resolve: {
+	// 	alias: [
+	// 		{
+	// 			find: "./runtimeConfig",
+	// 			replacement: "./runtimeConfig.browser",
+	// 		},
+	// 	],
+	// },
+	// test: {
+	// 	globals: true,
+	// 	environment: "jsdom",
+	// 	setupFiles: "./src/test/setup.ts",
+	// },
 });
