@@ -21,10 +21,19 @@
 	border: 0;
 
 	/* 字形設定 */
-	font-size: 16px;
+	font-size: 2.25vmin;
 	font-family: "Poppins", sans-serif;
 	color: var(--text-black);
 
 	/* 操作設定 */
 	overscroll-behavior: none;
+}
+
+::-webkit-scrollbar {
+	width: 0;  /* Remove scrollbar space */
+	background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+	background: var(--gray-secondary);
 }
