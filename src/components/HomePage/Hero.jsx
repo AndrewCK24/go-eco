@@ -1,11 +1,14 @@
 import styled from "@emotion/styled";
 
+import Img from "/assets/hero-img.png";
+
 const HeroContainer = styled.section`
 	width: 90%;
 	display: grid;
-	grid-template-columns: 1fr auto;
+	grid-template-columns: 1fr 1fr;
 	border-radius: 1.5rem;
 	background-color: var(--bg-green-main);
+	overflow: hidden;
 `;
 
 const HeroLeft = styled.div`
@@ -44,16 +47,17 @@ const HeroFigureTitle = styled.div`
 `;
 
 const HeroRight = styled.div`
-	background-image: url("/assets/mainBlockBackGround.png");
-	background-size: 75%;
+	/* background-image: url("../../assets/mainBlockBackGround.png"); */
+	/* background-size: 75%;
 	background-repeat: no-repeat;
-	background-position: bottom;
+	background-position: bottom; */
 	display: flex;
 	align-items: flex-end;
-	img {
+	/* img {
 		height: 80%;
-	}
+	} */
 `;
+
 const Hero = () => (
 	<HeroContainer>
 		<HeroLeft>
@@ -70,7 +74,7 @@ const Hero = () => (
 			</HeroFigureContainer>
 		</HeroLeft>
 		<HeroRight>
-			<img src="/assets/potPlant.png" alt="PotPlant" />
+			<img src={Img} />
 		</HeroRight>
 	</HeroContainer>
 );
