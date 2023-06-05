@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { RecoilRoot } from "recoil";
+import { useRecoilState } from "recoil";
 import styled from "@emotion/styled";
+
+import { findEventsByType } from "./dbMethods/eventMethods";
+import eventsDataState from "./recoil/eventsDataState";
 // import { Amplify, API } from "aws-amplify";
 // import awsconfig from "./aws-exports";
 
@@ -36,9 +39,29 @@ const PageContainer = styled.main`
 // Amplify.configure(awsconfig);
 
 const App = () => {
+	const [eventsData, setEventsData] = useRecoilState(eventsDataState);
+	// 頁面首次載入時，取得最新的活動資料
+	useEffect(() => {
+		(async () => {
+			try {
+				const [recycle, cleanUp] = await Promise.all([
+					findEventsByType("recycle", 4),
+					findEventsByType("cleanUp", 4),
+				]);
+				const data = {
+					recycle: recycle,
+					cleanUp: cleanUp,
+				};
+				setEventsData(data);
+				console.log("eventsData updated", data);
+			} catch (error) {
+				console.log(error);
+			}
+		})();
+	}, []);
+
 	return (
-		<RecoilRoot>
-			<BrowserRouter>
+		<BrowserRouter>
 			<NavBar />
 			<Container>
 				<PageContainer>
@@ -56,14 +79,16 @@ const App = () => {
 						<Route path="/go-eco/knowledge" element={<KnowledgePage />}>
 							<Route index element={<BeachCleanPage />} />
 							<Route path="/go-eco/knowledge" element={<BeachCleanPage />} />
-							<Route path="/go-eco/knowledge/recycle" element={<RecyclePage />} />
+							<Route
+								path="/go-eco/knowledge/recycle"
+								element={<RecyclePage />}
+							/>
 						</Route>
 					</Routes>
 				</PageContainer>
 				<Footer />
 			</Container>
-			</BrowserRouter>
-		</RecoilRoot>
+		</BrowserRouter>
 	);
 };
 
