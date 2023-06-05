@@ -1,11 +1,10 @@
-import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { v4 } from "uuid";
 
 import { createEvent } from "../dbMethods/eventMethods";
 
-const Container = styled.form`
+const Container = styled.div`
 	width: 100%;
 	display: flex;
 	overflow: auto;
@@ -70,7 +69,7 @@ const Title = styled.div`
 	font-weight: 700;
 `;
 
-const LeftBlock = styled.div`
+const LeftBlock = styled.label`
 	color: rgba(0, 0, 0, 1);
 	width: 13%;
 	font-size: 1rem;
@@ -138,6 +137,7 @@ const RowContainer = (prop) => {
 			<LeftBlock>{prop.leftText}</LeftBlock>
 			<RightBlock>
 				<TextArea
+					required
 					height={prop.height}
 					onChange={(e) => {
 						prop.setFormData({ ...prop.formData, [prop.name]: e.target.value });
@@ -150,8 +150,11 @@ const RowContainer = (prop) => {
 };
 
 const ProposalPage = () => {
+	const [eventID, setEventID] = useState("");
 	const [formData, setFormData] = useState({});
-	const eventID = v4().slice(0, 10);
+	useEffect(() => {
+		setEventID(v4().slice(0, 10));
+	}, []);
 	const handleConfirm = (formData) => {
 		setFormData({
 			...formData,
@@ -164,8 +167,9 @@ const ProposalPage = () => {
 			// applyBegDate: new Date(formData.applyBegDate).toISOString().slice(0, 10),
 			applyEndDate: new Date(formData.applyEndDate).toISOString().slice(0, 10),
 		});
+		console.log("preparing to create event", formData);
 		createEvent(formData);
-    // TODO: 跳轉到該活動的頁面，注意要帶上eventID，注意Invalid hook call
+		// TODO: 跳轉到該活動的頁面，注意要帶上eventID，注意Invalid hook call
 	};
 
 	// TODO: 記得加上必填選項
@@ -177,7 +181,7 @@ const ProposalPage = () => {
 			<br />
 			<ProposalContainer>
 				<Row>
-					<LeftBlock>Event Start Date/Time</LeftBlock>
+					<LeftBlock>開始時間</LeftBlock>
 					<RightBlock>
 						<DateTimeContainer>
 							<DateTime
@@ -196,7 +200,7 @@ const ProposalPage = () => {
 					</RightBlock>
 				</Row>
 				<Row>
-					<LeftBlock>Event End Date/Time</LeftBlock>
+					<LeftBlock>結束時間</LeftBlock>
 					<RightBlock>
 						<DateTimeContainer>
 							<DateTime
@@ -227,7 +231,7 @@ const ProposalPage = () => {
 					</RightBlock>
 				</Row> */}
 				<Row>
-					<LeftBlock>Apply End Date</LeftBlock>
+					<LeftBlock>報名截止日</LeftBlock>
 					<RightBlock>
 						<DateTime
 							type="date"
@@ -241,18 +245,31 @@ const ProposalPage = () => {
 				<Line2 />
 				{/* TODO: 應增加分類(recycle, cleanUp) */}
 				<Row>
-					<LeftBlock>Classification</LeftBlock>
-					<RightBlock></RightBlock>
+					<LeftBlock>活動種類</LeftBlock>
+					<RightBlock>
+						<select
+							id="type"
+							name="type"
+							onChange={(e) => {
+								setFormData({ ...formData, type: e.target.value });
+							}}
+							required
+						>
+							<option value="">請選擇活動種類</option>
+							<option value="recycle">環保回收</option>
+							<option value="cleanUp">環境清理</option>
+						</select>
+					</RightBlock>
 				</Row>
 				<Line2 />
 				<RowContainer
-					leftText="Project name"
+					leftText="活動名稱"
 					formData={formData}
 					setFormData={setFormData}
 					name="name"
 				/>
 				<RowContainer
-					leftText="Brief introdution"
+					leftText="活動簡介"
 					formData={formData}
 					setFormData={setFormData}
 					name="briefIntroduction"
@@ -265,7 +282,7 @@ const ProposalPage = () => {
             before the project goes live."
 				/> */}
 				<RowContainer
-					leftText="Introduction"
+					leftText="活動詳情"
 					formData={formData}
 					setFormData={setFormData}
 					name="introduction"
@@ -283,13 +300,13 @@ const ProposalPage = () => {
 				<Line2 />
 				{/* <RowContainer leftText="Destination" /> */}
 				<RowContainer
-					leftText="Location"
+					leftText="活動地點"
 					formData={formData}
 					setFormData={setFormData}
 					name="location"
 				/>
 				<RowContainer
-					leftText="Address"
+					leftText="地址"
 					formData={formData}
 					setFormData={setFormData}
 					name="address"
