@@ -43,8 +43,8 @@ const KnowledgePage = () =>{
         <Container>
             <LinkSection>
                 <LinkContainer>
-                    <LinkStyle to="/knowledgepage" end>淨灘</LinkStyle>
-                    <LinkStyle to="/knowledgepage/2">回收</LinkStyle>  
+                    <LinkStyle to="/go-eco/knowledge" end>淨灘</LinkStyle>
+                    <LinkStyle to="/go-eco/knowledge/recycle">回收</LinkStyle>  
                 </LinkContainer>
             </LinkSection>
             <Outlet/>

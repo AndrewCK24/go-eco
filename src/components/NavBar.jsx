@@ -5,7 +5,7 @@ import styled from "@emotion/styled";
 
 import Logo from "./Logo";
 import { ReactComponent as UserIcon } from "../icons/user.svg";
-import { ReactComponent as SearchIcon } from "../icons/search.svg";
+// import { ReactComponent as SearchIcon } from "../icons/search.svg";
 
 const OuterContainer = styled.nav`
 	width: 100%;
@@ -91,18 +91,18 @@ const TopNav = () => {
 		<Container>
 			<Logo />
 			<MenuContainer>
-				<MenuLink to="/">Home</MenuLink>
-				<MenuLink to="/eventcreatepage">Proposals</MenuLink>
-				<MenuLink to="/knowledgepage">Knowledge</MenuLink>
+				<MenuLink to="/go-eco/">首頁</MenuLink>
+				<MenuLink to="/go-eco/event-create">舉辦活動</MenuLink>
+				<MenuLink to="/go-eco/knowledge">知識加值</MenuLink>
 			</MenuContainer>
 			<RightNav>
-				<SearchContainer>
+				{/* <SearchContainer>
 					<SearchInput placeholder="Search..." />
 					<SearchBtn>
 						<SearchIcon />
 					</SearchBtn>
-				</SearchContainer>
-				<Link to={ logIn? "/userpage" : "/loginpage" }>
+				</SearchContainer> */}
+				<Link to={ logIn? "/go-eco/user" : "/go-eco/login" }>
 					<UserIcon />
 				</Link>
 			</RightNav>

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import styled from "@emotion/styled";
 // import { Amplify, API } from "aws-amplify";
@@ -38,31 +38,31 @@ const PageContainer = styled.main`
 const App = () => {
 	return (
 		<RecoilRoot>
-			<HashRouter>
+			<BrowserRouter>
 			<NavBar />
 			<Container>
 				<PageContainer>
 					<Routes>
-						<Route path="/" element={<HomePage />} />
-						<Route path="/registerpage" element={<RegisterPage />} />
-						<Route path="/loginpage" element={<LogInPage />} />
-						<Route path="/eventcreatepage" element={<EventCreatePage />} />
+						<Route path="/go-eco/" element={<HomePage />} />
+						<Route path="/go-eco/register" element={<RegisterPage />} />
+						<Route path="/go-eco/login" element={<LogInPage />} />
+						<Route path="/go-eco/event-create" element={<EventCreatePage />} />
 						<Route
-							path="/eventcreatepage/proposalpage"
+							path="/go-eco/event-create/proposal"
 							element={<ProposalPage />}
 						/>
-						<Route path="/userpage" element={<UserPage />} />
-						<Route path="/userpage/myactivity" element={<MyActivity />} />
-						<Route path="/knowledgepage" element={<KnowledgePage />}>
+						<Route path="/go-eco/user" element={<UserPage />} />
+						<Route path="/go-eco/user/activities" element={<MyActivity />} />
+						<Route path="/go-eco/knowledge" element={<KnowledgePage />}>
 							<Route index element={<BeachCleanPage />} />
-							<Route path="/knowledgepage" element={<BeachCleanPage />} />
-							<Route path="/knowledgepage/2" element={<RecyclePage />} />
+							<Route path="/go-eco/knowledge" element={<BeachCleanPage />} />
+							<Route path="/go-eco/knowledge/recycle" element={<RecyclePage />} />
 						</Route>
 					</Routes>
 				</PageContainer>
 				<Footer />
 			</Container>
-			</HashRouter>
+			</BrowserRouter>
 		</RecoilRoot>
 	);
 };
