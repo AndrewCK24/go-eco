@@ -17,14 +17,14 @@ const Container = styled.div`
 const EventSection = styled.section`
 	width: 90%;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	/* grid-template-columns: repeat(4, 1fr); */
 	grid-template-rows: auto 1fr;
-	grid-gap: 1.25%;
+	grid-gap: 1rem;
 `;
 
 const SectionTitle = styled.div`
 	padding: 0.5rem 0.5rem;
-	grid-column: 1 / -1;
+	/* grid-column: 1 / -1; */
 	grid-row: 1 / 2;
 	font-size: 2rem;
 	font-weight: 700;
@@ -39,6 +39,15 @@ const ViewAll = styled(Link)`
 	font-size: 1rem;
 	text-decoration: none;
 	color: var(--text-gray);
+`;
+
+const EventContainer = styled.div`
+	width: 100%;
+	/* padding: 0.5rem; */
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 1rem;
+	overflow: scroll;
 `;
 
 const FeedBackSection = styled.section`
@@ -69,76 +78,72 @@ const HomePage = () => {
 					Just go eco NOW!
 					<ViewAll to="/events">View All</ViewAll>
 				</SectionTitle>
-				<Event
-					eventName="Plant conservation"
-					location="Chiayi county"
-					time="11:00 AM"
-					date="04.16.2023"
-					src="/assets/recyclePicture1.png"
-					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-				/>
-				<Event
-					eventName="Event reusing"
-					location="Taipei City"
-					time="10:00 AM"
-					date="04.22.2023"
-					src="/assets/recyclePicture2.png"
-					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-				/>
-				<Event
-					eventName="Kitchen waste reuse"
-					location="Yilan county"
-					time="02:00 PM"
-					date="05.06.2023"
-					src="/assets/recyclePicture3.png"
-					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-				/>
-				<Event
-					eventName="Garbage reuse way"
-					location="Kaohsiung City"
-					time="03:00 PM"
-					date="05.11.2023"
-					src="/assets/recyclePicture4.png"
-					backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-				/>
+				<EventContainer>
+					<Event
+						eventName="Plant conservation"
+						location="Chiayi county"
+						time="11:00 AM"
+						date="04.16.2023"
+						backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+					/>
+					<Event
+						eventName="Event reusing"
+						location="Taipei City"
+						time="10:00 AM"
+						date="04.22.2023"
+						backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+					/>
+					<Event
+						eventName="Kitchen waste reuse"
+						location="Yilan county"
+						time="02:00 PM"
+						date="05.06.2023"
+						backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+					/>
+					<Event
+						eventName="Garbage reuse way"
+						location="Kaohsiung City"
+						time="03:00 PM"
+						date="05.11.2023"
+						backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+					/>
+				</EventContainer>
 			</EventSection>
 			<EventSection>
 				<SectionTitle>
 					Let’s make our planet better!
 					<ViewAll to="/events">View All</ViewAll>
 				</SectionTitle>
-				<Event
-					eventName="Mountain cleaning"
-					location="Yilan county"
-					time="08:00 AM"
-					date="04.15.2023"
-					src="/assets/cleanUpPicture1.png"
-					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
-				/>
-				<Event
-					eventName="Beach Event"
-					location="Tainan City"
-					time="07:00 AM"
-					date="05.06.2023"
-					src="/assets/cleanUpPicture2.png"
-					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
-				/>
-				<Event
-					eventName="Ｗetlands Event"
-					location="Taichung City"
-					time="05:00 PM"
-					date="04.25.2023"
-					src="/assets/cleanUpPicture3.png"
-					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
-				/>
-				<Event
-					eventName="Beach Event"
-					location="New Taipei City"
-					time="12:00 PM"
-					date="04.17.2023"
-					src="/assets/cleanUpPicture4.png"
-					backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
-				/>
+				<EventContainer>
+					<Event
+						eventName="Mountain cleaning"
+						location="Yilan county"
+						time="08:00 AM"
+						date="04.15.2023"
+						backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
+					/>
+					<Event
+						eventName="Beach Event"
+						location="Tainan City"
+						time="07:00 AM"
+						date="05.06.2023"
+						backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
+					/>
+					<Event
+						eventName="Ｗetlands Event"
+						location="Taichung City"
+						time="05:00 PM"
+						date="04.25.2023"
+						backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
+					/>
+					<Event
+						eventName="Beach Event"
+						location="New Taipei City"
+						time="12:00 PM"
+						date="04.17.2023"
+						backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
+					/>
+				</EventContainer>
 			</EventSection>
 			<FeedBackSection>
 				<SectionTitle>What’s volunteers’ feedback?</SectionTitle>

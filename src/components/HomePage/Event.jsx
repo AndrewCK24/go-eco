@@ -8,6 +8,7 @@ import { ReactComponent as ParticipantIcon } from "../../icons/participant.svg";
 
 const Container = styled(Link)`
 	width: 100%;
+	/* padding: 0.5rem; */
 	color: var(--text-black);
 	text-decoration: none;
 	display: grid;
@@ -27,25 +28,28 @@ const EventPicture = styled.img`
 	border-radius: 1rem;
 `;
 
-const EventInfoContainer = styled.div`
-	width: 90%;
-	padding: 0% 5% 5% 5%;
-	display: grid;
-	grid-template-rows: auto 1fr;
-`;
+// const EventInfoContainer = styled.div`
+// 	width: 90%;
+// 	padding: 0% 5% 5% 5%;
+// 	display: grid;
+// 	grid-template-rows: auto 1fr;
+// `;
 
 const EventTitle = styled.div`
-	padding: 0 0.25rem;
+	padding: 0.5rem 0.5rem;
 	font-size: 1.25rem;
 	font-weight: 700;
 	color: var(--text-black);
 `;
 
 const EventDetail = styled.div`
+	padding: 0.5rem;
 	align-items: center;
-	display: grid;
-	grid-template-rows: auto auto;
-	grid-template-columns: repeat(2, 1fr);
+	display: flex;																																										
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* grid-template-rows: auto auto; */
+	/* grid-template-columns: repeat(2, 1fr); */
 `;
 
 const EventDetailText = styled.div`
@@ -61,26 +65,13 @@ const EventDetailText = styled.div`
 	}
 `;
 
-// const JoinButton = styled(Link)`
-// 	width: 80%;
-// 	padding: 0.25rem;
-// 	display: flex;
-// 	justify-content: center;
-// 	text-align: center;
-// 	text-decoration: none;
-// 	border-radius: 0.5rem;
-// 	color: var(--primary-black);
-// 	font-weight: 500;
-// 	background-color: var(--bg-green-main);
-// `;
-
 const Event = (prop) => {
 	// TODO: 設定 onClick 事件，點擊後跳轉到活動詳情頁面
 
 	return (
 		<Container to="/registerpage" backgroundColor={prop.backgroundColor}>
-			<EventPicture src={prop.src} />
-			<EventInfoContainer>
+			{/* <EventPicture src={prop.src} /> */}
+			{/* <EventInfoContainer> */}
 				<EventTitle>{prop.eventName}</EventTitle>
 				<EventDetail>
 					<EventDetailText>
@@ -92,7 +83,6 @@ const Event = (prop) => {
 						250+
 					</EventDetailText>
 					{/* TODO:lifecycle */}
-					{/* <JoinButton to="/RegisterPage">Join now!</JoinButton> */}
 					<EventDetailText>
 						<TimeIcon />
 						{prop.time}
@@ -102,7 +92,7 @@ const Event = (prop) => {
 						{prop.location}
 					</EventDetailText>
 				</EventDetail>
-			</EventInfoContainer>
+			{/* </EventInfoContainer> */}
 		</Container>
 	);
 };
