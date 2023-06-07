@@ -53,11 +53,14 @@ const EventContainer = styled.div`
 const FeedBackSection = styled.section`
 	width: 90%;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
 	grid-template-rows: auto 1fr;
-	grid-gap: 1.25%;
 `;
 
+const FeedBackContainer = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1.25%;
+`;
 const FeedBack = styled.div`
 	display: flex;
 	border-radius: 1rem;
@@ -147,6 +150,7 @@ const HomePage = () => {
 			</EventSection>
 			<FeedBackSection>
 				<SectionTitle>What’s volunteers’ feedback?</SectionTitle>
+				<FeedBackContainer>
 				<FeedBack>
 					Beach Events are a great way to protect the environment and prevent
 					harm to marine life by removing trash and debris from beaches.
@@ -160,6 +164,7 @@ const HomePage = () => {
 					waste, conserving resources, and using environmentally friendly
 					products and practices.
 				</FeedBack>
+				</FeedBackContainer>	
 			</FeedBackSection>
 		</Container>
 	);
