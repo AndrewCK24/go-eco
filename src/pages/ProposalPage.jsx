@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { v4 } from "uuid";
 
-import { createEvent } from "../dbMethods/eventMethods";
-
 const Container = styled.div`
 	width: 100%;
 	display: flex;
@@ -131,19 +129,24 @@ const Button = styled.button`
 	padding: 0.7rem 1rem;
 `;
 
-const RowContainer = (prop) => {
+const RowContainer = ({
+	leftText,
+	height,
+	setFormData,
+	formData,
+	name,
+	rightText,
+}) => {
+	const handleInputChange = (e) => {
+		setFormData({ ...formData, [name]: e.target.value });
+	};
+
 	return (
 		<Row>
-			<LeftBlock>{prop.leftText}</LeftBlock>
+			<LeftBlock>{leftText}</LeftBlock>
 			<RightBlock>
-				<TextArea
-					required
-					height={prop.height}
-					onChange={(e) => {
-						prop.setFormData({ ...prop.formData, [prop.name]: e.target.value });
-					}}
-				/>
-				<Text2>{prop.rightText}</Text2>
+				<TextArea required height={height} onChange={handleInputChange} />
+				<Text2>{rightText}</Text2>
 			</RightBlock>
 		</Row>
 	);
@@ -152,25 +155,66 @@ const RowContainer = (prop) => {
 const ProposalPage = () => {
 	const [eventID, setEventID] = useState("");
 	const [formData, setFormData] = useState({});
-	useEffect(() => {
-		setEventID(v4().slice(0, 10));
-	}, []);
-	const handleConfirm = (formData) => {
-		setFormData({
-			...formData,
-			id: eventID,
-			// TODO: hostUserId should be the id of the current user
-			hostUserId: "HOST_USER_ID",
-			// TODO: 增加時間驗證功能，確保結束時間在開始時間之後等
-			begDate: new Date(formData.begDate).toISOString().slice(0, 10),
-			endDate: new Date(formData.endDate).toISOString().slice(0, 10),
-			// applyBegDate: new Date(formData.applyBegDate).toISOString().slice(0, 10),
-			applyEndDate: new Date(formData.applyEndDate).toISOString().slice(0, 10),
-		});
-		console.log("preparing to create event", formData);
-		createEvent(formData);
-		// TODO: 跳轉到該活動的頁面，注意要帶上eventID，注意Invalid hook call
+const handleConfirm = async (formData) => {
+	const hostId = "HOST_USER_ID";
+	const timestamp = Date.now();
+	const name = formData.name;
+	const begDate = formData.begDate;
+	const begTime = formData.begTime;
+	const endDate = formData.endDate;
+	const endTime = formData.endTime;
+	const applyEndDate = formData.applyEndDate;
+	const briefIntroduction = formData.briefIntroduction;
+	const introduction = formData.introduction;
+	const locationName = formData.location;
+	const address = formData.address;
+
+	const eventDate = {
+		begDate,
+		begTime,
+		endDate,
+		endTime,
 	};
+
+	const applyDate = {
+		endDate: applyEndDate,
+	};
+
+	const introductionObj = {
+		brief: briefIntroduction,
+		detail: introduction,
+	};
+
+	const location = {
+		name: locationName,
+		address,
+	};
+
+	const volunteers = [];
+
+	const data = {
+		hostId,
+		timestamp,
+		name,
+		eventDate,
+		applyDate,
+		introduction: introductionObj,
+		location,
+		volunteers,
+	};
+
+	console.log(data);
+	await fetch("/.netlify/functions/saveEvent/saveEvent.js", {
+		method: "POST",
+		headers: {
+			"Content-Type": "application/json",
+			// "Access-Control-Allow-Origin": "https://go-eco.netlify.app",
+		},
+		body: JSON.stringify(data),
+	});
+
+	// TODO: 跳轉到該活動的頁面，注意要帶上eventID，注意Invalid hook call
+};
 
 	// TODO: 記得加上必填選項
 	return (
@@ -219,17 +263,6 @@ const ProposalPage = () => {
 					</RightBlock>
 				</Row>
 				<Line2 />
-				{/* <Row>
-					<LeftBlock>Apply Start Date</LeftBlock>
-					<RightBlock>
-						<DateTime
-							type="date"
-							onChange={(e) => {
-								setFormData({ ...formData, applyBegDate: e.target.value });
-							}}
-						/>
-					</RightBlock>
-				</Row> */}
 				<Row>
 					<LeftBlock>報名截止日</LeftBlock>
 					<RightBlock>
@@ -243,7 +276,6 @@ const ProposalPage = () => {
 				</Row>
 
 				<Line2 />
-				{/* TODO: 應增加分類(recycle, cleanUp) */}
 				<Row>
 					<LeftBlock>活動種類</LeftBlock>
 					<RightBlock>
@@ -293,12 +325,7 @@ const ProposalPage = () => {
             information, or tsk tsk cannot evaluate the authenticity and
             feasibility of the plan, the plan will not be put on the shelves."
 				/>
-				{/* <Line2 />
-				<RowContainer leftText="Maximum number of volunteers" />
 				<Line2 />
-				<RowContainer leftText="Minimum number of volunteers" /> */}
-				<Line2 />
-				{/* <RowContainer leftText="Destination" /> */}
 				<RowContainer
 					leftText="活動地點"
 					formData={formData}
@@ -311,7 +338,6 @@ const ProposalPage = () => {
 					setFormData={setFormData}
 					name="address"
 				/>
-				{/* <RowContainer leftText="Meet point" /> */}
 				<Line2 />
 
 				<Row>
