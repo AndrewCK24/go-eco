@@ -1,6 +1,4 @@
 import { Link, NavLink } from "react-router-dom";
-import { useRecoilValue } from "recoil";
-import { logInState } from "../logInState";
 import styled from "@emotion/styled";
 
 import Logo from "./Logo";
@@ -84,8 +82,7 @@ const SearchBtn = styled.button`
 	}
 `;
 
-const TopNav = () => {
-	const logIn = useRecoilValue(logInState);
+const NavBar = () => {
 	return (
 		<OuterContainer>
 		<Container>
@@ -102,7 +99,7 @@ const TopNav = () => {
 						<SearchIcon />
 					</SearchBtn>
 				</SearchContainer> */}
-				<Link to={ logIn? "/go-eco/user" : "/go-eco/login" }>
+				<Link to={ "/go-eco/login" }>
 					<UserIcon />
 				</Link>
 			</RightNav>
@@ -111,4 +108,4 @@ const TopNav = () => {
 	);
 };
 
-export default TopNav;
+export default NavBar;

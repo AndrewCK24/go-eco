@@ -1,7 +1,5 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import { useRecoilState } from "recoil";
-import { logInState } from "../../logInState";
 
 const LogInButtonStyle = styled(Link)`
 	width: 80%;
@@ -17,8 +15,6 @@ const LogInButtonStyle = styled(Link)`
 `;
 
 function LogInButton(prop) {
-	const[logIn, setLogIn] = useRecoilState(logInState);
-	function handleLogIn() { if( !logIn ) setLogIn(true); }
 	return (
 		<LogInButtonStyle 
 			to="/userpage"
