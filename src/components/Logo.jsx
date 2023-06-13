@@ -13,7 +13,7 @@ const Container = styled(Link)`
 
 const Logo = () => {
 	return (
-		<Container to="/go-eco/">
+		<Container to="/">
 			<LogoIcon />
 		</Container>
 	);

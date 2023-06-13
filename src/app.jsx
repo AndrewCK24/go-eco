@@ -8,11 +8,11 @@ import eventsDataState from "./recoil/eventsDataState";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
-import RegisterPage from "./pages/RegisterPage";
+import EventPage from "./pages/EventPage";
 import LogInPage from "./pages/LogInPage";
 import ProposalPage from "./pages/ProposalPage";
 import EventCreatePage from "./pages/EventCreatePage";
-import KnowledgePage from "./pages/KnowledePage";
+import KnowledgePage from "./pages/KnowledgePage";
 import BeachCleanPage from "./pages/BeachCleanPage";
 import RecyclePage from "./pages/RecyclePage";
 import UserPage from "./pages/UserPage";
@@ -50,21 +50,21 @@ const App = () => {
 			<Container>
 				<PageContainer>
 					<Routes>
-						<Route path="/go-eco/" element={<HomePage />} />
-						<Route path="/go-eco/register" element={<RegisterPage />} />
-						<Route path="/go-eco/login" element={<LogInPage />} />
-						<Route path="/go-eco/event-create" element={<EventCreatePage />} />
+						<Route path="/" element={<HomePage />} />
+						<Route path="/event" element={<EventPage />} />
+						<Route path="/login" element={<LogInPage />} />
+						<Route path="/event-create" element={<EventCreatePage />} />
 						<Route
-							path="/go-eco/event-create/proposal"
+							path="/event-create/proposal"
 							element={<ProposalPage />}
 						/>
-						<Route path="/go-eco/user" element={<UserPage />} />
-						<Route path="/go-eco/user/activities" element={<MyActivity />} />
-						<Route path="/go-eco/knowledge" element={<KnowledgePage />}>
+						<Route path="/user" element={<UserPage />} />
+						<Route path="/user/activities" element={<MyActivity />} />
+						<Route path="/knowledge" element={<KnowledgePage />}>
 							<Route index element={<BeachCleanPage />} />
-							<Route path="/go-eco/knowledge" element={<BeachCleanPage />} />
+							<Route path="/knowledge" element={<BeachCleanPage />} />
 							<Route
-								path="/go-eco/knowledge/recycle"
+								path="/knowledge/recycle"
 								element={<RecyclePage />}
 							/>
 						</Route>

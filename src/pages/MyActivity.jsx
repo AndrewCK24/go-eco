@@ -97,4 +97,5 @@ const MyActivity = () => {
 		</Container>
 	);
 };
+
 export default MyActivity;

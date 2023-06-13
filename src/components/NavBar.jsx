@@ -85,25 +85,25 @@ const SearchBtn = styled.button`
 const NavBar = () => {
 	return (
 		<OuterContainer>
-		<Container>
-			<Logo />
-			<MenuContainer>
-				<MenuLink to="/go-eco/">首頁</MenuLink>
-				<MenuLink to="/go-eco/event-create">舉辦活動</MenuLink>
-				<MenuLink to="/go-eco/knowledge">知識加值</MenuLink>
-			</MenuContainer>
-			<RightNav>
-				{/* <SearchContainer>
+			<Container>
+				<Logo />
+				<MenuContainer>
+					<MenuLink to="/">首頁</MenuLink>
+					<MenuLink to="/event-create">舉辦活動</MenuLink>
+					<MenuLink to="/knowledge">知識加值</MenuLink>
+				</MenuContainer>
+				<RightNav>
+					{/* <SearchContainer>
 					<SearchInput placeholder="Search..." />
 					<SearchBtn>
 						<SearchIcon />
 					</SearchBtn>
 				</SearchContainer> */}
-				<Link to={ "/go-eco/login" }>
-					<UserIcon />
-				</Link>
-			</RightNav>
-		</Container>
+					<Link to={"/login"}>
+						<UserIcon />
+					</Link>
+				</RightNav>
+			</Container>
 		</OuterContainer>
 	);
 };

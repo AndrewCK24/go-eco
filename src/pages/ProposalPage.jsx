@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styled from "@emotion/styled";
-import { v4 } from "uuid";
 
 const Container = styled.div`
 	width: 100%;
@@ -153,68 +152,67 @@ const RowContainer = ({
 };
 
 const ProposalPage = () => {
-	const [eventID, setEventID] = useState("");
 	const [formData, setFormData] = useState({});
-const handleConfirm = async (formData) => {
-	const hostId = "HOST_USER_ID";
-	const timestamp = Date.now();
-	const name = formData.name;
-	const begDate = formData.begDate;
-	const begTime = formData.begTime;
-	const endDate = formData.endDate;
-	const endTime = formData.endTime;
-	const applyEndDate = formData.applyEndDate;
-	const briefIntroduction = formData.briefIntroduction;
-	const introduction = formData.introduction;
-	const locationName = formData.location;
-	const address = formData.address;
+	const handleConfirm = async (formData) => {
+		const hostId = "HOST_USER_ID";
+		const timestamp = Date.now();
+		const name = formData.name;
+		const begDate = formData.begDate;
+		const begTime = formData.begTime;
+		const endDate = formData.endDate;
+		const endTime = formData.endTime;
+		const applyEndDate = formData.applyEndDate;
+		const briefIntroduction = formData.briefIntroduction;
+		const introduction = formData.introduction;
+		const locationName = formData.location;
+		const address = formData.address;
 
-	const eventDate = {
-		begDate,
-		begTime,
-		endDate,
-		endTime,
+		const eventDate = {
+			begDate,
+			begTime,
+			endDate,
+			endTime,
+		};
+
+		const applyDate = {
+			endDate: applyEndDate,
+		};
+
+		const introductionObj = {
+			brief: briefIntroduction,
+			detail: introduction,
+		};
+
+		const location = {
+			name: locationName,
+			address,
+		};
+
+		const volunteers = [];
+
+		const data = {
+			hostId,
+			timestamp,
+			name,
+			eventDate,
+			applyDate,
+			introduction: introductionObj,
+			location,
+			volunteers,
+		};
+
+		console.log(data);
+		await fetch("/.netlify/functions/saveEvent/saveEvent.js", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				// "Access-Control-Allow-Origin": "https://go-eco.netlify.app",
+			},
+			body: JSON.stringify(data),
+		});
+
+		// TODO: 跳轉到該活動的頁面，注意要帶上eventID，注意Invalid hook call
 	};
-
-	const applyDate = {
-		endDate: applyEndDate,
-	};
-
-	const introductionObj = {
-		brief: briefIntroduction,
-		detail: introduction,
-	};
-
-	const location = {
-		name: locationName,
-		address,
-	};
-
-	const volunteers = [];
-
-	const data = {
-		hostId,
-		timestamp,
-		name,
-		eventDate,
-		applyDate,
-		introduction: introductionObj,
-		location,
-		volunteers,
-	};
-
-	console.log(data);
-	await fetch("/.netlify/functions/saveEvent/saveEvent.js", {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
-			// "Access-Control-Allow-Origin": "https://go-eco.netlify.app",
-		},
-		body: JSON.stringify(data),
-	});
-
-	// TODO: 跳轉到該活動的頁面，注意要帶上eventID，注意Invalid hook call
-};
 
 	// TODO: 記得加上必填選項
 	return (
