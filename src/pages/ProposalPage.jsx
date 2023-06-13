@@ -1,5 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "@emotion/styled";
+
+import { useRecoilState } from "recoil";
+import savedEventState from "../recoil/savedEventState";
 
 const Container = styled.div`
 	width: 100%;
@@ -153,6 +157,8 @@ const RowContainer = ({
 
 const ProposalPage = () => {
 	const [formData, setFormData] = useState({});
+	const [savedEvent, setSavedEvent] = useRecoilState(savedEventState);
+	const navigate = useNavigate();
 	const handleConfirm = async (formData) => {
 		const hostId = "HOST_USER_ID";
 		const timestamp = Date.now();
@@ -202,16 +208,23 @@ const ProposalPage = () => {
 		};
 
 		console.log(data);
-		await fetch("/.netlify/functions/saveEvent/saveEvent.js", {
+		const response = await fetch("/.netlify/functions/saveEvent/saveEvent", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
-				// "Access-Control-Allow-Origin": "https://go-eco.netlify.app",
+				"Access-Control-Allow-Origin": "https://go-eco.netlify.app",
 			},
 			body: JSON.stringify(data),
 		});
 
-		// TODO: 跳轉到該活動的頁面，注意要帶上eventID，注意Invalid hook call
+		if (response.status === 200) {
+			const savedData = await response.json();
+			setSavedEvent(savedData);
+			console.log("savedEventState Updated:", savedData);
+			navigate(`/event/${savedData._id}`);
+		} else {
+			throw new Error("event save error");
+		}
 	};
 
 	// TODO: 記得加上必填選項
