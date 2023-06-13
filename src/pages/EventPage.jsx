@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Map from "../components/Map";
 
 const Container = styled.div`
@@ -9,7 +9,7 @@ const Container = styled.div`
 	align-items: center;
 	flex-direction: column;
 	line-height: normal;
-	background-color: #3c9da4;
+	background-color: var(--bg-blue-dark);
 `;
 
 const RegisterContainer = styled.div`
@@ -18,29 +18,29 @@ const RegisterContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: #ffffff;
+	background-color: var(--bg-white);
 `;
 
 const Title = styled.div`
-	padding: 0.5rem 0.5rem;
 	font-size: 3rem;
-	font-style: Bold;
 	text-align: left;
 	font-weight: 700;
 `;
 
 const SectionTitle = styled.div`
 	font-size: 2rem;
-	font-style: SemiBold;
 	text-align: left;
 	font-weight: 600;
 `;
 
 const Paragraph = styled.div`
-	font-size: 1.5rem;
-	font-style: Regular;
+`;
+
+const Text = styled.div`
+	font-size: 1.25rem;
 	text-align: left;
 	font-weight: 400;
+	padding-bottom: 0.25rem;
 `;
 
 const JoinButton = styled(Link)`
@@ -59,6 +59,8 @@ const JoinButton = styled(Link)`
 `;
 
 const EventPage = () => {
+	const { eventId } = useParams();
+	console.log(eventId);
 	return (
 		<Container>
 			<RegisterContainer>
@@ -68,33 +70,23 @@ const EventPage = () => {
 					beautiful and our ocean safe for wildlife.
 				</SectionTitle>
 				<Paragraph>
-					<div>Destination: Tamsui, New Taipei City</div>
-					<br />
-					<div>Date &amp; Time: 4 Jun 2023, 12:30 p.m. to 3:30 p.m.</div>
-					<br />
-					<div>Meet point: Tamsui MRT station</div>
-					<br />
+					<Text>Destination: Tamsui, New Taipei City</Text>
+					<Text>Date & Time: 4 Jun 2023, 12:30 p.m. to 3:30 p.m.</Text>
+					<Text>Meet point: Tamsui MRT station</Text>
 					<div>Capacity: 40 volunteers - 3 spaces left</div>
-					<br />
 					<div>Check on map: </div>
 
-					<Map location="淡水" />
+					{/* <Map location="淡水" /> */}
 					{/* TODO:更改位置 */}
-
-					<br />
 					<div>
 						Members of the cross party group are invited alongside anyone else
 						interested in taking part in some marine litter citizen science.
 					</div>
-					<br />
-					<br />
 					<div>
 						Catherine and Kirsty will hand out equipment and give a briefing at
 						2.30 before heading down to the 100m stretch on Cramond beach to
 						work as a group to do a beach clean and litter survey.
 					</div>
-					<br />
-					<br />
 					<div>
 						If you have any questions about the event please email Catherine on
 						catherine.gemmell@mcsuk.org
@@ -107,16 +99,12 @@ const EventPage = () => {
 						essentials like sunscreen, waterproofs, hand sanitizer, and perhaps
 						some snacks and a drink (in a reusable bottle, of course).
 					</div>
-					<br />
-					<br />
 					<div>
 						What to wear: If you're picking up litter with your hands it's worth
 						wearing a strong pair of gloves - like gardening gloves - just to
 						make sure you're protected. Sturdy shoes are a must for protection
 						too.
 					</div>
-					<br />
-					<br />
 					<div>
 						Under 16s: To comply with our insurance, volunteers under 16 will
 						need to be accompanied by an adult who will be asked to sign a
