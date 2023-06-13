@@ -1,6 +1,10 @@
-import styled from "@emotion/styled";
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import Map from "../components/Map";
+import { useRecoilState } from "recoil";
+import styled from "@emotion/styled";
+// import Map from "../components/Map";
+
+import presentEventState from "../recoil/presentEventState";
 
 const Container = styled.div`
 	width: 100%;
@@ -33,8 +37,7 @@ const SectionTitle = styled.div`
 	font-weight: 600;
 `;
 
-const Paragraph = styled.div`
-`;
+const Paragraph = styled.div``;
 
 const Text = styled.div`
 	font-size: 1.25rem;
@@ -59,8 +62,33 @@ const JoinButton = styled(Link)`
 `;
 
 const EventPage = () => {
+	const [presentEvent, setPresentEvent] = useRecoilState(presentEventState);
 	const { eventId } = useParams();
-	console.log(eventId);
+
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const response = await fetch(
+					`/.netlify/functions/findEventById/findEventById`,
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+						},
+						body: JSON.stringify({ eventId: eventId }),
+					}
+				);
+				const data = await response.json();
+				console.log(data);
+				setPresentEvent(data);
+			} catch (error) {
+				console.log(error);
+			}
+		};
+
+		fetchData();
+	}, [eventId, setPresentEvent]);
+
 	return (
 		<Container>
 			<RegisterContainer>
@@ -75,9 +103,6 @@ const EventPage = () => {
 					<Text>Meet point: Tamsui MRT station</Text>
 					<div>Capacity: 40 volunteers - 3 spaces left</div>
 					<div>Check on map: </div>
-
-					{/* <Map location="淡水" /> */}
-					{/* TODO:更改位置 */}
 					<div>
 						Members of the cross party group are invited alongside anyone else
 						interested in taking part in some marine litter citizen science.

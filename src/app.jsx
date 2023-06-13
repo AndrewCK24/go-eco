@@ -51,7 +51,7 @@ const App = () => {
 				<PageContainer>
 					<Routes>
 						<Route path="/" element={<HomePage />} />
-						<Route path="/event/:_id" element={<EventPage />} />
+						<Route path="/event/:eventId" element={<EventPage />} />
 						<Route path="/login" element={<LogInPage />} />
 						<Route path="/event-create" element={<EventCreatePage />} />
 						<Route
