@@ -1,7 +1,7 @@
 # go-eco
 
 此專案是一個基於 Vite 的 React 模板，方便您快速開始 React 開發。<br />
-您可以選擇直接在 https://andrewck24.github.io/go-eco/ 直接進行專案預覽，<br />
+您可以選擇直接在 [此處](https://go-eco.netlify.app) 直接進行專案預覽，<br />
 或是在本地端開啟專案，以下是專案啟動的步驟：
 
 ## 安裝相依套件
