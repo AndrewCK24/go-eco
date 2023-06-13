@@ -14,19 +14,18 @@ const LogInButtonStyle = styled(Link)`
 	text-decoration: none;
 `;
 
-function LogInButton(prop) {
+const LogInButton = (prop) => {
 	return (
-		<LogInButtonStyle 
-			to="/userpage"
-			src={prop.src} 
-			name={prop.name} 
-			onClick = {handleLogIn}
+		<LogInButtonStyle
+			to="/user"
+			src={prop.src}
+			name={prop.name}
+			// onClick = {handleLogIn}
 		>
 			<img src={prop.src}></img>
 			&nbsp;&nbsp;{prop.name}
 		</LogInButtonStyle>
 	);
-}
+};
+
 export default LogInButton;
-
-

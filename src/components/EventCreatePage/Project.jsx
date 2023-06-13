@@ -1,12 +1,14 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
-const Container = styled.div`
+const Container = styled(Link)`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	border-radius: 1.5rem;
-	background-color: ${(prop) => prop.backgroundColor};
+	background-color: ${(prop) =>
+		prop.single ? "var(--bg-green-main)" : "var(--bg-blue-main)"};
+	text-decoration: none;
 `;
 
 const TextContainer = styled.div`
@@ -14,7 +16,7 @@ const TextContainer = styled.div`
 	grid-template-rows: 1fr 1fr;
 	text-align: center;
 	padding: 5%;
-	color: rgba(30, 30, 30, 0.75);
+	color: var(--text-black);
 `;
 
 const Text1 = styled.div`
@@ -27,20 +29,15 @@ const Text2 = styled.div`
 	font-weight: 400;
 `;
 
-function Project(prop) {
-	const style = {
-		textDecoration: "none",
-	};
-
+const Project = (prop) => {
 	return (
-		<Link to="/go-eco/event-create/proposal" style={style}>
-			<Container backgroundColor={prop.backgroundColor}>
-				<TextContainer>
-					<Text1>{prop.Text1}</Text1>
-					<Text2>{prop.Text2}</Text2>
-				</TextContainer>
-			</Container>
-		</Link>
+		<Container to="/event-create/proposal" single={prop.single}>
+			<TextContainer>
+				<Text1>{prop.Text1}</Text1>
+				<Text2>{prop.Text2}</Text2>
+			</TextContainer>
+		</Container>
 	);
-}
+};
+
 export default Project;
