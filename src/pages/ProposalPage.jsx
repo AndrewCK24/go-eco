@@ -2,9 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "@emotion/styled";
 
-import { useRecoilState } from "recoil";
-import savedEventState from "../recoil/savedEventState";
-
 const Container = styled.div`
 	width: 100%;
 	display: flex;
@@ -157,43 +154,27 @@ const RowContainer = ({
 
 const ProposalPage = () => {
 	const [formData, setFormData] = useState({});
-	const [savedEvent, setSavedEvent] = useRecoilState(savedEventState);
+	// const setSavedEvent = useSetRecoilState(savedEventState);
 	const navigate = useNavigate();
 	const handleConfirm = async (formData) => {
 		const hostId = "HOST_USER_ID";
 		const timestamp = Date.now();
-		const name = formData.name;
-		const begDate = formData.begDate;
-		const begTime = formData.begTime;
-		const endDate = formData.endDate;
-		const endTime = formData.endTime;
-		const applyEndDate = formData.applyEndDate;
-		const briefIntroduction = formData.briefIntroduction;
-		const introduction = formData.introduction;
-		const locationName = formData.location;
-		const address = formData.address;
-
-		const eventDate = {
+		const {
+			name,
 			begDate,
 			begTime,
 			endDate,
 			endTime,
-		};
-
-		const applyDate = {
-			endDate: applyEndDate,
-		};
-
-		const introductionObj = {
-			brief: briefIntroduction,
-			detail: introduction,
-		};
-
-		const location = {
-			name: locationName,
+			applyEndDate,
+			briefIntroduction,
+			introduction,
+			location,
 			address,
-		};
+		} = formData;
 
+		const eventDate = { begDate, begTime, endDate, endTime };
+		const applyDate = { endDate: applyEndDate };
+		const introductionObj = { brief: briefIntroduction, detail: introduction };
 		const volunteers = [];
 
 		const data = {
@@ -203,7 +184,7 @@ const ProposalPage = () => {
 			eventDate,
 			applyDate,
 			introduction: introductionObj,
-			location,
+			location: { name: location, address },
 			volunteers,
 		};
 
@@ -219,15 +200,14 @@ const ProposalPage = () => {
 
 		if (response.status === 200) {
 			const savedData = await response.json();
-			setSavedEvent(savedData);
-			console.log("savedEventState Updated:", savedData);
+			console.log("event created:", savedData);
 			navigate(`/event/${savedData._id}`);
 		} else {
 			throw new Error("event save error");
 		}
 	};
 
-	// TODO: 記得加上必填選項
+	// TODO: 表單必填要求、時間先後驗證、表單重構
 	return (
 		<Container>
 			<Title>Create your proposal</Title>
