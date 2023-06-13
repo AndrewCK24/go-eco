@@ -110,13 +110,13 @@ const EventCreatePage = () => {
 				<TitleText>Create your proposal</TitleText>
 				<Proposals>
 					<Project
-						backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
+						single={1}
 						Text1="Single activity"
 						Text2="For only one time"
 					/>
 					<Project
-						backgroundColor="rgba(179, 221, 230, 0.4300000071525574)"
-						Text1="Longterm project"
+						single={0}
+						Text1="Long-term project"
 						Text2="For continuous"
 					/>
 				</Proposals>
