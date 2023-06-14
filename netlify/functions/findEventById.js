@@ -2,13 +2,16 @@ import mongoose from "mongoose";
 import Event from "../../models/event";
 
 export const handler = async (event) => {
-	try {
+	if (!mongoose.connections[0].readyState) {
 		console.log('Connecting to MongoDB...');
-		mongoose.connect(process.env.MONGODB_URI, {
+		await mongoose.connect(process.env.MONGODB_URI, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
+			bufferCommands: false,
 		});
 		console.log('Connected to MongoDB.');
+	}
+	try {
 		const { eventId } = JSON.parse(event.body);
 		console.log(`Finding event with ID ${eventId}...`);
 		const foundEvent = await Event.findById(eventId);
