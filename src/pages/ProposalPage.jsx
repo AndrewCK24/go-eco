@@ -166,6 +166,7 @@ const ProposalPage = () => {
 			endDate,
 			endTime,
 			applyEndDate,
+			type,
 			briefIntroduction,
 			introduction,
 			location,
@@ -183,6 +184,7 @@ const ProposalPage = () => {
 			name,
 			eventDate,
 			applyDate,
+			type,
 			introduction: introductionObj,
 			location: { name: location, address },
 			volunteers,
@@ -193,7 +195,7 @@ const ProposalPage = () => {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
-				"Access-Control-Allow-Origin": "https://go-eco.netlify.app",
+				"Access-Control-Allow-Origin": "*",
 			},
 			body: JSON.stringify(data),
 		});

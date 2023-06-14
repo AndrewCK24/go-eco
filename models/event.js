@@ -53,6 +53,10 @@ const eventSchema = new Schema({
 			required: true,
 		},
 	},
+	type: {
+		type: String,
+		required: true,
+	},
 	introduction: {
 		brief: {
 			type: String,
