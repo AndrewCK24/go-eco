@@ -70,7 +70,7 @@ const EventPage = () => {
 			console.log("Fetching data...");
 			try {
 				const response = await fetch(
-					`/.netlify/functions/findEventById/findEventById`,
+					`/.netlify/functions/findEventById`,
 					{
 						method: "POST",
 						headers: {

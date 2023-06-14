@@ -189,7 +189,7 @@ const ProposalPage = () => {
 		};
 
 		console.log(data);
-		const response = await fetch("/.netlify/functions/saveEvent/saveEvent", {
+		const response = await fetch("/.netlify/functions/saveEvent", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
