@@ -1,7 +1,6 @@
 import mongoose, { model } from "mongoose";
-const { Schema } = mongoose;
 
-const eventSchema = new Schema({
+const eventSchema = new mongoose.Schema({
 	hostId: {
 		// ID of the user who created the event
 		type: String,
