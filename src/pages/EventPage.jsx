@@ -67,6 +67,7 @@ const EventPage = () => {
 
 	useEffect(() => {
 		const fetchData = async () => {
+			console.log("Fetching data...");
 			try {
 				const response = await fetch(
 					`/.netlify/functions/findEventById/findEventById`,
@@ -78,11 +79,12 @@ const EventPage = () => {
 						body: JSON.stringify({ eventId: eventId }),
 					}
 				);
+				console.log("fetching completed");
 				const data = await response.json();
-				console.log(data);
+				console.log("Data fetched successfully:", data);
 				setPresentEvent(data);
 			} catch (error) {
-				console.log(error);
+				console.log("Error fetching data:", error);
 			}
 		};
 
