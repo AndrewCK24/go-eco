@@ -1,10 +1,10 @@
-import { connect } from "mongoose";
+import mongoose from "mongoose";
 import Event from "../../models/event";
 
 export const handler = async (event) => {
 	try {
 		console.log('Connecting to MongoDB...');
-		connect(process.env.MONGODB_URI, {
+		mongoose.connect(process.env.MONGODB_URI, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
 		});
