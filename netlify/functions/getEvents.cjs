@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Event = require("./models/event");
+const Event = require("./models/event.cjs");
 
 exports.handler = async (event, context) => {
 	console.log("Starting function execution...");
