@@ -1,5 +1,4 @@
-import { ObjectId } from "mongodb";
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const eventSchema = new mongoose.Schema({
 	hostId: {
@@ -85,4 +84,4 @@ const eventSchema = new mongoose.Schema({
 });
 
 const Event = mongoose.model("Event", eventSchema, "events");
-export default Event;
+module.exports = Event;

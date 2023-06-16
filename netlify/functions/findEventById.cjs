@@ -1,7 +1,7 @@
-import mongoose from "mongoose";
-import Event from "./models/event";
+const mongoose = require("mongoose");
+const Event = require("./models/event.cjs");
 
-export const handler = async (event) => {
+exports.handler = async (event) => {
 	try {
 		console.log("Connecting to MongoDB...");
 		await mongoose.connect(process.env.MONGODB_URI, {

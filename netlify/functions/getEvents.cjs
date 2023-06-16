@@ -1,17 +1,19 @@
-import { connect, find } from "mongoose";
-import Event from "./models/event.js";
+const mongoose = require("mongoose");
+const Event = require("./models/event");
 
-export async function handler(event, context) {
+exports.handler = async (event, context) => {
 	console.log("Starting function execution...");
-
 	try {
-		connect(process.env.MONGO_URI, {
+		mongoose.connect(process.env.MONGO_URI, {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
+			bufferCommands: false,
 		});
 		console.log("Connected to MongoDB...");
 
-		const events = await find().sort({ "eventDate.begDate": -1 }).limit(10);
+		const events = await Event.find()
+			.sort({ "eventDate.begDate": -1 })
+			.limit(10);
 		console.log(`Found ${events.length} events...`);
 
 		return {
@@ -26,4 +28,4 @@ export async function handler(event, context) {
 			body: JSON.stringify({ message: "Internal Server Error" }),
 		};
 	}
-}
+};
