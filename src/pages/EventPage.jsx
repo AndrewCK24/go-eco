@@ -69,17 +69,14 @@ const EventPage = () => {
 		const fetchData = async () => {
 			console.log("Fetching data...");
 			try {
-				const response = await fetch(
-					`/.netlify/functions/findEventById`,
-					{
-						method: "POST",
-						headers: {
-							"Content-Type": "application/json",
-							"Access-Control-Allow-Origin": "*",
-						},
-						body: JSON.stringify({ eventId: eventId }),
-					}
-				);
+				const response = await fetch(`/.netlify/functions/findEventById`, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+						"Access-Control-Allow-Origin": "*",
+					},
+					body: JSON.stringify({ eventId: eventId }),
+				});
 				console.log("fetching completed");
 				const data = await response.json();
 				console.log("Data fetched successfully:", data);
@@ -92,58 +89,38 @@ const EventPage = () => {
 		fetchData();
 	}, [eventId, setPresentEvent]);
 
-	return (
-		<Container>
-			<RegisterContainer>
-				<Title>Beach Clean in Tamsui, New Taipei City</Title>
-				<SectionTitle>
+	if (Object.keys(presentEvent).length === 0) {
+		return (
+			<Container>
+				<RegisterContainer />
+			</Container>
+		);
+	} else {
+		return (
+			<Container>
+				<RegisterContainer>
+					<Title>{presentEvent.name}</Title>
+					{/* <SectionTitle>
 					Join one of our beach clean surveys and help keep Britain's beaches
 					beautiful and our ocean safe for wildlife.
-				</SectionTitle>
-				<Paragraph>
-					<Text>Destination: Tamsui, New Taipei City</Text>
-					<Text>Date & Time: 4 Jun 2023, 12:30 p.m. to 3:30 p.m.</Text>
-					<Text>Meet point: Tamsui MRT station</Text>
-					<div>Capacity: 40 volunteers - 3 spaces left</div>
-					<div>Check on map: </div>
-					<div>
-						Members of the cross party group are invited alongside anyone else
-						interested in taking part in some marine litter citizen science.
-					</div>
-					<div>
-						Catherine and Kirsty will hand out equipment and give a briefing at
-						2.30 before heading down to the 100m stretch on Cramond beach to
-						work as a group to do a beach clean and litter survey.
-					</div>
-					<div>
-						If you have any questions about the event please email Catherine on
-						catherine.gemmell@mcsuk.org
-					</div>
-				</Paragraph>
-				<SectionTitle>Also worth knowing…</SectionTitle>
-				<Paragraph>
-					<div>
-						What to bring: We’d recommend you pack a rucksack with a few
-						essentials like sunscreen, waterproofs, hand sanitizer, and perhaps
-						some snacks and a drink (in a reusable bottle, of course).
-					</div>
-					<div>
-						What to wear: If you're picking up litter with your hands it's worth
-						wearing a strong pair of gloves - like gardening gloves - just to
-						make sure you're protected. Sturdy shoes are a must for protection
-						too.
-					</div>
-					<div>
-						Under 16s: To comply with our insurance, volunteers under 16 will
-						need to be accompanied by an adult who will be asked to sign a
-						parental / guardian consent form on the day by the beach clean
-						organizer.
-					</div>
-				</Paragraph>
-				<JoinButton>Join NOW!</JoinButton>
-			</RegisterContainer>
-		</Container>
-	);
+				</SectionTitle> */}
+					<Paragraph>
+						<Text>地點: {presentEvent.location.name}</Text>
+						<Text>地址: {presentEvent.location.address}</Text>
+						<Text>活動開始時間: {presentEvent.eventDate.begDate} {presentEvent.eventDate.begTime}</Text>
+						<Text>活動結束時間: {presentEvent.eventDate.endDate} {presentEvent.eventDate.endTime}</Text>
+						<Text>募集截止日期: {presentEvent.applyDate.endDate}</Text>
+						<Text>{presentEvent.introduction.brief}</Text>
+					</Paragraph>
+					<SectionTitle>活動詳細資訊</SectionTitle>
+					<Paragraph>
+						<Text>{presentEvent.introduction.detail}</Text>
+					</Paragraph>
+					<JoinButton>Join NOW!</JoinButton>
+				</RegisterContainer>
+			</Container>
+		);
+	}
 };
 
 export default EventPage;
