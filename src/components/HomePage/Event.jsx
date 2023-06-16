@@ -1,10 +1,12 @@
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 
-import { ReactComponent as DateIcon } from "../../icons/date.svg";
-import { ReactComponent as TimeIcon } from "../../icons/time.svg";
-import { ReactComponent as LocationIcon } from "../../icons/location.svg";
-import { ReactComponent as ParticipantIcon } from "../../icons/participant.svg";
+import {
+	MdOutlineDateRange,
+	MdOutlineAccessTime,
+	MdOutlineLocationOn,
+	MdPeopleOutline,
+} from "react-icons/md";
 
 const Container = styled(Link)`
 	width: 100%;
@@ -45,7 +47,7 @@ const EventTitle = styled.div`
 const EventDetail = styled.div`
 	padding: 0.5rem;
 	align-items: center;
-	display: flex;																																										
+	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	/* grid-template-rows: auto auto; */
@@ -72,26 +74,26 @@ const Event = (prop) => {
 		<Container to="/event" backgroundColor={prop.backgroundColor}>
 			{/* <EventPicture src={prop.src} /> */}
 			{/* <EventInfoContainer> */}
-				<EventTitle>{prop.eventName}</EventTitle>
-				<EventDetail>
-					<EventDetailText>
-						<DateIcon />
-						{prop.date}
-					</EventDetailText>
-					<EventDetailText>
-						<ParticipantIcon />
-						250+
-					</EventDetailText>
-					{/* TODO:lifecycle */}
-					<EventDetailText>
-						<TimeIcon />
-						{prop.time}
-					</EventDetailText>
-					<EventDetailText>
-						<LocationIcon />
-						{prop.location}
-					</EventDetailText>
-				</EventDetail>
+			<EventTitle>{prop.eventName}</EventTitle>
+			<EventDetail>
+				<EventDetailText>
+					<MdOutlineDateRange />
+					{prop.date}
+				</EventDetailText>
+				<EventDetailText>
+					<MdPeopleOutline />
+					250+
+				</EventDetailText>
+				{/* TODO:lifecycle */}
+				<EventDetailText>
+					<MdOutlineAccessTime />
+					{prop.time}
+				</EventDetailText>
+				<EventDetailText>
+					<MdOutlineLocationOn />
+					{prop.location}
+				</EventDetailText>
+			</EventDetail>
 			{/* </EventInfoContainer> */}
 		</Container>
 	);

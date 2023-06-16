@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
 
 import Logo from "./Logo";
-import { ReactComponent as UserIcon } from "../icons/user.svg";
+import { FaUserCircle } from "react-icons/fa";
 // import { ReactComponent as SearchIcon } from "../icons/search.svg";
 
 const OuterContainer = styled.nav`
@@ -54,33 +54,38 @@ const RightNav = styled.div`
 	}
 `;
 
-const SearchContainer = styled.form`
-	display: grid;
-	grid-template-columns: auto auto;
-	background-color: var(--bg-gray);
-	border-radius: 0.5rem;
+const UserBtn = styled(Link)`
+	color: var(--text-black);
+	font-size: 1.5rem;
 `;
 
-const SearchInput = styled.input`
-	width: auto;
-	border: none;
-	padding-left: 0.5rem;
-	background-color: transparent;
-	&:focus {
-		outline: none;
-	}
-`;
+// const SearchContainer = styled.form`
+// 	display: grid;
+// 	grid-template-columns: auto auto;
+// 	background-color: var(--bg-gray);
+// 	border-radius: 0.5rem;
+// `;
 
-const SearchBtn = styled.button`
-	border: none;
-	background-color: transparent;
-	display: flex;
-	align-items: center;
-	svg {
-		height: 1.25rem;
-		width: 1.25rem;
-	}
-`;
+// const SearchInput = styled.input`
+// 	width: auto;
+// 	border: none;
+// 	padding-left: 0.5rem;
+// 	background-color: transparent;
+// 	&:focus {
+// 		outline: none;
+// 	}
+// `;
+
+// const SearchBtn = styled.button`
+// 	border: none;
+// 	background-color: transparent;
+// 	display: flex;
+// 	align-items: center;
+// 	svg {
+// 		height: 1.25rem;
+// 		width: 1.25rem;
+// 	}
+// `;
 
 const NavBar = () => {
 	return (
@@ -99,9 +104,9 @@ const NavBar = () => {
 						<SearchIcon />
 					</SearchBtn>
 				</SearchContainer> */}
-					<Link to={"/login"}>
-						<UserIcon />
-					</Link>
+					<UserBtn to={"/login"}>
+						<FaUserCircle />
+					</UserBtn>
 				</RightNav>
 			</Container>
 		</OuterContainer>
