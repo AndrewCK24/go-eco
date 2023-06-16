@@ -96,6 +96,7 @@ const EventPage = () => {
 			</Container>
 		);
 	} else {
+		const detailArr = presentEvent.introduction.detail.split("\n");
 		return (
 			<Container>
 				<RegisterContainer>
@@ -107,14 +108,22 @@ const EventPage = () => {
 					<Paragraph>
 						<Text>地點: {presentEvent.location.name}</Text>
 						<Text>地址: {presentEvent.location.address}</Text>
-						<Text>活動開始時間: {presentEvent.eventDate.begDate} {presentEvent.eventDate.begTime}</Text>
-						<Text>活動結束時間: {presentEvent.eventDate.endDate} {presentEvent.eventDate.endTime}</Text>
+						<Text>
+							活動開始時間: {presentEvent.eventDate.begDate}{" "}
+							{presentEvent.eventDate.begTime}
+						</Text>
+						<Text>
+							活動結束時間: {presentEvent.eventDate.endDate}{" "}
+							{presentEvent.eventDate.endTime}
+						</Text>
 						<Text>募集截止日期: {presentEvent.applyDate.endDate}</Text>
 						<Text>{presentEvent.introduction.brief}</Text>
 					</Paragraph>
 					<SectionTitle>活動詳細資訊</SectionTitle>
 					<Paragraph>
-						<Text>{presentEvent.introduction.detail}</Text>
+						{detailArr.map((item, index) => {
+							return <Text key={index}>{item}</Text>;
+						})}
 					</Paragraph>
 					<JoinButton>Join NOW!</JoinButton>
 				</RegisterContainer>
