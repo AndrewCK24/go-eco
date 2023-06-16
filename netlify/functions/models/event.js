@@ -1,3 +1,4 @@
+import { ObjectId } from "mongodb";
 import mongoose from "mongoose";
 
 const eventSchema = new mongoose.Schema({
@@ -83,5 +84,5 @@ const eventSchema = new mongoose.Schema({
 	},
 });
 
-const Event = mongoose.model("Event", eventSchema, "Event");
+const Event = mongoose.model("Event", eventSchema, "events");
 export default Event;

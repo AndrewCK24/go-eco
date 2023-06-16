@@ -1,5 +1,5 @@
 import { connect, find } from "mongoose";
-import Event from "../../models/event.js";
+import Event from "./models/event.js";
 
 export async function handler(event, context) {
 	console.log("Starting function execution...");

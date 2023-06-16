@@ -1,5 +1,5 @@
 import { connect } from "mongoose";
-import Event from "../../models/event.js";
+import Event from "./models/event.js";
 
 connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
