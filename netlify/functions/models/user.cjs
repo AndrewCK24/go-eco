@@ -22,7 +22,15 @@ const userSchema = new mongoose.Schema({
 	picture: {
 		type: String,
 		required: true,
-	}
+	},
+	events: {
+		registered: {
+			type: [String],
+		},
+		following: {
+			type: [String],
+		},
+	},
 });
 
 const User = mongoose.model("User", userSchema, "users");

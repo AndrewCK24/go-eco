@@ -53,12 +53,14 @@ const LogInPage = () => {
 			body: JSON.stringify({
 				credential: res.credential,
 			}),
-		})
+		});
 		const data = await response.json();
-		setUser(data);
+		const { $isNew, _doc, login } = data;
+		// TODO: 新增新註冊使用者填寫資料流程
+		setUser({ ..._doc, login });
 		navigate("/user");
 	};
-	
+
 	return (
 		<Container>
 			<LogInContainer>

@@ -28,7 +28,7 @@ exports.handler = async (event) => {
 			console.log("User found.");
 			return {
 				statusCode: 200,
-				body: JSON.stringify({...user, login: true}),
+				body: JSON.stringify({ ...user, login: true }),
 			};
 		} else {
 			console.log("User not found. Creating new user...");
@@ -41,13 +41,17 @@ exports.handler = async (event) => {
 					family: family_name,
 				},
 				picture,
-			}
+				events: {
+					registered: [],
+					following: [],
+				},
+			};
 			const createdUser = new User(data);
 			await createdUser.save();
 			console.log("New user created.");
 			return {
 				statusCode: 200,
-				body: JSON.stringify({...createdUser, login: true}),
+				body: JSON.stringify({ ...createdUser}),
 			};
 		}
 	} catch (error) {

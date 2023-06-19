@@ -59,7 +59,15 @@ const RightNav = styled.div`
 const UserBtn = styled(Link)`
 	color: var(--text-black);
 	font-size: 1.5rem;
+	display: flex;
 `;
+
+const UserImg = styled.img`
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+`;
+// TODO: 調整使用者圖片大小
 
 // const SearchContainer = styled.form`
 // 	display: grid;
@@ -91,7 +99,8 @@ const UserBtn = styled(Link)`
 
 const NavBar = () => {
 	const user = useRecoilValue(userState);
-	const { login } = user;
+	const { picture, login } = user;
+	console.log(user);
 	return (
 		<OuterContainer>
 			<Container>
@@ -109,7 +118,11 @@ const NavBar = () => {
 					</SearchBtn>
 				</SearchContainer> */}
 					<UserBtn to={login ? "/user" : "/login"}>
-						<FaUserCircle />
+						{login ? (
+							<UserImg src={picture} alt={user.name} />
+						) : (
+							<FaUserCircle />
+						)}
 					</UserBtn>
 				</RightNav>
 			</Container>
