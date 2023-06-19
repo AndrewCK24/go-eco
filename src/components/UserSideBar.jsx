@@ -113,11 +113,11 @@ const UserSideBar = () => {
 	return (
 		<SideBar>
 			<TopSide>
-				<SideLink to="/userpage">
+				<SideLink to="/user">
 					<img src="/assets/homeIcon.svg" />
 					&nbsp;UserPage
 				</SideLink>
-				<SideLink to="/userpage/MyActivity">
+				<SideLink to="/user/activities">
 					<img src="/assets/packageIcon.svg" />
 					&nbsp;My activities
 				</SideLink>

@@ -1,6 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
 import styled from "@emotion/styled";
+import { Link, NavLink } from "react-router-dom";
+import { useRecoilValue } from "recoil";
 
+import userState from "../recoil/userState";
 import Logo from "./Logo";
 import { FaUserCircle } from "react-icons/fa";
 // import { ReactComponent as SearchIcon } from "../icons/search.svg";
@@ -88,6 +90,8 @@ const UserBtn = styled(Link)`
 // `;
 
 const NavBar = () => {
+	const user = useRecoilValue(userState);
+	const { login } = user;
 	return (
 		<OuterContainer>
 			<Container>
@@ -104,7 +108,7 @@ const NavBar = () => {
 						<SearchIcon />
 					</SearchBtn>
 				</SearchContainer> */}
-					<UserBtn to={"/login"}>
+					<UserBtn to={login ? "/user" : "/login"}>
 						<FaUserCircle />
 					</UserBtn>
 				</RightNav>

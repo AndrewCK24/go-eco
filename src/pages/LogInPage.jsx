@@ -1,6 +1,9 @@
 import styled from "@emotion/styled";
-import LogInButton from "../components/LogInPage/LogInButton";
-import LogInInputForm from "../components/LogInPage/LogInInputForm";
+import { GoogleLogin } from "@react-oauth/google";
+import { useSetRecoilState } from "recoil";
+import { useNavigate } from "react-router-dom";
+
+import userState from "../recoil/userState";
 
 const Container = styled.div`
 	width: 100%;
@@ -18,9 +21,8 @@ const LogInContainer = styled.div`
 	align-items: center;
 	border-radius: 2rem;
 	border-style: solid;
-	border-color: green;
+	border-color: var(--bg-green-dark);
 	flex-direction: column;
-	background-color: white;
 `;
 
 const LogInTextSet = styled.div`
@@ -31,40 +33,45 @@ const LogInTextSet = styled.div`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	color: rgba(0, 0, 0, 0.4000000059604645);
+	color: var(--text-gray);
 `;
 
 const LogInText = styled.div`
 	font-size: 4rem;
-	color: rgba(0, 0, 0);
-`;
-
-const LogInButtonSet = styled.div`
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
 `;
 
 const LogInPage = () => {
+	const setUser = useSetRecoilState(userState);
+	const navigate = useNavigate();
+	const handleLogin = async (res) => {
+		console.log(res);
+		const response = await fetch("/.netlify/functions/userLogin", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				credential: res.credential,
+			}),
+		})
+		const data = await response.json();
+		setUser(data);
+		navigate("/user");
+	};
+	
 	return (
 		<Container>
 			<LogInContainer>
 				<LogInTextSet>
 					<LogInText>Sign In</LogInText>
-					<div>Your Social Campaigns</div>
-					<LogInButtonSet>
-						<LogInButton 
-							src="" 
-							name="Sign in with Google" 
-						/>
-						<LogInButton
-							src="/assets/appleIcon.svg"
-							name="Sign in with Apple"
-						/>
-					</LogInButtonSet>
-					<div>Or with Email</div>
-					<LogInInputForm />
-					<div>© 2023 GO ECO</div>
+					<GoogleLogin
+						onSuccess={(res) => {
+							handleLogin(res);
+						}}
+						onError={() => {
+							console.log("login error");
+						}}
+					/>
 				</LogInTextSet>
 			</LogInContainer>
 		</Container>
