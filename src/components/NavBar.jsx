@@ -9,7 +9,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 const OuterContainer = styled.nav`
 	width: 100%;
-	height: auto;
+	height: 4rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;

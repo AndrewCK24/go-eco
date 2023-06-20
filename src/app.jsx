@@ -21,7 +21,7 @@ import MyActivity from "./pages/MyActivity";
 
 const Container = styled.div`
 	width: 100%;
-	min-height: 100%;
+	min-height: calc(100vh - 4rem);
 	display: grid;
 	grid-template-rows: 1fr auto;
 	overflow: overlay;
