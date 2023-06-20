@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import EventPage from "./pages/EventPage";
 import LogInPage from "./pages/LogInPage";
+import RegisterPage from "./pages/RegisterPage";
 import ProposalPage from "./pages/ProposalPage";
 import EventCreatePage from "./pages/EventCreatePage";
 import KnowledgePage from "./pages/KnowledgePage";
@@ -53,6 +54,7 @@ const App = () => {
 						<Route path="/" element={<HomePage />} />
 						<Route path="/event/:eventId" element={<EventPage />} />
 						<Route path="/login" element={<LogInPage />} />
+						<Route path="/register" element={<RegisterPage />} />
 						<Route path="/event-create" element={<EventCreatePage />} />
 						<Route
 							path="/event-create/proposal"
