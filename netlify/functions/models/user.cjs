@@ -23,6 +23,26 @@ const userSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	avatar: {
+		type: Number,
+		required: true,
+	},
+	gender: {
+		type: String,
+		required: true,
+	},
+	birthday: {
+		type: Date,
+		required: true,
+	},
+	phone: {
+		type: Number,
+		required: true,
+	},
+	nationalId: {
+		type: String,
+		required: true,
+	},
 	events: {
 		registered: {
 			type: [String],

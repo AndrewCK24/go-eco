@@ -100,7 +100,7 @@ const UserImg = styled.img`
 const NavBar = () => {
 	const user = useRecoilValue(userState);
 	const { picture, login } = user;
-	console.log(user);
+	// console.log(user);
 	return (
 		<OuterContainer>
 			<Container>

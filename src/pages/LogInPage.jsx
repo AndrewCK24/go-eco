@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { GoogleLogin } from "@react-oauth/google";
-import { useSetRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import { useNavigate } from "react-router-dom";
 
 import userState from "../recoil/userState";
@@ -41,24 +41,33 @@ const LogInText = styled.div`
 `;
 
 const LogInPage = () => {
-	const setUser = useSetRecoilState(userState);
+	const [user, setUser] = useRecoilState(userState);
 	const navigate = useNavigate();
 	const handleLogin = async (res) => {
 		console.log(res);
-		const response = await fetch("/.netlify/functions/userLogin", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({
-				credential: res.credential,
-			}),
-		});
-		const data = await response.json();
-		const { $isNew, _doc, login } = data;
-		// TODO: 新增新註冊使用者填寫資料流程
-		setUser({ ..._doc, login });
-		navigate("/user");
+		try {
+			const response = await fetch("/.netlify/functions/get-user", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					credential: res.credential,
+				}),
+			});
+			const data = await response.json();
+			console.log(data);
+			if (!data.login) {
+				setUser(data);
+				navigate("/register");
+			} else {
+				const { _doc, login } = data;
+				setUser(..._doc, login);
+				navigate("/user");
+			}
+		} catch (error) {
+			console.error(error);
+		}
 	};
 
 	return (

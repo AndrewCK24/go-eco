@@ -59,7 +59,6 @@ const UserImg = styled.img`
 
 const RegisterPage = () => {
 	const [userData, setUserData] = useState({
-		avatar: 0,
 		gender: "other",
 	});
 	const [user, setUser] = useRecoilState(userState);

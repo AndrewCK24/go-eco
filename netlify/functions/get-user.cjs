@@ -31,9 +31,10 @@ exports.handler = async (event) => {
 				body: JSON.stringify({ ...user, login: true }),
 			};
 		} else {
-			console.log("User not found. Creating new user...");
+			console.log("User not found. Preparing registration data...");
 			const { email, given_name, family_name, picture } = payload;
 			const data = {
+				login: false,
 				socialId: userId,
 				email,
 				name: {
@@ -41,17 +42,12 @@ exports.handler = async (event) => {
 					family: family_name,
 				},
 				picture,
-				events: {
-					registered: [],
-					following: [],
-				},
+				avatar: 0,
 			};
-			const createdUser = new User(data);
-			await createdUser.save();
-			console.log("New user created.");
+			console.log("Registration data prepared.", data);
 			return {
 				statusCode: 200,
-				body: JSON.stringify({ ...createdUser}),
+				body: JSON.stringify(data),
 			};
 		}
 	} catch (error) {

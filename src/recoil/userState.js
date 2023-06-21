@@ -5,18 +5,22 @@ const userState = atom({
 	default: {
 		login: false,
 		_id: "",
-		googleId: "",
+		socialId: "",
+		email: "",
 		name: {
 			given: "",
 			family: "",
 		},
-		email: "",
 		picture: "",
 		avatar: 0,
 		gender: "",
 		birthday: "",
 		phone: "",
 		nationalId: "",
+		events: {
+			registered: [],
+			following: [],
+		},
 	},
 });
 
