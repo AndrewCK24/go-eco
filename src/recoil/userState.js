@@ -4,8 +4,19 @@ const userState = atom({
 	key: "userState",
 	default: {
 		login: false,
-		id: "",
-		name: "",
+		_id: "",
+		googleId: "",
+		name: {
+			given: "",
+			family: "",
+		},
+		email: "",
+		picture: "",
+		avatar: 0,
+		gender: "",
+		birthday: "",
+		phone: "",
+		nationalId: "",
 	},
 });
 

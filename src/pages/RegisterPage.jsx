@@ -1,9 +1,18 @@
+import { useState } from "react";
 import styled from "@emotion/styled";
-import { TextField } from "@mui/material";
+import {
+	FormControl,
+	InputLabel,
+	Select,
+	MenuItem,
+	TextField,
+} from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 import { useRecoilState } from "recoil";
 
 import userState from "../recoil/userState";
+
+import AvatarGroup from "../components/RegisterPage/AvatarGroup";
 
 const Container = styled.div`
 	width: 100%;
@@ -23,13 +32,22 @@ const RegisterForm = styled.form`
 	justify-content: center;
 `;
 
+const Title = styled.div`
+	border-bottom: 0.125rem solid var(--bg-green-dark);
+	margin: 0 0.5rem;
+	padding: 1rem 0;
+	flex: 1 1 100%;
+	font-size: 2rem;
+	font-weight: 700;
+`;
+
 const Info = styled.div`
 	padding: 1rem 0;
-	flex: 1 1 40%;
+	flex: 1 1 300px;
 	height: auto;
 	display: flex;
 	flex-direction: column;
-  justify-content: flex-end;
+	justify-content: flex-end;
 	gap: 1rem;
 `;
 
@@ -40,69 +58,102 @@ const UserImg = styled.img`
 `;
 
 const RegisterPage = () => {
+	const [userData, setUserData] = useState({
+		avatar: 0,
+		gender: "other",
+	});
 	const [user, setUser] = useRecoilState(userState);
 	const { email, name, picture } = user;
 	return (
 		<Container>
 			<RegisterForm>
+				<Title>註冊</Title>
 				<Info>
-					<UserImg src={picture} alt={name} />
+					<AvatarGroup user={user} setUser={setUser} />
 					<TextField
 						id="outlined-basic"
-            name="email"
+						name="email"
 						label="Email"
 						variant="outlined"
+						required
 						defaultValue={email}
+						onChange={(e) => {
+							setUserData({ ...userData, email: e.target.value });
+						}}
 					/>
 					<TextField
 						id="outlined-basic"
-            name="given"
+						name="given"
 						label="Given Name"
 						variant="outlined"
+						required
 						defaultValue={name.given}
+						onChange={(e) => {
+							setUserData({ ...userData, given: e.target.value });
+						}}
 					/>
-          <TextField
-            id="outlined-basic"
-            name="family"
-            label="Family Name"
-            variant="outlined"
-            defaultValue={name.family}
-          />
-				</Info>
-				<Info>
 					<TextField
 						id="outlined-basic"
-            name="phone"
-						label="Phone"
+						name="family"
+						label="Family Name"
 						variant="outlined"
 						required
+						defaultValue={name.family}
+						onChange={(e) => {
+							setUserData({ ...userData, family: e.target.value });
+						}}
 					/>
+				</Info>
+				<Info>
+					<FormControl fullWidth>
+						<InputLabel id="demo-simple-select-label">Gender</InputLabel>
+						<Select
+							labelId="demo-simple-select-label"
+							id="demo-simple-select"
+							name="gender"
+							label="Gender"
+							variant="outlined"
+							value={userData.gender}
+							required
+							onChange={(e) => {
+								setUserData({ ...userData, gender: e.target.value });
+							}}
+						>
+							<MenuItem value="female">Female</MenuItem>
+							<MenuItem value="male">Male</MenuItem>
+							<MenuItem value="other">Other</MenuItem>
+						</Select>
+					</FormControl>
 					<DatePicker
 						id="outlined-basic"
-            name="birthday"
+						name="birthday"
 						label="Date of Birth"
 						required
 						disableFuture
-						// slotProps={{
-						// 	textField: {
-						// 		helperText: "MM/DD/YYYY",
-						// 	},
-						// }}
+						onChange={(e) => {
+							setUserData({ ...userData, birthday: e.target.value });
+						}}
 					/>
 					<TextField
 						id="outlined-basic"
-            name="nationalId"
+						name="phone"
+						label="Phone"
+						variant="outlined"
+						required
+						onChange={(e) => {
+							setUserData({ ...userData, phone: e.target.value });
+						}}
+					/>
+					<TextField
+						id="outlined-basic"
+						name="nationalId"
 						label="National ID"
 						variant="outlined"
 						required
+						onChange={(e) => {
+							setUserData({ ...userData, nationalId: e.target.value });
+						}}
 					/>
-          <TextField
-            id="outlined-basic"
-            name="address"
-            label="Address"
-            variant="outlined"
-            required
-          />
 				</Info>
 			</RegisterForm>
 		</Container>
