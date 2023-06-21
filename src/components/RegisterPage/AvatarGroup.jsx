@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 
 import { Avatar, IconButton } from "@mui/material";
-import { FaGoogle, FaMountain } from "react-icons/fa";
-import { GiEarthAsiaOceania, GiForest, GiPolarBear } from "react-icons/gi";
+import { FaGoogle, FaMountain, FaLeaf } from "react-icons/fa";
+import { MdForest } from "react-icons/md";
+import { GiEarthAsiaOceania, GiPolarBear } from "react-icons/gi";
 import { TbBeach } from "react-icons/tb";
 
 const Container = styled.div`
@@ -35,11 +36,12 @@ const ButtonGroup = styled.div`
 const AvatarGroup = ({ user, setUser }) => {
 	const avatarArr = [
 		<FaGoogle />,
-		<FaMountain />,
-		<GiEarthAsiaOceania />,
-		<GiForest />,
 		<GiPolarBear />,
+		<FaLeaf />,
+		<MdForest />,
+		<FaMountain />,
 		<TbBeach />,
+		<GiEarthAsiaOceania />,
 	];
 
 	return (
@@ -58,6 +60,8 @@ const AvatarGroup = ({ user, setUser }) => {
 							key={index}
 							title="user avatar"
 							onClick={() => setUser({ ...user, avatar: index })}
+							color={index === user.avatar ? "secondary" : "primary"}
+							disabled={index === user.avatar}
 						>
 							{item}
 						</IconButton>
