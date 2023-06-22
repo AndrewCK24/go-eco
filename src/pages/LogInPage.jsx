@@ -58,11 +58,12 @@ const LogInPage = () => {
 			const data = await response.json();
 			console.log(data);
 			if (!data.login) {
-				setUser(data);
+				setUser({...data});
+				console.log(user);
 				navigate("/register");
 			} else {
 				const { _doc, login } = data;
-				setUser(..._doc, login);
+				setUser({..._doc, login});
 				navigate("/user");
 			}
 		} catch (error) {

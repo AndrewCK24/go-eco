@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "@emotion/styled";
 import {
+	Button,
 	FormControl,
 	InputLabel,
 	Select,
@@ -9,6 +11,7 @@ import {
 } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers";
 import { useRecoilState } from "recoil";
+import dayjs from "dayjs";
 
 import userState from "../recoil/userState";
 
@@ -24,6 +27,7 @@ const Container = styled.div`
 
 const RegisterForm = styled.form`
 	width: 80%;
+	padding: 1rem 0;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -51,18 +55,39 @@ const Info = styled.div`
 	gap: 1rem;
 `;
 
-const UserImg = styled.img`
-	width: 4rem;
-	height: 4rem;
-	border-radius: 50%;
+const ButtonGroup = styled.div`
+	flex: 1 1 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	gap: 1rem;
 `;
 
 const RegisterPage = () => {
-	const [userData, setUserData] = useState({
-		gender: "other",
-	});
+	const navigate = useNavigate();
+	const [edit, setEdit] = useState(false);
 	const [user, setUser] = useRecoilState(userState);
-	const { email, name, picture } = user;
+	const { email, name } = user;
+
+const handleRegister = async () => {
+	try {
+		console.log(user);
+		const response = await fetch("/.netlify/functions/create-user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    });
+    const data = await response.json();
+    console.log(data);
+		setUser({...user, login: true});
+		navigate("/user");
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 	return (
 		<Container>
 			<RegisterForm>
@@ -75,9 +100,10 @@ const RegisterPage = () => {
 						label="Email"
 						variant="outlined"
 						required
+						disabled={!edit}
 						defaultValue={email}
 						onChange={(e) => {
-							setUserData({ ...userData, email: e.target.value });
+							setUser({ ...user, email: e.target.value });
 						}}
 					/>
 					<TextField
@@ -86,9 +112,10 @@ const RegisterPage = () => {
 						label="Given Name"
 						variant="outlined"
 						required
+						disabled={!edit}
 						defaultValue={name.given}
 						onChange={(e) => {
-							setUserData({ ...userData, given: e.target.value });
+							setUser({ ...user, given: e.target.value });
 						}}
 					/>
 					<TextField
@@ -97,9 +124,10 @@ const RegisterPage = () => {
 						label="Family Name"
 						variant="outlined"
 						required
+						disabled={!edit}
 						defaultValue={name.family}
 						onChange={(e) => {
-							setUserData({ ...userData, family: e.target.value });
+							setUser({ ...user, family: e.target.value });
 						}}
 					/>
 				</Info>
@@ -112,10 +140,10 @@ const RegisterPage = () => {
 							name="gender"
 							label="Gender"
 							variant="outlined"
-							value={userData.gender}
+							defaultValue=""
 							required
 							onChange={(e) => {
-								setUserData({ ...userData, gender: e.target.value });
+								setUser({ ...user, gender: e.target.value });
 							}}
 						>
 							<MenuItem value="female">Female</MenuItem>
@@ -129,8 +157,9 @@ const RegisterPage = () => {
 						label="Date of Birth"
 						required
 						disableFuture
-						onChange={(e) => {
-							setUserData({ ...userData, birthday: e.target.value });
+						onChange={(date) => {
+							const formattedDate = dayjs(date).format("YYYY-MM-DD");
+							setUser({ ...user, birthday: formattedDate });
 						}}
 					/>
 					<TextField
@@ -140,7 +169,7 @@ const RegisterPage = () => {
 						variant="outlined"
 						required
 						onChange={(e) => {
-							setUserData({ ...userData, phone: e.target.value });
+							setUser({ ...user, phone: e.target.value });
 						}}
 					/>
 					<TextField
@@ -150,10 +179,26 @@ const RegisterPage = () => {
 						variant="outlined"
 						required
 						onChange={(e) => {
-							setUserData({ ...userData, nationalId: e.target.value });
+							setUser({ ...user, nationalId: e.target.value });
 						}}
 					/>
 				</Info>
+				<ButtonGroup>
+					<Button
+						variant="outlined"
+						color="error"
+						onClick={() => setEdit(!edit)}
+					>
+						修改預設
+					</Button>
+					<Button
+						variant="contained"
+						color="primary"
+						onClick={() => handleRegister()}
+					>
+						註冊
+					</Button>
+				</ButtonGroup>
 			</RegisterForm>
 		</Container>
 	);
