@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const connectMongoDB = require("./utils/connect-mongodb.cjs");
 const { OAuth2Client } = require("google-auth-library");
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 const User = require("./models/user.cjs");
@@ -16,13 +16,7 @@ exports.handler = async (event) => {
 		const userId = payload["sub"];
 
 		// find user by userId in mongodb
-		console.log("Connecting to MongoDB...");
-		await mongoose.connect(process.env.MONGODB_URI, {
-			useNewUrlParser: true,
-			useUnifiedTopology: true,
-			bufferCommands: false,
-		});
-		console.log("Connected to MongoDB.");
+		await connectMongoDB.handler();
 		const user = await User.findOne({ socialId: userId });
 		if (user) {
 			console.log("User found.");

@@ -1,16 +1,9 @@
-const mongoose = require("mongoose");
+const connectMongoDB = require("./utils/connect-mongodb.cjs");
 const Event = require("./models/event.cjs");
 
 exports.handler = async (event, context) => {
-	console.log("Starting function execution...");
 	try {
-		mongoose.connect(process.env.MONGO_URI, {
-			useNewUrlParser: true,
-			useUnifiedTopology: true,
-			bufferCommands: false,
-		});
-		console.log("Connected to MongoDB...");
-
+		await connectMongoDB.handler();
 		const events = await Event.find()
 			.sort({ "eventDate.begDate": -1 })
 			.limit(10);

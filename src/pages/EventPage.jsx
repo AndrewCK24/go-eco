@@ -69,7 +69,7 @@ const EventPage = () => {
 		const fetchData = async () => {
 			console.log("Fetching data...");
 			try {
-				const response = await fetch(`/.netlify/functions/findEventById`, {
+				const response = await fetch(`/.netlify/functions/get-event-by-id`, {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",

@@ -1,15 +1,9 @@
-const mongoose = require("mongoose");
+const connectMongoDB = require("./utils/connect-mongodb.cjs");
 const Event = require("./models/event.cjs");
 
 exports.handler = async (event) => {
 	try {
-		console.log("Connecting to MongoDB...");
-		await mongoose.connect(process.env.MONGODB_URI, {
-			useNewUrlParser: true,
-			useUnifiedTopology: true,
-			bufferCommands: false,
-		});
-		console.log("Connected to MongoDB.");
+		await connectMongoDB.handler();
 		const { eventId } = JSON.parse(event.body);
 		console.log(`Finding event with ID ${eventId}...`);
 		const foundEvent = await Event.findById(eventId);
