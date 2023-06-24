@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Hero from "../components/HomePage/Hero";
 import Event from "../components/HomePage/Event";
+import EventCard from "../components/HomePage/EventCard";
 
 const Container = styled.div`
 	width: 100%;
@@ -23,17 +24,19 @@ const EventSection = styled.section`
 `;
 
 const SectionTitle = styled.div`
-	padding: 0.5rem 0.5rem;
+	padding: 0.5rem 0.5rem 0;
 	/* grid-column: 1 / -1; */
 	grid-row: 1 / 2;
 	font-size: 2rem;
 	font-weight: 700;
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: 1fr auto;
 	align-items: center;
+	justify-content: center;
 `;
 
 const ViewAll = styled(Link)`
+	width: fit-content;
 	grid-column: 2 / 3;
 	text-align: right;
 	font-size: 1rem;
@@ -43,7 +46,7 @@ const ViewAll = styled(Link)`
 
 const EventContainer = styled.div`
 	width: 100%;
-	/* padding: 0.5rem; */
+	padding: 0.5rem 0.25rem;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 1rem;
@@ -82,34 +85,9 @@ const HomePage = () => {
 					<ViewAll to="/events">View All</ViewAll>
 				</SectionTitle>
 				<EventContainer>
-					<Event
-						eventName="Plant conservation"
-						location="Chiayi county"
-						time="11:00 AM"
-						date="04.16.2023"
-						backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-					/>
-					<Event
-						eventName="Event reusing"
-						location="Taipei City"
-						time="10:00 AM"
-						date="04.22.2023"
-						backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-					/>
-					<Event
-						eventName="Kitchen waste reuse"
-						location="Yilan county"
-						time="02:00 PM"
-						date="05.06.2023"
-						backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-					/>
-					<Event
-						eventName="Garbage reuse way"
-						location="Kaohsiung City"
-						time="03:00 PM"
-						date="05.11.2023"
-						backgroundColor="rgba(179, 230, 193, 0.4300000071525574)"
-					/>
+				<EventCard />
+				<EventCard />
+				<EventCard />
 				</EventContainer>
 			</EventSection>
 			<EventSection>
