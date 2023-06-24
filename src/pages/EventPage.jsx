@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { Button, Skeleton } from "@mui/material";
 import styled from "@emotion/styled";
 // import Map from "../components/Map";
 
 import presentEventState from "../recoil/presentEventState";
+import userState from "../recoil/userState";
 
 const Container = styled.div`
 	width: 100%;
@@ -57,6 +58,7 @@ const Text = styled.div`
 
 const EventPage = () => {
 	const [presentEvent, setPresentEvent] = useRecoilState(presentEventState);
+	const user = useRecoilValue(userState);
 	const { eventId } = useParams();
 
 	useEffect(() => {
@@ -82,6 +84,24 @@ const EventPage = () => {
 
 		fetchData();
 	}, [eventId, setPresentEvent]);
+
+	const handleJoin = async () => {
+		const participantId = user._id;
+		try {
+			const response = await fetch("/.netlify/functions/update-event", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"Access-Control-Allow-Origin": "*",
+				},
+				body: JSON.stringify({ participantId, eventId }),
+			});
+			const data = await response.json();
+			console.log("Data joined successfully:", data);
+		} catch (error) {
+			console.log("Error joining data:", error);
+		}
+	};
 
 	if (Object.keys(presentEvent).length === 0) {
 		return (
@@ -120,7 +140,7 @@ const EventPage = () => {
 							return <Text key={index}>{item}</Text>;
 						})}
 					</Paragraph>
-					<Button variant="contained" color="success" fullWidth>
+					<Button variant="contained" color="success" fullWidth onClick={() => handleJoin()}>
 						Join NOW!
 					</Button>
 				</RegisterContainer>
