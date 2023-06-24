@@ -1,12 +1,13 @@
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { Button, Skeleton } from "@mui/material";
+import { Avatar, Button, Skeleton } from "@mui/material";
 import styled from "@emotion/styled";
 // import Map from "../components/Map";
 
 import presentEventState from "../recoil/presentEventState";
 import userState from "../recoil/userState";
+import avatarArr from "../utils/avatarArr";
 
 const Container = styled.div`
 	width: 100%;
@@ -49,11 +50,22 @@ const Paragraph = styled.div`
 `;
 
 const Text = styled.div`
+	display: flex;
+	flex-direction: row;
+	gap: 0.25rem;
+	align-items: center;
 	padding-bottom: 0.25rem;
-	font-size: 1.25rem;
 	text-align: left;
-	font-weight: 400;
-	padding-bottom: 0.25rem;
+	a {
+		color: var(--text-black);
+	}
+`;
+
+const HostImg = styled(Avatar)`
+	svg {
+		width: 2.25rem;
+		height: 2.25rem;
+	}
 `;
 
 const EventPage = () => {
@@ -116,22 +128,36 @@ const EventPage = () => {
 		);
 	} else {
 		const detailArr = presentEvent.introduction.detail.split("\n");
+		const { hostName, hostAvatar, hostPicture } = presentEvent;
+		const { given, family } = hostName;
+
 		return (
 			<Container>
 				<RegisterContainer>
 					<Title>{presentEvent.name}</Title>
 					<Paragraph>
-						<Text>地點: {presentEvent.location.name}</Text>
-						<Text>地址: {presentEvent.location.address}</Text>
 						<Text>
-							活動開始時間: {presentEvent.eventDate.begDate}{" "}
+							<HostImg
+								alt="Avatar"
+								src={hostAvatar === 0 ? hostPicture : avatarArr[hostAvatar]}
+								sx={{ width: "1.5rem", height: "1.5rem" }}
+							>
+								{avatarArr[hostAvatar]}
+							</HostImg>
+							{/* TODO: 增加導向個人介面功能 */}
+							<Link>{`${family}, ${given}`}</Link>
+						</Text>
+						<Text>地點：{presentEvent.location.name}</Text>
+						<Text>地址：{presentEvent.location.address}</Text>
+						<Text>
+							活動開始時間：{presentEvent.eventDate.begDate}{" "}
 							{presentEvent.eventDate.begTime}
 						</Text>
 						<Text>
-							活動結束時間: {presentEvent.eventDate.endDate}{" "}
+							活動結束時間：{presentEvent.eventDate.endDate}{" "}
 							{presentEvent.eventDate.endTime}
 						</Text>
-						<Text>募集截止日期: {presentEvent.applyDate.endDate}</Text>
+						<Text>募集截止日期：{presentEvent.applyDate.endDate}</Text>
 						<Text>{presentEvent.introduction.brief}</Text>
 					</Paragraph>
 					<SectionTitle>活動詳細資訊</SectionTitle>
@@ -140,7 +166,12 @@ const EventPage = () => {
 							return <Text key={index}>{item}</Text>;
 						})}
 					</Paragraph>
-					<Button variant="contained" color="success" fullWidth onClick={() => handleJoin()}>
+					<Button
+						variant="contained"
+						color="success"
+						fullWidth
+						onClick={() => handleJoin()}
+					>
 						Join NOW!
 					</Button>
 				</RegisterContainer>
