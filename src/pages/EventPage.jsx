@@ -1,6 +1,7 @@
 import { useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useRecoilState } from "recoil";
+import { Button, Skeleton } from "@mui/material";
 import styled from "@emotion/styled";
 // import Map from "../components/Map";
 
@@ -8,6 +9,7 @@ import presentEventState from "../recoil/presentEventState";
 
 const Container = styled.div`
 	width: 100%;
+	min-height: 100%;
 	display: flex;
 	overflow: auto;
 	align-items: center;
@@ -18,6 +20,8 @@ const Container = styled.div`
 
 const RegisterContainer = styled.div`
 	width: 80%;
+	max-width: 800px;
+	min-height: 100%;
 	padding: 2rem;
 	display: flex;
 	flex-direction: column;
@@ -26,39 +30,29 @@ const RegisterContainer = styled.div`
 `;
 
 const Title = styled.div`
+	padding: 1rem 0;
 	font-size: 3rem;
 	text-align: left;
 	font-weight: 700;
 `;
 
 const SectionTitle = styled.div`
+	padding: 1rem 0 0 0;
 	font-size: 2rem;
 	text-align: left;
 	font-weight: 600;
 `;
 
-const Paragraph = styled.div``;
+const Paragraph = styled.div`
+	padding-bottom: 0.5rem;
+`;
 
 const Text = styled.div`
+	padding-bottom: 0.25rem;
 	font-size: 1.25rem;
 	text-align: left;
 	font-weight: 400;
 	padding-bottom: 0.25rem;
-`;
-
-const JoinButton = styled(Link)`
-	display: flex;
-	width: 80%;
-	margin: 2rem 2rem;
-	padding: 1rem;
-	justify-content: center;
-	font-size: 2rem;
-	text-align: center;
-	text-decoration: none;
-	border-radius: 0.5rem;
-	color: var(--primary-black);
-	font-weight: 600;
-	background-color: var(--bg-green-main);
 `;
 
 const EventPage = () => {
@@ -92,7 +86,12 @@ const EventPage = () => {
 	if (Object.keys(presentEvent).length === 0) {
 		return (
 			<Container>
-				<RegisterContainer />
+				<RegisterContainer>
+					<Skeleton variant="h1" width="50%" animation="wave" />
+					<Skeleton variant="text" width="100%" animation="wave" />
+					<Skeleton variant="text" width="100%" animation="wave" />
+					<Skeleton variant="text" width="100%" animation="wave" />
+				</RegisterContainer>
 			</Container>
 		);
 	} else {
@@ -101,10 +100,6 @@ const EventPage = () => {
 			<Container>
 				<RegisterContainer>
 					<Title>{presentEvent.name}</Title>
-					{/* <SectionTitle>
-					Join one of our beach clean surveys and help keep Britain's beaches
-					beautiful and our ocean safe for wildlife.
-				</SectionTitle> */}
 					<Paragraph>
 						<Text>地點: {presentEvent.location.name}</Text>
 						<Text>地址: {presentEvent.location.address}</Text>
@@ -125,7 +120,9 @@ const EventPage = () => {
 							return <Text key={index}>{item}</Text>;
 						})}
 					</Paragraph>
-					<JoinButton>Join NOW!</JoinButton>
+					<Button variant="contained" color="success" fullWidth>
+						Join NOW!
+					</Button>
 				</RegisterContainer>
 			</Container>
 		);
