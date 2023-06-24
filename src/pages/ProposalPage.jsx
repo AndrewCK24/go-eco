@@ -29,6 +29,7 @@ const Container = styled.div`
 
 const ProposalContainer = styled.div`
 	width: 80%;
+	max-width: 800px;
 	gap: 1rem;
 	display: flex;
 	padding: 3rem;
@@ -69,7 +70,7 @@ const ProposalPage = () => {
 	const navigate = useNavigate();
 	const handleConfirm = async (formData) => {
 		const hostId = user._id;
-		const timestamp = Date.now();
+		const updateTime = dayjs().format("YYYY-MM-DD HH:mm:ss");
 		const {
 			name,
 			begDate,
@@ -91,7 +92,7 @@ const ProposalPage = () => {
 
 		const data = {
 			hostId,
-			timestamp,
+			updateTime,
 			name,
 			eventDate,
 			applyDate,
@@ -102,21 +103,20 @@ const ProposalPage = () => {
 		};
 
 		console.log(data);
-		const response = await fetch("/.netlify/functions/create-event", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				"Access-Control-Allow-Origin": "*",
-			},
-			body: JSON.stringify(data),
-		});
-
-		if (response.status === 200) {
+		try {
+			const response = await fetch("/.netlify/functions/create-event", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"Access-Control-Allow-Origin": "*",
+				},
+				body: JSON.stringify(data),
+			});
 			const savedData = await response.json();
 			console.log("event created:", savedData);
 			navigate(`/event/${savedData._id}`);
-		} else {
-			throw new Error("event save error");
+		} catch (error) {
+			console.log(error);
 		}
 	};
 
@@ -165,14 +165,13 @@ const ProposalPage = () => {
 					id="outlined-basic"
 					name="applyEndDate"
 					label="報名截止日"
-					format="MM/DD/YYYY"
 					disablePast
 					required
 					value={formData.applyEndDate}
-					onChange={(e) => {
+					onChange={(date) => {
 						setFormData({
 							...formData,
-							applyEndDate: dayjs(e).format("YYYY-MM-DD"),
+							applyEndDate: dayjs(date).format("YYYY-MM-DD"),
 						});
 					}}
 				/>
@@ -253,12 +252,6 @@ const ProposalPage = () => {
 						setFormData({ ...formData, introduction: e.target.value });
 					}}
 				/>
-				{/* <RowContainer
-					leftText="地址"
-					formData={formData}
-					setFormData={setFormData}
-					name="address"
-				/> */}
 				<Divider variant="middle" />
 				<FormGroup>
 					<FormControlLabel
