@@ -1,10 +1,7 @@
 import styled from "@emotion/styled";
 
 import { Avatar, IconButton } from "@mui/material";
-import { FaGoogle, FaMountain, FaLeaf } from "react-icons/fa";
-import { MdForest } from "react-icons/md";
-import { GiEarthAsiaOceania, GiPolarBear } from "react-icons/gi";
-import { TbBeach } from "react-icons/tb";
+import avatarArr from "../../utils/avatarArr";
 
 const Container = styled.div`
 	width: 100%;
@@ -34,16 +31,6 @@ const ButtonGroup = styled.div`
 `;
 
 const AvatarGroup = ({ user, setUser }) => {
-	const avatarArr = [
-		<FaGoogle />,
-		<GiPolarBear />,
-		<FaLeaf />,
-		<MdForest />,
-		<FaMountain />,
-		<TbBeach />,
-		<GiEarthAsiaOceania />,
-	];
-
 	return (
 		<Container>
 			<UserImg
